@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lease_start_date: 2023-12-06
+  lease_end_date: 2023-12-06
+  monthly_license_fee: 1
+  car_space_fee: 1
+  business: one
+
+two:
+  lease_start_date: 2023-12-06
+  lease_end_date: 2023-12-06
+  monthly_license_fee: 1
+  car_space_fee: 1
+  business: two

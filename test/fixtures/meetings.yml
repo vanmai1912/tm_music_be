@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2023-12-06
+  end_date: 2023-12-06
+  meeting_room: one
+  business: one
+  member: one
+
+two:
+  start_date: 2023-12-06
+  end_date: 2023-12-06
+  meeting_room: two
+  business: two
+  member: two

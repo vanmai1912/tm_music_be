@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  status: MyString
+  desks: 1
+  office_photo_url: MyString
+  business: one
+  lease: one
+
+two:
+  name: MyString
+  status: MyString
+  desks: 1
+  office_photo_url: MyString
+  business: two
+  lease: two

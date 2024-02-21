@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>circle-check-solid</title>
+    <g id="Admin-Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="4-reset-password-confirm" transform="translate(-688.000000, -246.000000)" fill="#68DC45" fill-rule="nonzero">
+            <g id="circle-check-solid" transform="translate(688.000000, 246.000000)">
+                <path d="M0,32 C0,14.325 14.325,0 32,0 C49.675,0 64,14.325 64,32 C64,49.675 49.675,64 32,64 C14.325,64 0,49.675 0,32 Z M46.475,26.475 C47.8375,25.1125 47.8375,22.8875 46.475,21.525 C45.1125,20.1625 42.8875,20.1625 41.525,21.525 L28,35.05 L22.475,29.525 C21.1125,28.1625 18.8875,28.1625 17.525,29.525 C16.1625,30.8875 16.1625,33.1125 17.525,34.475 L25.525,42.475 C26.8875,43.8375 29.1125,43.8375 30.475,42.475 L46.475,26.475 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

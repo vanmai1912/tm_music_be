@@ -1,0 +1,2 @@
+class PemberAdmin < ApplicationRecord
+end
