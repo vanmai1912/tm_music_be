@@ -59,7 +59,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: white;
-  --bs-body-bg: $pembr-dark-gray;
+  --bs-body-bg: #f8fafc;
   --bs-border-width: 1px;
   --bs-border-style: solid;
   --bs-border-color: #e3ebf6;
@@ -473,8 +473,8 @@ summary {
 }
 
 .main {
-  background-color: $pembr-dark-gray;
-  color: white;
+  background-color: #f9fbfd;
+  color: black;
   height: 100%;
 }
 
@@ -16198,11 +16198,11 @@ tbody th {
 
 .navbar-nav .nav-link:not(.active):focus,
 .navbar-nav .nav-link:not(.active):hover {
-  color: $pembr-orange
+  color: var(--bs-navbar-color)
 }
 
 .navbar-dark {
-  background-color: $pembr-black;
+  background-color: white;
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(18, 38, 63, .03)
 }
@@ -16212,7 +16212,7 @@ tbody th {
 }
 
 .navbar-dark .navbar-divider {
-  color: $pembr-dark-gray
+  color: #f8fafc
 }
 
 .navbar-dark .navbar-user {
@@ -16531,11 +16531,11 @@ tbody th {
 
 .navbar-nav .nav-link.active {
   position: relative;
-  color: $pembr-orange !important;
+  color: var(--bs-navbar-color) !important;
 }
 
 .navbar-nav .nav-link.active:before {
-  border-left: 2px solid var($pembr-orange);
+  border-left: 2px solid var(--bs-navbar-color);
   bottom: .5rem;
   content: "";
   left: 0;
