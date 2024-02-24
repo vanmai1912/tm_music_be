@@ -7,7 +7,7 @@
     </button>
 
     <!-- Brand -->
-    <%= link_to image_tag("logo.png", class: "navbar-brand-img mx-auto"), admin_root_path, class: "navbar-brand" %>
+    <%= link_to image_tag("logo.svg", class: "navbar-brand-img mx-auto"), '', class: "navbar-brand" %>
 
     <!-- User (xs) -->
     <div class="navbar-user d-md-none">
@@ -44,35 +44,22 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to admin_root_path, class: "nav-link #{current_page?(admin_root_path) ? 'active' : ''}" do %>
+          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
             <i class="fe fe-home"></i> Dashboard
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to admin_buildings_path, class: "nav-link #{current_page?(admin_buildings_path) ? 'active' : ''}" do %>
+          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
             <i class="fa fa-regular fa-building"></i> Buildings
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to admin_schedule_path, class: "nav-link #{current_page?(admin_schedule_path) ? 'active' : ''}" do %>
+          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
             <i class="fa fa-regular fa-calendar"></i> Schedule
           <% end %>
         </li>
       </ul>
-
-      <!-- Divider -->
-      <hr class="navbar-divider my-3">
-
-      <ul class="navbar-nav mb-md-4">
-        <li class="nav-item">
-          <%= link_to admin_admins_path, class: "nav-link #{current_page?(admin_admins_path) ? 'active' : ''}" do %>
-            <i class="fa fa-regular fa-user"></i> Admin
-          <% end %>
-        </li>
-
-      </ul>
       
-
       <!-- Push content down -->
       <div class="mt-auto">
          <a class="btn btn-primary w-100">

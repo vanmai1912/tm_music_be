@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
 
-    <title>Pembr - Admin</title>
+    <title>Music - Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -56,18 +56,14 @@
   </head>
 
   <body>
-    
-    
     <main id="content" role="main" class="main">
+      <%= render "admin/shared/sidebar" %>
+      <div class="main-content" style="padding-top: 12px;">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-        <!-- <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>-->
-
-      <!-- Content -->
-        <%= render "admin/shared/sidebar" %>
-  
         <%= yield %>
-      <!-- End Content -->
+      </div>
     </main>
 
   </body>
