@@ -58,7 +58,7 @@
   --bs-body-font-size: 0.9375rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: white;
+  --bs-body-color: black;
   --bs-body-bg: #f8fafc;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -3371,11 +3371,11 @@ fieldset:disabled .btn {
 }
 
 .btn-primary {
-  --bs-btn-color: #434343;
-  --bs-btn-bg: #808080;
+  --bs-btn-color: black;
+  --bs-btn-bg: ##fff;
   --bs-btn-border-color: #808080;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #f97a43;
+  --bs-btn-hover-bg: var(--bs-link-hover-color);
   --bs-btn-hover-border-color: #f97a43;
   --bs-btn-focus-shadow-rgb: 76, 143, 233;
   --bs-btn-active-color: #fff;

@@ -57,12 +57,12 @@
 
   <body>
     <main id="content" role="main" class="main">
-      <%= render "admin/shared/sidebar" %>
+      <%= render "layouts/sidebar" %>
       <div class="main-content" style="padding-top: 12px;">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-
-        <%= yield %>
+        <div class="container-fluid">
+          <p class="notice d-block text-center" style="background-color: mediumspringgreen;"><%= notice %></p>
+          <%= yield %>
+        </div>
       </div>
     </main>
 
