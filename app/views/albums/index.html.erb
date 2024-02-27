@@ -1,25 +1,46 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Albums</h1>
+<div class="container-fluid d-flex justify-content-end mb-3">
+  <%= link_to 'New Album', new_album_path, class: "btn btn-primary" %>
+</div>
+<div class="container-fluid">
+  <div class="tab-content">
+    <div class="tab-pane fade active show" id="tabPaneOne" role="tabpanel">
+      <div class="row listAlias">
+        <% @albums.each do |album| %>
+          <div class="col-12 col-md-6 col-xl-4">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+            <div class="card">
 
-  <tbody>
-    <% @albums.each do |album| %>
-      <tr>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <% if album.logo.present? %>
+                <%= link_to album_path(album) do %>
+                  <%= image_tag album.logo, alt: "Album Logo", class: "card-img-top", size: "485x325" %>
+                <% end %>
+              <% else %>
+              <% end %>
 
-<br>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
 
-<%= link_to 'New Album', new_album_path %>
+                    <!--  -->
+                    <h4 class="mb-2 name">                    
+                      <%= link_to "#{album.title}", album_path(album) %>
+                    </h4>
+
+                    <p class="card-text small text-body-secondary">
+                      <%= album.description %>
+                    </p>
+
+                  </div>
+                 
+                </div> 
+              </div>
+
+            </div>
+
+          </div>
+        <% end %>
+      </div> 
+    </div>
+  </div>
+</div>

@@ -13,6 +13,9 @@ class SongsController < ApplicationController
   # GET /songs/new
   def new
     @song = Song.new
+    @genres = Genre.all
+    @singes = Artist.singer
+    @authors = Artist.author
   end
 
   # GET /songs/1/edit
@@ -65,6 +68,6 @@ class SongsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def song_params
-      params.fetch(:song, {})
+      params.require(:song).permit(:title, :lyric, :release_date, :genre_id, :logo, artist_ids: [])
     end
 end
