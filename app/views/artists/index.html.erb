@@ -1,25 +1,46 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Artists</h1>
+<div class="container-fluid d-flex justify-content-end mb-3">
+  <%= link_to 'New Artist', new_artist_path, class: "btn btn-primary" %>
+</div>
+<div class="container-fluid">
+  <div class="tab-content">
+    <div class="tab-pane fade active show" id="tabPaneOne" role="tabpanel">
+      <div class="row listAlias">
+        <% @artists.each do |artist| %>
+          <div class="col-12 col-md-6 col-xl-4">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+            <div class="card">
 
-  <tbody>
-    <% @artists.each do |artist| %>
-      <tr>
-        <td><%= link_to 'Show', artist %></td>
-        <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
-        <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <% if artist.avatar.present? %>
+                <%= link_to artist_path(artist) do %>
+                  <%= image_tag artist.avatar, alt: "Project Avatar", class: "card-img-top" %>
+                <% end %>
+              <% else %>
+              <% end %>
 
-<br>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
 
-<%= link_to 'New Artist', new_artist_path %>
+                    <!--  -->
+                    <h4 class="mb-2 name">                    
+                      <%= link_to "#{artist.name}", artist_path(artist) %>
+                    </h4>
+
+                    <p class="card-text small text-body-secondary">
+                      <%= artist.description %>
+                    </p>
+
+                  </div>
+                 
+                </div> 
+              </div>
+
+            </div>
+
+          </div>
+        <% end %>
+      </div> 
+    </div>
+  </div>
+</div>

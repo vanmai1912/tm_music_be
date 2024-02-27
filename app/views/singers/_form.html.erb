@@ -1,11 +1,11 @@
 <div class="row justify-content-center">
-  <%= form_with(model: artist) do |form| %>
-    <% if artist.errors.any? %>
+  <%= form_with(model: singer) do |form| %>
+    <% if singer.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(artist.errors.count, "error") %> prohibited this artist from being saved:</h2>
+        <h2><%= pluralize(singer.errors.count, "error") %> prohibited this singer from being saved:</h2>
 
         <ul>
-          <% artist.errors.each do |error| %>
+          <% singer.errors.each do |error| %>
             <li><%= error.full_message %></li>
           <% end %>
         </ul>
@@ -17,7 +17,7 @@
 
         <div class="form-group">
           <%= form.label :name, class: "form-label" %>
-          <%= form.text_field :name, class: "form-control", required: true %>
+          <%= form.text_field :title, class: "form-control", required: true %>
         </div>
 
       </div>
@@ -39,15 +39,8 @@
 
       <div class="col-12 col-md-6">
         <div class="form-group">
-          <%= form.label :tag, "Tag", class: "form-label" %>
-          <%= form.select :tag, options_for_select([["Singer", "singer"], ["Author", "author"]], artist.tag), { include_blank: "Select Tag" }, class: "form-control", required: true %>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6">
-        <div class="form-group">
           <%= form.label :avatar, "Avatar", class: "form-label" %>
-          <%= form.file_field :avatar, class: "form-control" %>
+          <%= form.file_field :avatar, class: "form-control", required: true %>
         </div>
       </div>
     
@@ -57,3 +50,4 @@
     </div>
   <% end %>
 </div>
+

@@ -4,4 +4,6 @@ class Artist < ApplicationRecord
 
   enum tag: { author: "author", singer: "singer" }
 
+  has_one_attached :avatar
+
 end
