@@ -1,3 +1,5 @@
+require 'mp3info'
+
 class SongsController < ApplicationController
   before_action :set_song, only: %i[ show edit update destroy ]
 
@@ -68,6 +70,6 @@ class SongsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def song_params
-      params.require(:song).permit(:title, :lyric, :release_date, :genre_id, :logo, artist_ids: [])
+      params.require(:song).permit(:title, :lyric, :release_date, :genre_id, :logo, :mp3_file, artist_ids: [])
     end
 end

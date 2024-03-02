@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :albums
   resources :artists
   resources :genres
-  resources :songs
+  resources :songs do
+    member do
+      get 'duration'
+    end
+  end
   devise_for :users
   # root to: "overview#index"
 
