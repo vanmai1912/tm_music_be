@@ -3,4 +3,28 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # before_save :ensure_authentication_token, if: :new_record?
+  before_save :set_default_role, if: :new_record?
+
+  enum role: { user: 'user', admin: 'admin' }
+
+  has_one_attached :avatar
+
+  private
+
+  # Ensure token is generated when a new user is created
+  def ensure_authentication_token
+    self.token ||= generate_authentication_token
+  end
+
+  # Generate a unique authentication token
+  def generate_authentication_token
+    payload = { user_id: id }
+    JWT.encode(payload, Rails.application.secrets.secret_key_base, 'HS256')
+  end
+
+  def set_default_role
+    self.role ||= :user
+  end
 end

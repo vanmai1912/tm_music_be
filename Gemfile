@@ -26,6 +26,9 @@ gem 'devise'
 gem 'sidekiq'
 gem "net-http"
 gem 'ruby-mp3info'
+gem 'active_model_serializers'
+gem 'jwt'
+gem 'warden'
 
 
 # Use Active Storage variant

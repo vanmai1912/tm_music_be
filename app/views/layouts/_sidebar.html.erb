@@ -62,9 +62,9 @@
       
       <!-- Push content down -->
       <div class="mt-auto">
-         <a class="btn btn-primary w-100">
+        <%= button_to destroy_user_session_path, method: :delete, class: "btn btn-primary w-100" do %>
           <i class="fa fa-sign-out-alt"></i> Sign out
-         </a>
+        <% end %>
       </div>
 
      

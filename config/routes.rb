@@ -12,4 +12,13 @@ Rails.application.routes.draw do
   devise_for :users
   # root to: "overview#index"
 
+  namespace :api, defaults: { format: :json } do
+    # resources :types
+    # resources :singers
+    # resources :users
+    post 'login' => 'auth#login'
+    resources :singers
+    resources :albums
+  end
+
 end
