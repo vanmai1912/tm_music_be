@@ -18,7 +18,9 @@ Rails.application.routes.draw do
     # resources :users
     post 'login' => 'auth#login'
     resources :singers
+    resources :authors
     resources :albums
+    resources :songs
   end
 
 end

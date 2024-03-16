@@ -5,6 +5,8 @@ class Song < ApplicationRecord
   has_many :album_songs
   has_many :albums, through: :album_songs
 
+  belongs_to :genre
+
   has_one_attached :logo 
   has_one_attached :mp3_file
 

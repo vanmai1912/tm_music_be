@@ -7,7 +7,6 @@ class Api::AuthController < Api::ApplicationController
     user = User.find_by(email: params[:email])
 
     if user && user.valid_password?(params[:password])
-      # Tạo token và trả về cho người dùng
       token = encode_token(user.id)
       render json: {
         data: {

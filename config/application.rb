@@ -20,5 +20,10 @@ module Pembr
     # config.eager_load_paths << Rails.root.join("extras")
     config.default_url_options = { host: '127.0.0.1:3000' }
 
+    config.action_mailer.default_url_options = { host: 'yourhostname.com' }
+
+    config.active_storage.service = :local
+
+
   end
 end
