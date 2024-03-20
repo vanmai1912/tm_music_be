@@ -10,6 +10,7 @@ class User < ApplicationRecord
   enum role: { user: 'user', admin: 'admin' }
 
   has_one_attached :avatar
+  has_many :albums
 
   private
 

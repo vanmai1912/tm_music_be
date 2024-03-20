@@ -1,6 +1,7 @@
 require 'jwt'
 
 class Api::ApplicationController < ActionController::Base
+  protect_from_forgery with: :null_session
   before_action :set_cors_headers
   before_action :verify_token
 

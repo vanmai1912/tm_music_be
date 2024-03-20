@@ -21,6 +21,12 @@ Rails.application.routes.draw do
     resources :authors
     resources :albums
     resources :songs
+
+    namespace :me, defaults: { format: :json } do
+      resources :albums
+    end
   end
+
+  match '*path', to: 'api/application#options', via: :options
 
 end
