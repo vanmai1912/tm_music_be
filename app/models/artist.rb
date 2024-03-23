@@ -1,5 +1,5 @@
 class Artist < ApplicationRecord
-  has_many :artist_song, dependent: :destroy
+  has_many :artist_songs, dependent: :destroy
   has_many :songs, through: :artist_songs
   has_many :albums
 

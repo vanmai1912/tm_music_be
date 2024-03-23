@@ -1,0 +1,22 @@
+# Ignore version control files
+.git
+.gitignore
+.svn
+
+# Ignore node_modules directory (we'll mount it as a volume)
+node_modules
+
+# Ignore log and tmp directories
+log/*
+tmp/*
+!log/.keep
+!tmp/.keep
+
+# Ignore editor backup files
+*~
+*.swp
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile
+docker-compose.yml

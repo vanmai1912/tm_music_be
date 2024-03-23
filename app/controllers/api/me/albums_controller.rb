@@ -1,7 +1,11 @@
 class Api::Me::AlbumsController < Api::ApplicationController
   def index
     albums = @current_user.albums
-    render json: albums, each_serializer: AlbumSerializer, is_song: false
+    if albums
+      render json: albums, each_serializer: AlbumSerializer, is_song: false
+    else
+      render json: {}, status: :ok
+    end
   end
 
   def create
@@ -12,6 +16,11 @@ class Api::Me::AlbumsController < Api::ApplicationController
     else
       render json: { error: 'Không thể lưu album' }, status: :unprocessable_entity
     end
+  end
+
+  def show 
+    album = @current_user.albums.find(params[:id])
+    render json: album, each_serializer: AlbumSerializer, is_song: true
   end
 
   private
