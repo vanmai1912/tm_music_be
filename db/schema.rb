@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_02_27_093419) do
+ActiveRecord::Schema.define(version: 2024_03_24_170438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,27 @@ ActiveRecord::Schema.define(version: 2024_02_27_093419) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "song_id"
+    t.bigint "parent_comment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parent_comment_id"], name: "index_comments_on_parent_comment_id"
+    t.index ["song_id"], name: "index_comments_on_song_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "artist_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artist_id"], name: "index_follows_on_artist_id"
+    t.index ["user_id"], name: "index_follows_on_user_id"
+  end
+
   create_table "genres", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -134,6 +155,11 @@ ActiveRecord::Schema.define(version: 2024_02_27_093419) do
   add_foreign_key "albums", "users"
   add_foreign_key "artist_songs", "artists"
   add_foreign_key "artist_songs", "songs"
+  add_foreign_key "comments", "comments", column: "parent_comment_id"
+  add_foreign_key "comments", "songs"
+  add_foreign_key "comments", "users"
+  add_foreign_key "follows", "artists"
+  add_foreign_key "follows", "users"
   add_foreign_key "history_likes", "songs"
   add_foreign_key "history_likes", "users"
   add_foreign_key "songs", "genres"

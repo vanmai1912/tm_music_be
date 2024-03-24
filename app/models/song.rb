@@ -7,6 +7,10 @@ class Song < ApplicationRecord
 
   belongs_to :genre
 
+  has_many :comments
+  has_many :history_likes
+  has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
+
   has_one_attached :logo 
   has_one_attached :mp3_file
 

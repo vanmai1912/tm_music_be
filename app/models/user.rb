@@ -18,6 +18,9 @@ class User < ApplicationRecord
   has_many :histories, through: :history_songs, source: :song
   has_many :likes, through: :liked_songs, source: :song
 
+  has_many :follows 
+  has_many :artists, through: :follows
+  has_many :comments
 
   has_many :history_likes
 
