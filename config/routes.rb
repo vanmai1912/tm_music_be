@@ -13,17 +13,21 @@ Rails.application.routes.draw do
   # root to: "overview#index"
 
   namespace :api, defaults: { format: :json } do
-    # resources :types
-    # resources :singers
-    # resources :users
-    post 'login' => 'auth#login'
-    resources :singers
-    resources :authors
-    resources :albums
-    resources :songs
+    post 'login', to: 'auth#login'
 
-    namespace :me, defaults: { format: :json } do
-      resources :albums
+    resources :singers, only: [:index, :show]
+    resources :authors, only: [:index, :create, :show]
+    resources :albums, only: [:index, :create, :show]
+    resources :songs, only: [:index, :create, :show]
+
+    namespace :me do
+      resources :albums, only: [:index, :create, :show]
+      resources :histories, only: [:index, :create]
+      resources :likes, only: [:index, :create] do
+        collection do
+          delete 'destroys'
+        end
+      end
     end
   end
 

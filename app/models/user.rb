@@ -12,6 +12,16 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_many :albums
 
+  has_many :history_likes
+  has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
+  has_many :history_songs, -> { where(tag: :history) }, class_name: 'HistoryLike'
+  has_many :histories, through: :history_songs, source: :song
+  has_many :likes, through: :liked_songs, source: :song
+
+
+  has_many :history_likes
+
+
   private
 
   # Ensure token is generated when a new user is created
