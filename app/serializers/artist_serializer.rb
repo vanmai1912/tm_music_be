@@ -1,6 +1,8 @@
 class ArtistSerializer < ApplicationSerializer
   attributes :id, :name, :avatar, :description, :birthdate, :avatar, :songs
 
+  has_many :albums, serializer: AlbumSerializer, is_song: false
+
   def initialize(object, options = {})
     super
     @is_song = options[:is_song]

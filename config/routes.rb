@@ -15,10 +15,17 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     post 'login', to: 'auth#login'
 
-    resources :singers, only: [:index, :show]
+    resources :singers, only: [:index, :show] do 
+      collection do
+        get 'albums'
+      end
+    end
+    resources :genres, only: [:index, :show]
     resources :authors, only: [:index, :create, :show]
     resources :albums, only: [:index, :create, :show]
-    resources :songs, only: [:index, :create, :show]
+    resources :songs, only: [:index, :create, :show] do 
+      resources :comments, only: [:index]
+    end
 
     namespace :me do
       resources :albums, only: [:index, :create, :show]
@@ -28,6 +35,8 @@ Rails.application.routes.draw do
           delete 'destroys'
         end
       end
+      resources :follows, only: [:index, :create, :destroy]
+      resources :comments, only: [:create, :destroy, :show]
     end
   end
 

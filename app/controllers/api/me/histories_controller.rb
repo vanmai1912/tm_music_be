@@ -12,6 +12,8 @@ class Api::Me::HistoriesController < Api::ApplicationController
     history = @current_user.history_likes.history.new(history_params)
 
     if history.save
+      song = Song.find(params[:song_id])
+      song.update(view: song.view + 1)      
       render json: {success: 'Đã lưu lịch sử'}, status: :created
     else
       render json: { error: 'Không thể lưu lịch sử' }, status: :unprocessable_entity
