@@ -13,7 +13,7 @@ class Api::Me::HistoriesController < Api::ApplicationController
 
     if history.save
       song = Song.find(params[:song_id])
-      song.update(view: song.view + 1)      
+      song.update(views: song.views + 1)      
       render json: {success: 'Đã lưu lịch sử'}, status: :created
     else
       render json: { error: 'Không thể lưu lịch sử' }, status: :unprocessable_entity

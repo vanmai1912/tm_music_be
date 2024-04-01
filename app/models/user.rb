@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_many :histories, through: :history_songs, source: :song
   has_many :likes, through: :liked_songs, source: :song
 
+  has_one :listened_song, class_name: "Song", foreign_key: "id", primary_key: "listened_song_id"
+
   has_many :follows 
   has_many :artists, through: :follows
   has_many :comments

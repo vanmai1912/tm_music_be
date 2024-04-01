@@ -38,6 +38,8 @@ Rails.application.routes.draw do
       resources :follows, only: [:index, :create, :destroy]
       resources :comments, only: [:create, :destroy, :show]
     end
+
+    resources :me, only: [:index]
   end
 
   match '*path', to: 'api/application#options', via: :options
