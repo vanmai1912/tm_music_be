@@ -1,7 +1,8 @@
+require 'google/apis/oauth2_v2'
 
 class Api::AuthController < Api::ApplicationController
   skip_before_action :verify_authenticity_token
-  skip_before_action :verify_token, only: :login
+  skip_before_action :verify_token, only: [:login, :google_oauth2]
 
   def login
     user = User.find_by(email: params[:email])
@@ -18,6 +19,29 @@ class Api::AuthController < Api::ApplicationController
     else
       render json: { error: 'Email hoặc mật khẩu không đúng' }, status: :unauthorized
     end
+  end
+
+  def google_oauth2
+    access_token = params[:access_token]
+
+    user_data = get_user_data(access_token)
+
+    render json: user_data.to_json
+  end
+
+  private
+
+  def get_user_data(access_token)
+    client = Google::Apis::Oauth2V2::Oauth2Service.new
+    client.authorization = Google::Auth::UserRefreshCredentials.new(
+      client_id: '752350881613-bl9sqnl42ur88fpubi0veeqeod3ehh8u.apps.googleusercontent.com',
+      client_secret: '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',
+      access_token: access_token
+    )
+
+    user_data = client.get_userinfo
+
+    return user_data
   end
 
 end
