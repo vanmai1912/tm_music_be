@@ -29,6 +29,8 @@ gem 'ruby-mp3info'
 gem 'active_model_serializers'
 gem 'jwt'
 gem 'warden'
+gem 'google-api-client', '~> 0.52'
+gem 'rack-cors'
 
 
 # Use Active Storage variant
