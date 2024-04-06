@@ -34,8 +34,8 @@ class Api::AuthController < Api::ApplicationController
   def get_user_data(access_token)
     client = Google::Apis::Oauth2V2::Oauth2Service.new
     client.authorization = Google::Auth::UserRefreshCredentials.new(
-      client_id: '752350881613-bl9sqnl42ur88fpubi0veeqeod3ehh8u.apps.googleusercontent.com',
-      client_secret: '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',
+      client_id: '',
+      client_secret: '',
       access_token: access_token
     )
 
