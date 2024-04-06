@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     post 'login', to: 'auth#login'
+    post 'google_oauth2', to: 'auth#google_oauth2'
 
     resources :singers, only: [:index, :show] do 
       collection do
