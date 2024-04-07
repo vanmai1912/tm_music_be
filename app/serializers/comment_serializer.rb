@@ -1,5 +1,6 @@
 class CommentSerializer < ActiveModel::Serializer
-    attributes :id, :content, :song_id, :parent_comment_id, :replies, :count_reply
+    attributes :id, :content, :song_id, :parent_comment_id, :replies, :count_reply, :created_at
+    belongs_to :user, serializer: ClientSerializer
 
     def initialize(object, options = {})
         super

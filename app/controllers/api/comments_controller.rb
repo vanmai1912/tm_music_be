@@ -4,5 +4,11 @@ class Api::CommentsController < Api::ApplicationController
         comments = @song.comments.where(parent_comment_id: nil)
         render json: comments, each_serializer: CommentSerializer, is_comment: false
     end
+
+    def show
+        comment = Comment.find(params[:id])
+        comments = comment.replies
+        render json: comments, each_serializer: CommentSerializer, is_comment: false
+    end
       
 end

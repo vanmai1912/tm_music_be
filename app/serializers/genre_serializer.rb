@@ -1,6 +1,8 @@
 class GenreSerializer < ApplicationSerializer
     attributes :id, :title, :description, :songs, :logo
   
+    has_many :albums, each_serializer: AlbumSerializer, is_song: false
+
     def initialize(object, options = {})
       super
       @is_song = options[:is_song]

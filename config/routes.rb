@@ -28,6 +28,8 @@ Rails.application.routes.draw do
       resources :comments, only: [:index]
     end
 
+    resources :comments, only: [:show]    
+
     namespace :me do
       resources :albums, only: [:index, :create, :show]
       resources :histories, only: [:index, :create]

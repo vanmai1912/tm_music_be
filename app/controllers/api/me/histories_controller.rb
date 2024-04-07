@@ -13,6 +13,7 @@ class Api::Me::HistoriesController < Api::ApplicationController
 
     if history.save
       song = Song.find(params[:song_id])
+      @current_user.update(listened_song_id: params[:song_id])
       song.update(views: song.views + 1)      
       render json: {success: 'Đã lưu lịch sử'}, status: :created
     else
