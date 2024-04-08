@@ -1,5 +1,3 @@
-require 'google/apis/oauth2_v2'
-
 class Api::AuthController < Api::ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :verify_token, only: [:login, :google_oauth2]
@@ -22,26 +20,41 @@ class Api::AuthController < Api::ApplicationController
   end
 
   def google_oauth2
-    access_token = params[:access_token]
-
-    user_data = get_user_data(access_token)
-
-    render json: user_data.to_json
+    email = google_oauth2_param[:email]
+    user = User.find_by(email: email)
+  
+    if user.nil?
+      user = User.new(google_oauth2_param)
+      user.password = SecureRandom.hex(10)
+      if user.save
+        token = encode_token(user.id)
+        render json: {
+          data: {
+            client: ClientSerializer.new(user),
+            token: token
+          },
+          status: :ok
+        }
+      else
+        render json: { error: 'Có lỗi xảy ra, vui lòng thử lại sau' }, status: :unprocessable_entity
+      end
+    else
+      token = encode_token(user.id)
+      render json: {
+        data: {
+          client: ClientSerializer.new(user),
+          token: token
+        },
+        status: :ok
+      }
+    end
   end
+  
 
   private
 
-  def get_user_data(access_token)
-    client = Google::Apis::Oauth2V2::Oauth2Service.new
-    client.authorization = Google::Auth::UserRefreshCredentials.new(
-      client_id: '',
-      client_secret: '',
-      access_token: access_token
-    )
-
-    user_data = client.get_userinfo
-
-    return user_data
+  def google_oauth2_param
+    params.permit(:email, :first_name, :last_name, :avatar, :avatar_oauth2)
   end
 
 end

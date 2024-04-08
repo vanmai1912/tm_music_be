@@ -38,6 +38,7 @@ Rails.application.routes.draw do
           delete 'destroys'
         end
       end
+      get 'search'
       resources :follows, only: [:index, :create, :destroy]
       resources :comments, only: [:create, :destroy, :show]
     end

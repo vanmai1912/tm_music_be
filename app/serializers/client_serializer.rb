@@ -1,10 +1,13 @@
 class ClientSerializer < ActiveModel::Serializer
-  attributes :id, :email, :first_name, :last_name, :avatar
+  include Rails.application.routes.url_helpers
+  
+  attributes :id, :email, :first_name, :last_name, :avatar, :avatar_oauth2
 
   has_one :listened_song, serializer: SongSerializer
 
   def avatar
-    object.avatar.url if object.avatar.attached?
-  end
-  
+    if object && object.avatar.attached?
+      rails_blob_path(object.avatar, only_path: true)
+    end
+  end   
 end
