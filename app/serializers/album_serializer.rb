@@ -1,5 +1,5 @@
 class AlbumSerializer < ApplicationSerializer
-  attributes :id, :title, :description, :logo, :songs
+  attributes :id, :title, :description, :logo, :created_at, :songs, :liked
 
   def initialize(object, options = {})
     super
@@ -16,5 +16,11 @@ class AlbumSerializer < ApplicationSerializer
     if object && object.logo.attached?
       url_for(object.logo)
     end
+  end
+
+  def liked
+    user_ids = object.liked_albums.pluck(:user_id)
+    exists = user_ids.include?($current_user.id)
+    exists
   end
 end

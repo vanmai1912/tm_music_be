@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_08_170127) do
+ActiveRecord::Schema.define(version: 2024_04_15_162102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,9 +113,10 @@ ActiveRecord::Schema.define(version: 2024_04_08_170127) do
   create_table "history_likes", force: :cascade do |t|
     t.string "tag"
     t.bigint "user_id", null: false
-    t.bigint "song_id", null: false
+    t.bigint "song_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "album_id"
     t.index ["song_id"], name: "index_history_likes_on_song_id"
     t.index ["user_id"], name: "index_history_likes_on_user_id"
   end

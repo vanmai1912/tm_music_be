@@ -4,6 +4,7 @@ class Api::ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   before_action :set_cors_headers
   before_action :verify_token
+  before_action :set_current_user_to_global
 
   private
 
@@ -33,5 +34,10 @@ class Api::ApplicationController < ActionController::Base
   def encode_token(user_id)
     payload = { user_id: user_id, exp: Time.now.to_i + 3.hours.to_i } 
     JWT.encode(payload, Rails.application.secrets.secret_key_base, 'HS256')
+  end
+
+  
+  def set_current_user_to_global
+    $current_user = @current_user
   end
 end

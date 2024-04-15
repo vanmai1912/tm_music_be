@@ -31,7 +31,12 @@ Rails.application.routes.draw do
     resources :comments, only: [:show]    
 
     namespace :me do
-      resources :albums, only: [:index, :create, :show]
+      resources :albums, only: [:index, :create, :show] do
+        member do
+          post 'add_song_ids'
+          post 'remove_song_ids'
+        end
+      end
       resources :histories, only: [:index, :create]
       resources :likes, only: [:index, :create] do
         collection do

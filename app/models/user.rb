@@ -13,7 +13,8 @@ class User < ApplicationRecord
   has_many :albums
 
   has_many :history_likes
-  has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
+  has_many :liked_songs, -> { where("tag = 'like' AND song_id IS NOT NULL") }, class_name: 'HistoryLike'
+  has_many :liked_albums, -> { where("tag = 'like' AND album_id IS NOT NULL") }, class_name: 'HistoryLike'
   has_many :history_songs, -> { where(tag: :history) }, class_name: 'HistoryLike'
   has_many :histories, through: :history_songs, source: :song
   has_many :likes, through: :liked_songs, source: :song

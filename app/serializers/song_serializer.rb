@@ -1,5 +1,5 @@
 class SongSerializer < ApplicationSerializer
-  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :logo, :mp3_file
+  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :logo, :mp3_file, :liked, :singers
   belongs_to :genre, serializer: GenreSerializer, is_song: false
 
 
@@ -12,11 +12,21 @@ class SongSerializer < ApplicationSerializer
       url_for(object.logo)
     end
   end
+  
+  def singers
+    object.artists.singer.map { |singer| ArtistSerializer.new(singer) }
+  end
 
   def mp3_file
     if object && object.mp3_file.attached?
       url_for(object.mp3_file)
     end
   end
+
+  def liked
+    user_ids = object.liked_songs.pluck(:user_id)
+    exists = user_ids.include?($current_user.id)
+    exists
+  end 
   
 end
