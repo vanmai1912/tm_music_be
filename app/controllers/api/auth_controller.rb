@@ -5,6 +5,8 @@ class Api::AuthController < Api::ApplicationController
   def login
     user = User.find_by(email: params[:email])
 
+    $current_user = user
+
     if user && user.valid_password?(params[:password])
       token = encode_token(user.id)
       render json: {
@@ -22,6 +24,8 @@ class Api::AuthController < Api::ApplicationController
   def google_oauth2
     email = google_oauth2_param[:email]
     user = User.find_by(email: email)
+
+    $current_user = user
   
     if user.nil?
       user = User.new(google_oauth2_param)

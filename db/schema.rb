@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_15_162102) do
+ActiveRecord::Schema.define(version: 2024_04_16_095802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2024_04_15_162102) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "genre_id"
+    t.string "status"
     t.index ["artist_id"], name: "index_albums_on_artist_id"
     t.index ["user_id"], name: "index_albums_on_user_id"
   end
@@ -121,6 +122,18 @@ ActiveRecord::Schema.define(version: 2024_04_15_162102) do
     t.index ["user_id"], name: "index_history_likes_on_user_id"
   end
 
+  create_table "invitations", force: :cascade do |t|
+    t.string "email"
+    t.integer "song_id"
+    t.string "pin"
+    t.datetime "expired"
+    t.decimal "price", precision: 15, scale: 2
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_invitations_on_user_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.text "lyric"
@@ -167,5 +180,6 @@ ActiveRecord::Schema.define(version: 2024_04_15_162102) do
   add_foreign_key "follows", "users"
   add_foreign_key "history_likes", "songs"
   add_foreign_key "history_likes", "users"
+  add_foreign_key "invitations", "users"
   add_foreign_key "songs", "genres"
 end

@@ -26,7 +26,9 @@ class User < ApplicationRecord
   has_many :comments
 
   has_many :history_likes
+  has_many :invitations
 
+  after_create :create_default_album
 
   private
 
@@ -43,5 +45,9 @@ class User < ApplicationRecord
 
   def set_default_role
     self.role ||= :user
+  end
+
+  def create_default_album
+    self.albums.favorite.create(title: "My Favorite", description: "My favorite album")
   end
 end

@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:show]    
 
     namespace :me do
+      resources :invitations, only: [:index, :create, :show]
       resources :albums, only: [:index, :create, :show] do
         member do
           post 'add_song_ids'

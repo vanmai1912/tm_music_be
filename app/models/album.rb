@@ -11,4 +11,14 @@ class Album < ApplicationRecord
 
   has_one_attached :logo
 
+  enum status: { favorite: "favorite", normal: "normal" }
+
+  after_initialize :set_default_status, if: :new_record?
+
+ private
+
+  def set_default_status
+    self.status ||= :normal
+  end
+  
 end
