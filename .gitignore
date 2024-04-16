@@ -23,7 +23,6 @@
 /public/assets
 .byebug_history
 .env
-Gemfile.lock
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -32,5 +31,11 @@ Gemfile.lock
 /public/packs-test
 /node_modules
 /yarn-error.logs
+yarn-debug.log*
+.yarn-integrity
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
 yarn-debug.log*
 .yarn-integrity
