@@ -25,6 +25,8 @@ class ArtistsController < ApplicationController
 
     respond_to do |format|
       if @artist.save
+        url = CloudinaryService.upload_image(artist_params['avatar'])
+        @artist.update(image: url)
         format.html { redirect_to artist_url(@artist), notice: "Artist was successfully created." }
         format.json { render :show, status: :created, location: @artist }
       else

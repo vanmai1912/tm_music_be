@@ -9,7 +9,8 @@ class User < ApplicationRecord
 
   enum role: { user: 'user', admin: 'admin' }
 
-  has_one_attached :avatar
+  attr_accessor :avatar
+
   has_many :albums
 
   has_many :history_likes

@@ -25,6 +25,8 @@ class GenresController < ApplicationController
 
     respond_to do |format|
       if @genre.save
+        url = CloudinaryService.upload_image(genre_params['logo'])
+        @genre.update(image: url)
         format.html { redirect_to genre_url(@genre), notice: "Genre was successfully created." }
         format.json { render :show, status: :created, location: @genre }
       else
@@ -65,6 +67,6 @@ class GenresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def genre_params
-      params.require(:genre).permit(:title, :description)
+      params.require(:genre).permit(:title, :description, :logo)
     end
 end

@@ -1,5 +1,5 @@
 class SongSerializer < ApplicationSerializer
-  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :logo, :mp3_file, :liked, :singers
+  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers
   belongs_to :genre, serializer: GenreSerializer, is_song: false
 
 
