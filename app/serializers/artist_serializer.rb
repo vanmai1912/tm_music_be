@@ -1,5 +1,5 @@
 class ArtistSerializer < ApplicationSerializer
-  attributes :id, :name, :avatar, :description, :birthdate, :avatar, :songs
+  attributes :id, :name, :image, :description, :birthdate, :songs
 
   has_many :albums, serializer: AlbumSerializer, is_song: false
 
@@ -14,9 +14,4 @@ class ArtistSerializer < ApplicationSerializer
     end
   end
 
-  def avatar
-    if object && object.avatar.attached?
-      url_for(object.avatar)
-    end
-  end
 end

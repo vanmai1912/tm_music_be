@@ -4,35 +4,181 @@
     <div class="header-body">
       <div class="row align-items-end">
         <div class="col">
-
-
-          <!-- Title -->
           <h1 class="header-title">
             <%= @genre.title %>
             <%= link_to edit_genre_path(@genre) do %>
               <i class="mx-2 fa fa-edit"></i> 
             <% end %>
           </h1>
-
         </div>
-        
       </div>
     </div> 
 
-    <!-- Footer -->
-    <div class="header-footer">
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-12">  </div>
+      <% if @genre.image.present? %>
+        <%= link_to edit_genre_path(@genre) do %>
+          <%= image_tag @genre.image, alt: "image", size: "485x325" %>
+        <% end %>
+      <% end %>
 
-
+      <p class="mt-3">
+        <h3>Description:</h3>
+        <p><%= @genre.description %></p>
+      </p>
     </div>
-
+  </div>
 </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @genre.title %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">
+            Danh sách albums của <%=  @genre.title %>
+          </h4>
+        </div>
+        <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
+          <table class="table table-sm table-nowrap card-table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-project">
+                    Logo
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-status">
+                    Title
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Create date
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort text-center" data-sort="project-date">
+                    Number song 
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="list">
+            <% @albums.each do |album| %>
+              <tr>
+                <td class="project-project">
+                  <h4 class="fw-normal mb-1">
+                    <% if album.image.present? %>
+                      <%= link_to album_path(album) do %>
+                        <%= image_tag album.image, alt: "image", size: "50x150" %>
+                      <% end %>
+                    <% end %>
+                  </h4> 
+                </td>
+                <td class="project-status">
+                  <%= link_to "#{album.title}", album_path(album) %>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= album.created_at&.strftime("%d/%m/%Y") %>
+                  </div>
+                </td>
+                <td class="project-date">
+                  <div class="d-flex mx-5">
+                    <%= album.songs.size %>
+                  </div>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @genre.description %>
-</p>
+    </div>
+  </div> 
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">
+            Danh sách nhạc của <%=  @genre.title %>
+          </h4>
+        </div>
+        <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
+          <table class="table table-sm table-nowrap card-table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-project">
+                    Logo
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-status">
+                    Title
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    View
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort text-center" data-sort="project-date">
+                    Create date
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="list">
+            <% @songs.each do |song| %>
+              <tr>
+                <td class="project-project">
+                  <% if song.image.present? %>
+                    <%= link_to song_path(song) do %>
+                      <%= image_tag song.image, alt: "image",  size: "300x150" %>
+                    <% end %>
+                  <% end %>
+                </td>
+                <td class="project-status">
+                  <%= link_to "#{song.title}", song_path(song) %>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= song.views %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= song.created_at&.strftime("%d/%m/%Y") %>
+                  </div>
+                </td>
+
+                <td class="project-project">
+                  <h4 class="fw-normal mb-1">
+                    <% if song.audio.present? %>
+                      <audio controls>
+                        <source src="<%= song.audio %>" type="audio/mpeg">
+                      </audio>                   
+                    <% end %>
+                  </h4> 
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+</div>

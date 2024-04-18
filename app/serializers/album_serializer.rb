@@ -1,5 +1,5 @@
 class AlbumSerializer < ApplicationSerializer
-  attributes :id, :title, :description, :logo, :created_at, :songs, :liked
+  attributes :id, :title, :description, :image, :created_at, :songs, :liked
 
   def initialize(object, options = {})
     super
@@ -9,12 +9,6 @@ class AlbumSerializer < ApplicationSerializer
   def songs
     if @is_song
       object.songs.map { |song| SongSerializer.new(song) }
-    end
-  end
-
-  def logo
-    if object && object.logo.attached?
-      url_for(object.logo)
     end
   end
 

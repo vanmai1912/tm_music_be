@@ -8,6 +8,8 @@ class ArtistsController < ApplicationController
 
   # GET /artists/1 or /artists/1.json
   def show
+    @albums = @artist.albums
+    @songs = @artist.songs
   end
 
   # GET /artists/new
@@ -25,6 +27,11 @@ class ArtistsController < ApplicationController
 
     respond_to do |format|
       if @artist.save
+        if artist_params['avatar']
+          url = CloudinaryService.upload_image(artist_params['avatar'])
+          @artist.update(image: url)
+        end
+        
         format.html { redirect_to artist_url(@artist), notice: "Artist was successfully created." }
         format.json { render :show, status: :created, location: @artist }
       else
@@ -38,6 +45,10 @@ class ArtistsController < ApplicationController
   def update
     respond_to do |format|
       if @artist.update(artist_params)
+        if artist_params['avatar']
+          url = CloudinaryService.upload_image(artist_params['avatar'])
+          @artist.update(image: url)
+        end
         format.html { redirect_to artist_url(@artist), notice: "Artist was successfully updated." }
         format.json { render :show, status: :ok, location: @artist }
       else

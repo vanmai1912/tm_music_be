@@ -30,6 +30,9 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.save
+        url = CloudinaryService.upload_image(song_params['logo'])
+        audio = CloudinaryService.upload_mp3(song_params['mp3_file'])
+        @song.update(image: url, audio: audio)
         format.html { redirect_to song_url(@song), notice: "Song was successfully created." }
         format.json { render :show, status: :created, location: @song }
       else

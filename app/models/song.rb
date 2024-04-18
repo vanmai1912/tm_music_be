@@ -11,8 +11,7 @@ class Song < ApplicationRecord
   has_many :history_likes
   has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
 
-  has_one_attached :logo 
-  has_one_attached :mp3_file
+  attr_accessor :logo, :mp3_file
 
   # before_save :calculate_and_save_duration
 
