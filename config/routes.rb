@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
     namespace :me do
       resources :invitations, only: [:index, :create, :show]
-      resources :albums, only: [:index, :create, :show] do
+      resources :albums, only: [:index, :create, :show, :destroy] do
         member do
           post 'add_song_ids'
           post 'remove_song_ids'

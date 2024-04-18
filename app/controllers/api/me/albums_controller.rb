@@ -59,6 +59,15 @@ class Api::Me::AlbumsController < Api::ApplicationController
     end
   end
 
+  def destroy 
+    album = @current_user.albums.find(params[:id])
+    if album.destroy
+      render json: {success: true, error: "Xóa thành công"}, status: :ok
+    else
+      render json: {success: true, error: "Có lỗi xảy ra"}, status: :unprocessable_entity
+    end
+  end
+
   private
 
     def album_params

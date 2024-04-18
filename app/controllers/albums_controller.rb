@@ -22,6 +22,8 @@ class AlbumsController < ApplicationController
   # POST /albums or /albums.json
   def create
     @album = Album.new(album_params)
+    uploaded_file = album_params['logo']
+    url = CloudinaryService.upload_and_save(uploaded_file)
 
     respond_to do |format|
       if @album.save

@@ -5,7 +5,7 @@ class Album < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :genre, optional: true
 
-  has_many :album_songs
+  has_many :album_songs, dependent: :destroy
   has_many :songs, through: :album_songs
   has_many :liked_albums, -> { where(tag: :like) }, class_name: 'HistoryLike'
 

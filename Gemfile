@@ -31,6 +31,7 @@ gem 'jwt'
 gem 'warden'
 gem 'google-api-client', '~> 0.52'
 gem 'rack-cors'
+gem 'cloudinary'
 
 
 # Use Active Storage variant
