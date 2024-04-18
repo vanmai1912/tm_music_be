@@ -11,9 +11,9 @@
 
             <div class="card">
 
-              <% if album.logo.present? %>
+              <% if album.image.present? %>
                 <%= link_to album_path(album) do %>
-                  <%= image_tag album.logo, alt: "Album Logo", class: "card-img-top", size: "485x325" %>
+                  <%= image_tag album.image, alt: "image", class: "card-img-top", size: "485x325" %>
                 <% end %>
               <% else %>
               <% end %>

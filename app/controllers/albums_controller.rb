@@ -22,11 +22,10 @@ class AlbumsController < ApplicationController
   # POST /albums or /albums.json
   def create
     @album = Album.new(album_params)
-    uploaded_file = album_params['logo']
-    url = CloudinaryService.upload_and_save(uploaded_file)
-
     respond_to do |format|
       if @album.save
+        url = CloudinaryService.upload_image(album_params['logo'])
+        @album.update(image: url)
         format.html { redirect_to album_url(@album), notice: "Album was successfully created." }
         format.json { render :show, status: :created, location: @album }
       else
@@ -67,6 +66,6 @@ class AlbumsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def album_params
-      params.require(:album).permit(:title, :description, :logo)
+      params.require(:album).permit(:title, :description, :logo, :image)
     end
 end
