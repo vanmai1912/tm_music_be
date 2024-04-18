@@ -49,13 +49,28 @@
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
-            <i class="fa fa-regular fa-building"></i> Buildings
+          <%= link_to albums_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fa fa-regular fa-building"></i> Albums
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
-            <i class="fa fa-regular fa-calendar"></i> Schedule
+          <%= link_to genres_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fa fa-regular fa-calendar"></i> Genres
+          <% end %>
+        </li>
+        <li class="nav-item" role="button">
+          <%= link_to artists_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fa fa-regular fa-calendar"></i> Artists
+          <% end %>
+        </li>
+        <li class="nav-item" role="button">
+          <%= link_to songs_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fa fa-regular fa-calendar"></i> Songs
+          <% end %>
+        </li>
+        <li class="nav-item" role="button">
+          <%= link_to albums_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fe fe-user"></i> User
           <% end %>
         </li>
       </ul>

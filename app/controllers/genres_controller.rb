@@ -8,6 +8,8 @@ class GenresController < ApplicationController
 
   # GET /genres/1 or /genres/1.json
   def show
+    @albums = @genre.albums
+    @songs = @genre.songs
   end
 
   # GET /genres/new
@@ -25,8 +27,10 @@ class GenresController < ApplicationController
 
     respond_to do |format|
       if @genre.save
-        url = CloudinaryService.upload_image(genre_params['logo'])
-        @genre.update(image: url)
+        if genre_params['logo']
+          url = CloudinaryService.upload_image(genre_params['logo'])
+          @genre.update(image: url)
+        end
         format.html { redirect_to genre_url(@genre), notice: "Genre was successfully created." }
         format.json { render :show, status: :created, location: @genre }
       else
@@ -40,6 +44,10 @@ class GenresController < ApplicationController
   def update
     respond_to do |format|
       if @genre.update(genre_params)
+        if genre_params['logo']
+          url = CloudinaryService.upload_image(genre_params['logo'])
+          @genre.update(image: url)
+        end
         format.html { redirect_to genre_url(@genre), notice: "Genre was successfully updated." }
         format.json { render :show, status: :ok, location: @genre }
       else
