@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   layout 'layout'
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   private
   def authenticate_user!
