@@ -40,6 +40,7 @@
           <h4 class="card-header-title">
             Danh sách albums của <%=  @genre.title %>
           </h4>
+          <%= link_to 'New album', new_album_path(genre_id: @genre.id), class: "btn btn-sm btn-primary" %>
         </div>
         <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
           <table class="table table-sm table-nowrap card-table table-hover">
@@ -112,6 +113,7 @@
           <h4 class="card-header-title">
             Danh sách nhạc của <%=  @genre.title %>
           </h4>
+          <%= link_to 'New song', new_song_path(genre_id: @genre.id), class: "btn btn-sm btn-primary" %>
         </div>
         <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
           <table class="table table-sm table-nowrap card-table table-hover">

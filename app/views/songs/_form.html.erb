@@ -44,16 +44,16 @@
         </div>
       </div> 
 
-      <div class="col-12 col-md-6">
-        
-      </div>  
-
-      <div class="col-12 col-md-6">
-        <div class="form-group">
-          <%= form.label :genre_id, "Genre", class: "form-label" %>
-          <%= form.select :genre_id, options_from_collection_for_select(Genre.all, :id, :title, song.genre_id), { include_blank: "Select Genre" }, class: "form-control", required: true %>
+      <% if params[:genre_id].present? %>
+        <%= form.hidden_field :genre_id, value: params[:genre_id] %>
+      <% else %>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <%= form.label :genre_id, "Genre", class: "form-label" %>
+            <%= form.select :genre_id, options_for_select(Genre.all.map { |genre| [genre.title, genre.id] }, song.genre_id ), { include_blank: "Select Genre" }, class: "form-control", required: true %>
+          </div>
         </div>
-      </div>
+      <% end %>
 
       <div class="col-12 col-md-6">
         <div class="form-group">
@@ -61,46 +61,50 @@
           <%= form.file_field :logo, class: "form-control" %>
         </div>
       </div>
-      <div class="col-12 col-md-6">
-        <input type="text" id="search_singers" class="" placeholder="Search by Singer Name">
-      </div>
-      <div class="col-12 col-md-6">
-        <input type="text" id="search_authors" class="" placeholder="Search by Author Name">
-      </div>
-      <div class="col-12 col-md-6 bg-white">
-        <div class="form-group">
-          <%= form.label :singers, class: "my-3" %>
-          <div class="checkbox-container">
-            <% Artist.singer.each do |singer| %>
-              <div class="checkbox-singer-group mt-2" data-singer-name="<%= singer.name.downcase %>">
-                <% if singer.avatar.present? %>
-                  <%= image_tag singer.avatar, alt: "Project Avatar", class: "rounded-circle mx-3", size: "80x80" %>
-                <% else %>
-                  <%= image_tag('/profile_default.svg', alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80") %>
-                <% end %>
-                <%= form.check_box :artist_ids, { multiple: true }, singer.id, nil %>
-                <%= form.label "artist_ids_#{singer.id}", singer.name %>
-              </div>
-            <% end %>
-          </div>
+      <div class="d-flex mt-5">
+        <div class="col-12 col-md-6">
+          <input type="text" id="search_singers" class="" placeholder="Search by Singer Name">
+        </div>
+        <div class="col-12 col-md-6">
+          <input type="text" id="search_authors" class="" placeholder="Search by Author Name">
         </div>
       </div>
+      <div class="d-flex">
+        <div class="col-12 col-md-6 bg-white">
+          <div class="form-group">
+            <%= form.label :singers, class: "my-3" %>
+            <div class="checkbox-container">
+              <% Artist.singer.each do |singer| %>
+                <div class="checkbox-singer-group mt-2" data-singer-name="<%= singer.name.downcase %>">
+                  <% if singer.avatar.present? %>
+                    <%= image_tag singer.avatar, alt: "Project Avatar", class: "rounded-circle mx-3", size: "80x80" %>
+                  <% else %>
+                    <%= image_tag('/profile_default.svg', alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80") %>
+                  <% end %>
+                  <%= form.check_box :artist_ids, { multiple: true }, singer.id, nil %>
+                  <%= form.label "artist_ids_#{singer.id}", singer.name %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-12 col-md-6 bg-white">
-        <div class="form-group">
-          <%= form.label :authors, class: "my-3" %>
-          <div class="checkbox-container">
-            <% Artist.author.each do |author| %>
-              <div class="checkbox-author-group mt-2" data-author-name="<%= author.name.downcase %>">
-                <% if author.avatar.present? %>
-                  <%= image_tag author.avatar, alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80" %>
-                <% else %>
-                  <%= image_tag('/profile_default.svg', alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80") %>
-                <% end %>
-                <%= form.check_box :artist_ids, { multiple: true }, author.id, nil %>
-                <%= form.label "artist_ids_#{author.id}", author.name %>
-              </div>
-            <% end %>
+        <div class="col-12 col-md-6 bg-white">
+          <div class="form-group">
+            <%= form.label :authors, class: "my-3" %>
+            <div class="checkbox-container">
+              <% Artist.author.each do |author| %>
+                <div class="checkbox-author-group mt-2" data-author-name="<%= author.name.downcase %>">
+                  <% if author.avatar.present? %>
+                    <%= image_tag author.avatar, alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80" %>
+                  <% else %>
+                    <%= image_tag('/profile_default.svg', alt: "Author Avatar", class: "rounded-circle mx-3", size: "80x80") %>
+                  <% end %>
+                  <%= form.check_box :artist_ids, { multiple: true }, author.id, nil %>
+                  <%= form.label "artist_ids_#{author.id}", author.name %>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

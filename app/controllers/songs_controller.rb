@@ -33,7 +33,7 @@ class SongsController < ApplicationController
         url = CloudinaryService.upload_image(song_params['logo'])
         audio = CloudinaryService.upload_mp3(song_params['mp3_file'])
         @song.update(image: url, audio: audio)
-        format.html { redirect_to song_url(@song), notice: "Song was successfully created." }
+        format.html { redirect_to songs_url, notice: "Song was successfully created." }
         format.json { render :show, status: :created, location: @song }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -46,7 +46,7 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
-        format.html { redirect_to song_url(@song), notice: "Song was successfully updated." }
+        format.html { redirect_to songs_url, notice: "Song was successfully updated." }
         format.json { render :show, status: :ok, location: @song }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -73,6 +73,7 @@ class SongsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def song_params
-      params.require(:song).permit(:title, :lyric, :release_date, :genre_id, :logo, :mp3_file, artist_ids: [])
+      params.require(:song).permit(:title, :lyric, :release_date, :genre_id, :logo, :mp3_file, album_ids: [], artist_ids: [])
     end
+    
 end

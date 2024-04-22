@@ -40,9 +40,7 @@
           <h4 class="card-header-title">
             Danh sách nhạc của <%= @album.title %>
           </h4>
-          <a href="#!" class="btn btn-sm btn-white">
-            Add files
-          </a>
+          <%= link_to 'New song', new_song_path(album_id: @album.id), class: "btn btn-sm btn-primary" %>
         </div>
         <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
           <table class="table table-sm table-nowrap card-table table-hover">
