@@ -1,26 +1,89 @@
+<h1 class="mt-4">Songs</h1>
+
 <div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">
+            Tất cả bài nhạc
+          </h4>
+          <%= link_to 'New song', new_song_path, class: "btn btn-sm btn-primary" %>
+        </div>
+        <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
+          <table class="table table-sm table-nowrap card-table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-project">
+                    Logo
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-status">
+                    Title
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    View
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort text-center" data-sort="project-date">
+                    Create date
+                  </a>
+                </th>
+                <th>Audio</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="list">
+            <% @songs.each do |song| %>
+              <tr>
+                <td class="project-project">
+                  <% if song.image.present? %>
+                    <%= link_to song_path(song) do %>
+                      <%= image_tag song.image, alt: "image",  size: "300x150" %>
+                    <% end %>
+                  <% end %>
+                </td>
+                <td class="project-status">
+                  <%= link_to "#{song.title}", song_path(song) %>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= song.views %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= song.created_at&.strftime("%d/%m/%Y") %>
+                  </div>
+                </td>
 
-  <h1>Songs</h1>
+                <td class="project-project">
+                  <h4 class="fw-normal mb-1">
+                    <% if song.audio.present? %>
+                      <audio controls>
+                        <source src="<%= song.audio %>" type="audio/mpeg">
+                      </audio>                   
+                    <% end %>
+                  </h4> 
+                </td>
 
-  <table>
-    <thead>
-      <tr>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+                <td class="project-project">
+                  <%= link_to 'Edit', edit_song_path(song), class: "btn btn-sm btn-primary d-none d-md-inline-block" %>
+                  <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-primary d-none d-md-inline-block" %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-    <tbody>
-      <% @songs.each do |song| %>
-        <tr>
-          <td><%= link_to 'Show', song %></td>
-          <td><%= link_to 'Edit', edit_song_path(song) %></td>
-          <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Song', new_song_path %>
+    </div>
+  </div> 
 </div>

@@ -10,8 +10,15 @@
           <ul class="list-group list-group-lg list-group-flush list my-n4">
             <% @artists.each do |artist| %>
               <li class="list-group-item">
-                <div class="row align-items-center">
-                  <div class="col ms-n2">
+                <div class="row align-items-center d-flex">
+                  <div class="col col-2">
+                    <% if artist.image.present? %>
+                      <%= link_to edit_artist_path(artist) do %>
+                        <%= image_tag artist.image, alt: "image", size: "160x120" %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="col">
                     <h4 class="mb-1 name">
                       <%= link_to artist.name, artist_path(artist) %>
                     </h4>

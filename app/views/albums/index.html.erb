@@ -11,7 +11,14 @@
             <% @albums.each do |album| %>
               <li class="list-group-item">
                 <div class="row align-items-center">
-                  <div class="col ms-n2">
+                  <div class="col col-2">
+                    <% if album.image.present? %>
+                      <%= link_to edit_album_path(album) do %>
+                        <%= image_tag album.image, alt: "image", size: "160x120" %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="col">
                     <h4 class="mb-1 name">
                       <%= link_to album.title, album_path(album) %>
                     </h4>

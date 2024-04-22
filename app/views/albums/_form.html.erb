@@ -44,6 +44,13 @@
           <%= form.select :genre_id, options_for_select(Genre.all.map { |genre| [genre.title, genre.id] }, album.genre_id ), { include_blank: "Select Genre" }, class: "form-control", required: true %>
         </div>
       </div>
+
+      <div class="col-12 col-md-6">
+        <div class="form-group">
+          <%= form.label :artist_id, "Genre", class: "form-label" %>
+          <%= form.select :artist_id, options_for_select(Artist.all.map { |artist| [artist.name, artist.id] }, album.artist_id ), { include_blank: "Select Artist" }, class: "form-control", required: true %>
+        </div>
+      </div>
     
     </div>
     <div class="actions mb-3">
