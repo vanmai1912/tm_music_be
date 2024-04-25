@@ -10,6 +10,7 @@ class Song < ApplicationRecord
   has_many :comments
   has_many :history_likes
   has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
+  has_many :invoices
 
   attr_accessor :logo, :mp3_file, :album_ids
 end

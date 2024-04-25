@@ -50,6 +50,8 @@ Rails.application.routes.draw do
     end
 
     resources :me, only: [:index]
+    post '/create-checkout-session', to: 'payments#create_checkout_session'
+    resources :stripe_webhooks, only: [:create]
   end
 
   match '*path', to: 'api/application#options', via: :options

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_04_22_165806) do
+ActiveRecord::Schema.define(version: 2024_04_25_181013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -137,6 +137,21 @@ ActiveRecord::Schema.define(version: 2024_04_22_165806) do
     t.index ["user_id"], name: "index_invitations_on_user_id"
   end
 
+  create_table "invoices", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "song_id"
+    t.string "name"
+    t.string "email"
+    t.integer "price"
+    t.string "status"
+    t.string "currency"
+    t.json "stripe_data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_id"], name: "index_invoices_on_song_id"
+    t.index ["user_id"], name: "index_invoices_on_user_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.text "lyric"
@@ -187,5 +202,7 @@ ActiveRecord::Schema.define(version: 2024_04_22_165806) do
   add_foreign_key "history_likes", "songs"
   add_foreign_key "history_likes", "users"
   add_foreign_key "invitations", "users"
+  add_foreign_key "invoices", "songs"
+  add_foreign_key "invoices", "users"
   add_foreign_key "songs", "genres"
 end

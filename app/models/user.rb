@@ -28,6 +28,7 @@ class User < ApplicationRecord
 
   has_many :history_likes
   has_many :invitations
+  has_many :invoices
 
   after_create :create_default_album
 
