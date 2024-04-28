@@ -1,0 +1,93 @@
+<h1 class="mt-4">Clients</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">
+            Danh sách clients
+          </h4>
+        </div>
+        <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
+          <table class="table table-sm table-nowrap card-table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-project">
+                    Avatar
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-status">
+                    Email
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    First Name
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Last Name
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Login by
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort text-center" data-sort="project-date">
+                    Create date
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="list">
+            <% @users.each do |user| %>
+              <tr>
+                <td class="project-project">
+                  <% if user.avatar_oauth2.present? %>
+                    <%= image_tag user.avatar_oauth2, alt: "image",  size: "70x70", class: 'rounded-circle' %>
+                  <% end %>
+                </td>
+                <td class="project-status">
+                  <%= user.email %>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= user.first_name&.titleize %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= user.last_name&.titleize %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= user.login_by&.titleize %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= user.created_at&.strftime("%d/%m/%Y") %>
+                  </div>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center mt-3">
+            <%= paginate @users, theme: 'twitter-bootstrap-3' %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+</div>
+
+

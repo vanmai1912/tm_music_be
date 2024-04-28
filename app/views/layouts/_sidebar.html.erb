@@ -69,7 +69,12 @@
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to albums_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to payments_path, class: "nav-link #{true ? 'active' : ''}" do %>
+            <i class="fe fe-user"></i> Payments
+          <% end %>
+        </li>
+        <li class="nav-item" role="button">
+          <%= link_to clients_path, class: "nav-link #{true ? 'active' : ''}" do %>
             <i class="fe fe-user"></i> User
           <% end %>
         </li>

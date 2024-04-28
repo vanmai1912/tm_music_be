@@ -8,6 +8,7 @@ class User < ApplicationRecord
   before_save :set_default_role, if: :new_record?
 
   enum role: { user: 'user', admin: 'admin' }
+  enum login_by: { facebook: 'facebook', google: 'google' }
 
   attr_accessor :avatar
 

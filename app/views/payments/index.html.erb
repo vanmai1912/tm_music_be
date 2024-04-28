@@ -1,0 +1,101 @@
+<h1 class="mt-4">Payments</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <!-- Projects -->
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-header-title">
+            Danh sách payments
+          </h4>
+        </div>
+        <div class="table-responsive mb-0" data-list='{"valueNames": ["project-project", "project-status", "project-progress", "project-date"]}'>
+          <table class="table table-sm table-nowrap card-table table-hover">
+            <thead>
+              <tr>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-project">
+                    Email
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-status">
+                    User
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Song
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Price
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Status
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort" data-sort="project-progress">
+                    Currency
+                  </a>
+                </th>
+                <th>
+                  <a href="#" class="text-body-secondary list-sort text-center" data-sort="project-date">
+                    Buy date
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="list">
+            <% @invoices.each do |invoice| %>
+              <tr>
+                <td class="project-project">
+                  <%= invoice.email %>
+                </td>
+                <td class="project-status">
+                  <%= invoice.user.last_name&.titleize + '' + invoice.user.first_name&.titleize %>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= invoice.song.title %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= invoice.price/100 %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= invoice.status&.titleize %>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= invoice.currency&.titleize%>
+                  </div>
+                </td>
+                <td class="project-progress">
+                  <div class="d-flex align-items-center">
+                    <%= invoice.created_at&.strftime("%d/%m/%Y") %>
+                  </div>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-center mt-3">
+            <%= paginate @invoices, theme: 'twitter-bootstrap-3' %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+</div>
+
+

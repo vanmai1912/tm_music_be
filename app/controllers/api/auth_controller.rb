@@ -25,13 +25,12 @@ class Api::AuthController < Api::ApplicationController
     email = google_oauth2_param[:email]
     user = User.find_by(email: email)
 
-    $current_user = user
-  
     if user.nil?
       user = User.new(google_oauth2_param)
       user.password = SecureRandom.hex(10)
       if user.save
         token = encode_token(user.id)
+        $current_user = user
         render json: {
           data: {
             client: ClientSerializer.new(user),
@@ -39,11 +38,13 @@ class Api::AuthController < Api::ApplicationController
           },
           status: :ok
         }
+        
       else
         render json: { error: 'Có lỗi xảy ra, vui lòng thử lại sau' }, status: :unprocessable_entity
       end
     else
       token = encode_token(user.id)
+      $current_user = user
       render json: {
         data: {
           client: ClientSerializer.new(user),
@@ -58,7 +59,7 @@ class Api::AuthController < Api::ApplicationController
   private
 
   def google_oauth2_param
-    params.permit(:email, :first_name, :last_name, :avatar, :avatar_oauth2)
+    params.permit(:email, :first_name, :last_name, :avatar, :avatar_oauth2, :login_by)
   end
 
 end

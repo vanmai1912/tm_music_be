@@ -33,7 +33,9 @@ gem 'google-api-client', '~> 0.52'
 gem 'rack-cors'
 gem 'cloudinary'
 gem 'stripe'
-
+gem 'kaminari'
+gem 'ransack'
+gem 'bootstrap-kaminari-views'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'

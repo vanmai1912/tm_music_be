@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :albums
   resources :artists
   resources :genres
+  resources :clients, only: [:index]
+  resources :payments, only: [:index] 
   resources :songs do
     member do
       get 'duration'
