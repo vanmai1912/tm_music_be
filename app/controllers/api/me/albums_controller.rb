@@ -12,6 +12,10 @@ class Api::Me::AlbumsController < Api::ApplicationController
     @album = @current_user.albums.new(album_params)
 
     if @album.save
+      if album_params['logo']
+        url = CloudinaryService.upload_image(album_params['logo'])
+        @album.update(image: url)
+      end
       render json: @album, serializer: AlbumSerializer, is_song: false, status: :created
     else
       render json: { error: 'Không thể lưu album' }, status: :unprocessable_entity
