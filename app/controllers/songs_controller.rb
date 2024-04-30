@@ -5,7 +5,7 @@ class SongsController < ApplicationController
 
   # GET /songs or /songs.json
   def index
-    @songs = Song.all
+    @songs = Song.all.page(params[:page]).per(8)
   end
 
   # GET /songs/1 or /songs/1.json
