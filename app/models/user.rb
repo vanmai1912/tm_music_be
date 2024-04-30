@@ -20,6 +20,7 @@ class User < ApplicationRecord
   has_many :history_songs, -> { where(tag: :history) }, class_name: 'HistoryLike'
   has_many :histories, through: :history_songs, source: :song
   has_many :likes, through: :liked_songs, source: :song
+  has_many :likes_albums, through: :liked_albums, source: :album
 
   has_one :listened_song, class_name: "Song", foreign_key: "id", primary_key: "listened_song_id"
 
@@ -27,7 +28,6 @@ class User < ApplicationRecord
   has_many :artists, through: :follows
   has_many :comments
 
-  has_many :history_likes
   has_many :invitations
   has_many :invoices
 

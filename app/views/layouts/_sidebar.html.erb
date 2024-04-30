@@ -7,7 +7,7 @@
     </button>
 
     <!-- Brand -->
-    <%= link_to image_tag("logo.svg", class: "navbar-brand-img mx-auto"), '', class: "navbar-brand" %>
+    <%= link_to image_tag("logo.svg", class: "navbar-brand-img mx-auto"), '/',  data: {turbolinks: false}, class: "navbar-brand" %>
 
     <!-- User (xs) -->
     <div class="navbar-user d-md-none">
@@ -18,7 +18,6 @@
         <!-- Toggle -->
         <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="avatar avatar-sm avatar-online">
-            <img src="https://pbs.twimg.com/profile_images/945915072274157568/whi90Lfc_400x400.jpg" class="avatar-img rounded-circle">
           </div>
         </a>
 
@@ -44,37 +43,37 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <%= link_to '', class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to '/', class: "nav-link active", data: {turbolinks: false} do %>
             <i class="fe fe-home"></i> Dashboard
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to albums_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to albums_path, class: "nav-link active" do %>
             <i class="fa fa-regular fa-building"></i> Albums
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to genres_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to genres_path, class: "nav-link active" do %>
             <i class="fa fa-regular fa-calendar"></i> Genres
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to artists_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to artists_path, class: "nav-link active" do %>
             <i class="fa fa-regular fa-calendar"></i> Artists
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to songs_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to songs_path, class: "nav-link active" do %>
             <i class="fa fa-regular fa-calendar"></i> Songs
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to payments_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to payments_path, class: "nav-link active" do %>
             <i class="fe fe-user"></i> Payments
           <% end %>
         </li>
         <li class="nav-item" role="button">
-          <%= link_to clients_path, class: "nav-link #{true ? 'active' : ''}" do %>
+          <%= link_to clients_path, class: "nav-link active" do %>
             <i class="fe fe-user"></i> User
           <% end %>
         </li>

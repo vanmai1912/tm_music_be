@@ -59,14 +59,14 @@
     <main id="content" role="main" class="main">
       <%= render "layouts/sidebar" %>
       <div class="main-content" style="padding-top: 12px;">
-        <div class="container-fluid">
+        <%# <div class="container-fluid"> %>
           <% if notice.present? || alert.present? %>
             <p class="notice d-block text-center" style="background-color: <%= alert.present? ? 'red' : 'mediumspringgreen' %>;">
               <%= alert.present? ? alert : notice %>
             </p>
           <% end %>
           <%= yield %>
-        </div>
+        <%# </div> %>
       </div>
     </main>
 

@@ -1,0 +1,220 @@
+<div data-bs-theme="dark">
+  <div class="header pb-5">
+    <div class="container-fluid">
+
+      <!-- Body -->
+      <div class="header-body">
+        <div class="row align-items-end">
+          <div class="col">
+
+            <!-- Pretitle -->
+            <h6 class="header-pretitle">
+              Annual
+            </h6>
+
+            <!-- Title -->
+            <h1 class="header-title">
+              Audience
+            </h1>
+
+          </div>
+          <div class="col-auto">
+
+            <!-- Nav -->
+            <ul class="nav nav-tabs header-tabs">
+              <li class="nav-item" data-toggle="chartline" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="0">
+                <a href="#" class="nav-link text-center active text-white" data-bs-toggle="tab">
+                  <h6 class="header-pretitle">
+                    Customers
+                  </h6>
+                  <h3 class="mb-0">
+                    73.2k
+                  </h3>
+                </a>
+              </li>
+              <li class="nav-item" data-toggle="chartline" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="1">
+                <a href="#" class="nav-link text-center  text-white" data-bs-toggle="tab">
+                  <h6 class="header-pretitle">
+                    Sessions
+                  </h6>
+                  <h3 class="mb-0">
+                    92.1k
+                  </h3>
+                </a>
+              </li>
+              <li class="nav-item" data-toggle="chartline" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="2">
+                <a href="#" class="nav-link text-center  text-white" data-bs-toggle="tab">
+                  <h6 class="header-pretitle">
+                    Conversion
+                  </h6>
+                  <h3 class="mb-0">
+                    50.2%
+                  </h3>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div><!-- / .row -->
+      </div> <!-- / .header-body -->
+
+      <!-- Footer -->
+      <div class="header-footer">
+
+        <!-- Chart -->
+        <div class="chart">
+          <canvas id="audienceChart" class="chart-canvas"></canvas>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-n6">
+  <div class="row">
+    <div class="col-12 col-xl-8">
+
+      <!-- Orders -->
+      <div class="card">
+        <div class="card-header">
+
+          <!-- Title -->
+          <h4 class="card-header-title">
+            Orders
+          </h4>
+
+          <!-- Caption -->
+          <span class="text-body-secondary me-3">
+            Show affiliate:
+          </span>
+
+          <!-- Switch -->
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1">
+            <label class="form-check-label" for="cardToggle"></label>
+          </div>
+
+        </div>
+        <div class="card-body">
+
+          <!-- Chart -->
+          <div class="chart">
+            <canvas id="ordersChart" class="chart-canvas"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-4">
+
+      <!-- Traffic -->
+      <div class="card">
+        <div class="card-header">
+
+          <!-- Title -->
+          <h4 class="card-header-title">
+            Traffic Channels
+          </h4>
+
+        </div>
+        <div class="card-body">
+
+          <!-- Chart -->
+          <div class="chart chart-appended">
+            <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
+          </div>
+
+          <!-- Legend -->
+          <div id="trafficChartLegend" class="chart-legend"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-12 col-lg-6 col-xl">
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center gx-0">
+          <div class="col">
+            <h6 class="text-uppercase text-body-secondary mb-2">
+              Total Payments
+            </h6>
+            <span class="h2 mb-0">
+              <%= @total_payment %>
+            </span>
+          </div>
+          <div class="col-auto">
+            <span class="h2 fe fe-dollar-sign text-body-secondary mb-0"></span>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+  </div>
+  <div class="col-12 col-lg-6 col-xl">
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center gx-0">
+          <div class="col">
+            <h6 class="text-uppercase text-body-secondary mb-2">
+              Total clients
+            </h6>
+            <span class="h2 mb-0">
+              <%= @total_user %>
+            </span>
+
+          </div>
+          <div class="col-auto">
+            <span class="h2 fe fe-briefcase text-body-secondary mb-0"></span>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6 col-xl">
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center gx-0">
+          <div class="col">
+            <h6 class="text-uppercase text-body-secondary mb-2">
+              Total songs
+            </h6>
+            <span class="h2 mb-0">
+              <%= @total_song %>
+            </span>
+          </div>
+          <div class="col-auto">
+            <div class="chart chart-sparkline">
+              <canvas class="chart-canvas" id="sparklineChart"></canvas>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6 col-xl">
+    <div class="card">
+      <div class="card-body">
+        <div class="row align-items-center gx-0">
+          <div class="col">
+            <h6 class="text-uppercase text-body-secondary mb-2">
+                total interactions
+              </h6>
+            <span class="h2 mb-0">
+              <%= @total_interactions %>
+            </span>
+          </div>
+          <div class="col-auto">
+            <span class="h2 fe fe-clock text-body-secondary mb-0"></span>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+  </div> 
+</div>
