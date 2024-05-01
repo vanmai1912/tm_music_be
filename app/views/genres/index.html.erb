@@ -13,14 +13,16 @@
                 <div class="row align-items-center">
                   <div class="col col-2">
                     <% if genre.image.present? %>
-                      <%= link_to edit_genre_path(genre) do %>
+                      <%= link_to genre_path(genre) do %>
                         <%= image_tag genre.image, alt: "image", size: "160x120" %>
                       <% end %>
                     <% end %>
                   </div>
                   <div class="col">
                     <h4 class="mb-1 name">
-                      <a href="#!"><%= genre.title %></a>
+                      <%= link_to genre_path(genre) do %> 
+                        <%= genre.title %>
+                      <% end %>
                     </h4>
                     <p class="card-text small text-body-secondary">
                       <%= genre.description %>

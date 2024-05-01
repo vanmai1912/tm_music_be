@@ -743,6 +743,77 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "stripe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTQ1NjQ1OTR9.6mbRPB5JeneT4JBB5iLm3pm6RP1-gVX4B0QY6G44hN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "song_id",
+									"value": "18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/create-checkout-session",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"create-checkout-session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "suggest",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTQ1ODc3OTB9.BsTubw7PHHTdh6ybuWi8fbHm6yPibe2Yz11KQdKtAWM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/me/suggest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"me",
+								"suggest"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1078,7 +1149,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTM0MzQxMjR9.bjSJv_8B9X4DZ20BpD9PMKQ8eBaZ2zp3BSU90WuOTPk",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTQ1ODc3OTB9.BsTubw7PHHTdh6ybuWi8fbHm6yPibe2Yz11KQdKtAWM",
 							"type": "string"
 						}
 					]
@@ -1086,7 +1157,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/songs/9",
+					"raw": "http://localhost:3000/api/songs/18",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1095,7 +1166,7 @@
 					"path": [
 						"api",
 						"songs",
-						"9"
+						"18"
 					]
 				}
 			},
