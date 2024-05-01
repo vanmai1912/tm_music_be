@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Chào,  <%= @user.email %></h1>
+    <% if @copyright %>
+      <p>
+        Bài nhạc độc quyền <%= @song.title %> vừa được cập nhật, mua để trải nghiệm ngay!
+      </p>
+    <% else %>
+      <p>
+        Nghệ sĩ yêu thích của bạn vừa cập nhật bài nhạc mới: <%= @song.title %>, trải nghiệm ngay!
+      </p>
+    <% end %>
+  </body>
+</html>

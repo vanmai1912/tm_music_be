@@ -13,4 +13,23 @@ class Song < ApplicationRecord
   has_many :invoices
 
   attr_accessor :logo, :mp3_file, :album_ids
+
+  after_create :send_email_to_user
+
+  private
+
+  def send_email_to_user
+    followed_users = []
+    if self.copyright 
+      followed_users = User.all
+    else
+      self.artists.each do |artist|
+        followed_users += artist.users
+      end
+    end
+    followed_users.uniq.each do |user|
+      UserMailer.send_email_after_create_song(user, self, self.copyright).deliver_now
+    end
+  end
+
 end
