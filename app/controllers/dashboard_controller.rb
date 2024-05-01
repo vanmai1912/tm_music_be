@@ -4,6 +4,7 @@ class DashboardController < ApplicationController
     @total_user = User.all.size
     @total_song = Song.all.size
     @total_interactions = HistoryLike.like.size + Comment.all.size
+    @songs = Song.order(views: :desc).first(10)
   end
 
   def client_chart

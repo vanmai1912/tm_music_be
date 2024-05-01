@@ -199,4 +199,91 @@
     </div>
   </div>
   </div> 
+
+  <div class="row">
+  <div class="col-12">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <h4 class="card-header-title">
+              Top 10 Views
+            </h4>
+
+          </div>
+        </div> 
+      </div>
+      <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+        <table class="table table-sm table-nowrap card-table">
+          <thead>
+            <tr>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-project">
+                  Logo
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-status">
+                  Title
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-progress">
+                  Singer
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Genres
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Views
+                </a>
+              </th>
+               <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  CREATE DATE
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <% @songs.each do |song| %>
+              <tr>
+                <td class="goal-project">
+                  <% if song.image.present? %>
+                    <%= image_tag song.image, alt: "image",  size: "50x50", class: 'rounded-circle' %>
+                  <% end %>
+                </td>
+                <td class="goal-status">
+                  <%= song.title %>
+                </td>
+                <td class="goal-progress">
+                  <% song.artists.singer.each_with_index do |artist, index| %>
+                    <%= artist.name %>
+                    <%= ", " unless index == song.artists.size - 1 %>
+                  <% end %>
+                </td>
+                <td class="goal-date">
+                  <%= song.genre&.title %>
+                </td>
+                <td class="goal-date">
+                  <%= song.views %>
+                </td>
+                <td class="goal-date">
+                  <%= song.created_at&.strftime("%d/%m/%Y") %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  </div> 
 </div>
