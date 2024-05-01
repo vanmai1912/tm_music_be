@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
     @total_payment = sprintf('%.2f', Invoice.sum(:price) / 100.0).to_f
     @total_user = User.all.size
     @total_song = Song.all.size
-    @total_interactions = HistoryLike.all.size + Comment.all.size
+    @total_interactions = HistoryLike.like.size + Comment.all.size
   end
 
   def client_chart
@@ -34,6 +34,23 @@ class DashboardController < ApplicationController
     render json: data
   end
 
+  def status_chart
+    views = HistoryLike.history.where("EXTRACT(YEAR FROM created_at) = ?", Date.today.year)
+    likes = HistoryLike.like.where("EXTRACT(YEAR FROM created_at) = ?", Date.today.year)
+    comments = Comment.where("EXTRACT(YEAR FROM created_at) = ?", Date.today.year)
+  
+    current_year_view = calculate_monthly_views(views)
+    current_year_interactions = calculate_monthly_interactions(likes, comments)
+  
+    data = {
+      views: current_year_view.values_at(*1..12),
+      interactions: current_year_interactions.values_at(*1..12)
+    }
+  
+    render json: data
+  end
+   
+
   private
 
   def calculate_monthly_summary(payments)
@@ -41,6 +58,28 @@ class DashboardController < ApplicationController
     payments.each do |payment|
       month = payment.created_at.month
       summary[month] += payment.price/100.0
+    end
+    summary
+  end
+
+  def calculate_monthly_views(views)
+    summary = Hash.new(0)
+    views.each do |view|
+      month = view.created_at.month
+      summary[month] += 1
+    end
+    summary
+  end
+
+  def calculate_monthly_interactions(likes, comments)
+    summary = Hash.new(0)
+    likes.each do |like|
+      month = like.created_at.month
+      summary[month] += 1
+    end
+    comments.each do |comment|
+      month = comment.created_at.month
+      summary[month] += 1
     end
     summary
   end

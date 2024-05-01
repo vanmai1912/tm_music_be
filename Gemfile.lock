@@ -147,6 +147,8 @@ GEM
       multi_json (~> 1.11)
       os (>= 0.9, < 2.0)
       signet (>= 0.16, < 2.a)
+    groupdate (6.2.1)
+      activesupport (>= 5.2)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -360,7 +362,6 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
-  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -373,6 +374,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   google-api-client (~> 0.52)
+  groupdate
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jwt
