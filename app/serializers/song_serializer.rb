@@ -1,5 +1,5 @@
 class SongSerializer < ApplicationSerializer
-  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers
+  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers, :owner
   belongs_to :genre, serializer: GenreSerializer, is_song: false
 
 
@@ -10,6 +10,17 @@ class SongSerializer < ApplicationSerializer
   def logo
     if object && object.logo.attached?
       url_for(object.logo)
+    end
+  end
+
+  def owner
+    if object.copyright
+      invoice = Invoice.where(song_id: object.id, user_id: $current_user.id).first
+      if invoice
+        true
+      else
+        false
+      end
     end
   end
   
