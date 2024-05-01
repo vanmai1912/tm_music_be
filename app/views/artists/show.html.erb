@@ -1,20 +1,18 @@
 <div class="header">
 
-    <!-- Body -->
-    <div class="header-body">
-      <div class="row align-items-end">
-        <div class="col">
-          <h1 class="header-title">
-            <%= @artist.name %>
-            <%= link_to edit_artist_path(@artist) do %>
-              <i class="mx-2 fa fa-edit"></i> 
-            <% end %>
-          </h1>
-        </div>
-      </div>
-    </div> 
-
 <div class="container-fluid mt-3">
+  <div class="header-body">
+    <div class="row align-items-end">
+      <div class="col">
+        <h1 class="header-title">
+          <%= @artist.name %>
+          <%= link_to edit_artist_path(@artist) do %>
+            <i class="mx-2 fa fa-edit"></i> 
+          <% end %>
+        </h1>
+      </div>
+    </div>
+  </div> 
   <div class="row">
     <div class="col-12">  </div>
       <% if @artist.image.present? %>
