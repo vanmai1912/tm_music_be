@@ -1,14 +1,15 @@
 class Api::SongsController < Api::ApplicationController
   def index
-    if params[:page].present?
-      per_page = 10
-      page_number = params[:page].to_i
-      offset = (page_number - 1) * per_page
-      songs = Song.offset(offset).limit(per_page)
+    if params[:copyright].present? && params[:copyright] == 'true'
+      songs = Song.where(copyright: true)
     else
-      songs = Song.first 10
+      songs = Song.where(copyright: false)
     end
-    render json: songs, each_serializer: SongSerializer
+    songs = songs.page(params[:page]).per(10)
+    render json: {
+      songs: songs,
+      total_pages: songs.total_pages
+    }, each_serializer: SongSerializer
   end
 
   def show 

@@ -4,7 +4,7 @@ class SongSerializer < ApplicationSerializer
 
 
   def release_date
-    object.release_date.strftime('%Y-%m-%d')
+    object.release_date&.strftime('%Y-%m-%d')
   end
 
   def logo

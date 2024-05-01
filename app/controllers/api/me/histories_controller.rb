@@ -1,8 +1,11 @@
 class Api::Me::HistoriesController < Api::ApplicationController
   def index
-    histories = @current_user.histories
+    histories = @current_user.histories.page(params[:page]).per(10)
     if histories
-      render json: histories, each_serializer: SongSerializer
+      render json: {
+        histories: histories,
+        total_pages: histories.total_pages
+      }, each_serializer: SongSerializer
     else
       render json: {}, status: :ok
     end

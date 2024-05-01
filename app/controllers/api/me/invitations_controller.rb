@@ -24,7 +24,7 @@ class Api::Me::InvitationsController < Api::ApplicationController
   end
 
   def show
-    invitation = Invitation.where(pin: params[:id].to_s).first
+    invitation = Invitation.where(pin: params[:id].to_s, user_id: @current_user.id).first
     if invitation 
       if @current_user.albums.favorite&.first
         @current_user.albums.favorite&.first.album_songs.create(song_id: invitation.song_id )

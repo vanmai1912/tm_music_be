@@ -1,8 +1,11 @@
 class Api::Me::AlbumsController < Api::ApplicationController
   def index
-    albums = @current_user.albums
+    albums = @current_user.albums.page(params[:page]).per(10)
     if albums
-      render json: albums, each_serializer: AlbumSerializer, is_song: false
+      render json: {
+        albums: albums,
+        total_pages: albums.total_pages
+      }, each_serializer: AlbumSerializer, is_song: false
     else
       render json: {}, status: :ok
     end
