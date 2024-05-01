@@ -86,56 +86,14 @@ $(document).ready(function() {
     });
   }
 
-  const ordersChart = document.getElementById('ordersChart');
-  const cardToggle = document.getElementById('cardToggle');
-
-  if (ordersChart) {
-    const chartOrder = new Chart(ordersChart, {
-      type: 'bar',
-      options: {
-        scales: {
-          y: {
-            ticks: {
-              callback: function (value) {
-                return '$' + value + 'k';
-              },
-            },
-          },
-        },
-      },
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [
-          {
-            label: 'Sales',
-            data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32],
-            backgroundColor: '#2c7be5',
-          },
-          {
-            label: 'Affiliate',
-            data: [15, 10, 20, 12, 7, 0, 8, 16, 18, 16, 10, 22],
-            backgroundColor: '#d2ddec',
-            hidden: true,
-          },
-        ],
-      },
-    });
-    cardToggle.addEventListener('change', function() {
-      const datasetIndex = parseInt(this.getAttribute('data-dataset'));
-      const dataset = chartOrder.data.datasets[datasetIndex];
-      dataset.hidden = !this.checked;
-      chartOrder.update();
-    });
-  }
-
   fetchDataAndCreateTrafficChart();
+  fetchDataAndCreateOrdersChart();
 });
 
 const fetchDataAndCreateTrafficChart = () => {
   axios.get('/dashboard/client_chart')
     .then(response => {
       const data = response.data;
-      console.log(data)
       createTrafficChart(data); 
     })
     .catch(error => {
@@ -179,3 +137,58 @@ const createTrafficChart = (data) => {
 
   toggleLegendAfterChart(legends);
 };
+
+const fetchDataAndCreateOrdersChart = () => {
+  axios.get('/dashboard/payment_chart')
+    .then(response => {
+      const data = response.data;
+      createOrdersChart(data); 
+    })
+    .catch(error => {
+      console.error('Lỗi khi gửi yêu cầu API:', error);
+    });
+};
+
+const createOrdersChart = (data) => {
+  const ordersChart = document.getElementById('ordersChart');
+  const cardToggle = document.getElementById('cardToggle');
+
+  if (ordersChart) {
+    const chartOrder = new Chart(ordersChart, {
+      type: 'bar',
+      options: {
+        scales: {
+          y: {
+            ticks: {
+              callback: function (value) {
+                return '$' + value;
+              },
+            },
+          },
+        },
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [
+          {
+            label: data.current_year.year,
+            data: data.current_year.data,
+            backgroundColor: '#2c7be5',
+          },
+          {
+            label: data.prev_year.year,
+            data: data.prev_year.data,
+            backgroundColor: '#d2ddec',
+            hidden: true,
+          },
+        ],
+      },
+    });
+    cardToggle.addEventListener('change', function() {
+      const datasetIndex = parseInt(this.getAttribute('data-dataset'));
+      const dataset = chartOrder.data.datasets[datasetIndex];
+      dataset.hidden = !this.checked;
+      chartOrder.update();
+    });
+  }
+}

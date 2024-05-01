@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :dashboard, only: [] do 
     collection do
       get :client_chart
+      get :payment_chart
     end 
   end
   namespace :api, defaults: { format: :json } do
