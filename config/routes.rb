@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "dashboard#index"
 
+  resources :dashboard, only: [] do 
+    collection do
+      get :client_chart
+    end 
+  end
   namespace :api, defaults: { format: :json } do
     post 'login', to: 'auth#login'
     post 'google_oauth2', to: 'auth#google_oauth2'
