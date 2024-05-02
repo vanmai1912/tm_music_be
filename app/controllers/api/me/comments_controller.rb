@@ -26,7 +26,7 @@ class Api::Me::CommentsController < Api::ApplicationController
     private
   
       def comment_params
-        params.permit(:content, :song_id, :parent_comment_id)
+        params.permit(:content, :song_id, :parent_comment_id, :status)
       end
       
   end
