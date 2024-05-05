@@ -6,17 +6,29 @@ class Api::StripeWebhooksController < Api::ApplicationController
 
   def create
     object = params[:data][:object]
-  
-    invoice = Invoice.new(
-      user_id: object[:metadata][:user_id],
-      song_id: object[:metadata][:song_id],
-      name: object[:customer_details][:name],
-      email: object[:customer_details][:email],
-      price: object[:amount_total],
-      status: object[:payment_status],
-      currency: object[:currency],
-      stripe_data: object
-    )
+    if object[:metadata][:song_id].present?
+      invoice = Invoice.new(
+        user_id: object[:metadata][:user_id],
+        song_id: object[:metadata][:song_id],
+        name: object[:customer_details][:name],
+        email: object[:customer_details][:email],
+        price: object[:amount_total],
+        status: object[:payment_status],
+        currency: object[:currency],
+        stripe_data: object
+      )
+    else
+      invoice = UserSubscription.new(
+        user_id: object[:metadata][:user_id],
+        subscription_id: 1,
+        name: object[:customer_details][:name],
+        email: object[:customer_details][:email],
+        price: object[:amount_total],
+        status: object[:payment_status],
+        currency: object[:currency],
+        stripe_data: object
+      )
+    end
   
     if invoice.save
       render json: { success: true, invoice: invoice }

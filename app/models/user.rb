@@ -31,6 +31,9 @@ class User < ApplicationRecord
   has_many :invitations
   has_many :invoices
 
+  has_many :user_subscriptions
+  has_many :subscriptions, through: :user_subscriptions
+
   after_create :create_default_album
 
   private

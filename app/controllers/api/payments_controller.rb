@@ -9,8 +9,8 @@ class Api::PaymentsController < Api::ApplicationController
           quantity: 1,
         }],
         mode: 'payment',
-        success_url: ENV['YOUR_DOMAIN'] + '?success=true',
-        cancel_url: ENV['YOUR_DOMAIN'] + '?success=false',
+        success_url: ENV['CLIENT_DOMAIN'] + '?success=true',
+        cancel_url: ENV['CLIENT_DOMAIN'] + '?success=false',
         metadata: {
           user_id: @current_user.id,
           song_id: params[:song_id]
@@ -23,4 +23,24 @@ class Api::PaymentsController < Api::ApplicationController
   rescue Stripe::StripeError => e
     render json: { error: e.message }, status: :unprocessable_entity
   end
+
+  def create_checkout_submission
+    session = Stripe::Checkout::Session.create({
+      payment_method_types: ['card'],
+      line_items: [{
+        price: ENV['SUB_ID'],
+        quantity: 1,
+      }],
+      mode: 'payment',
+      success_url: ENV['CLIENT_DOMAIN'] + '?success=true',
+      cancel_url: ENV['CLIENT_DOMAIN'] + '?success=false',
+      metadata: {
+        user_id: @current_user.id,
+      }
+    })
+    render json: { url: session.url }
+  rescue Stripe::StripeError => e
+    render json: { error: e.message }, status: :unprocessable_entity
+  end
+  
 end

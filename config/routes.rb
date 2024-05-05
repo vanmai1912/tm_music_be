@@ -61,6 +61,7 @@ Rails.application.routes.draw do
 
     resources :me, only: [:index]
     post '/create-checkout-session', to: 'payments#create_checkout_session'
+    post '/create-checkout-submission', to: 'payments#create_checkout_submission'
     resources :stripe_webhooks, only: [:create]
   end
 
