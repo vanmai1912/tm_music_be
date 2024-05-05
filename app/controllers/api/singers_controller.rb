@@ -2,9 +2,9 @@ class Api::SingersController < Api::ApplicationController
   def index
     singers = Artist.singer.page(params[:page]).per(10)
     render json: {
-      singers: singers,
+      singers: ActiveModel::Serializer::CollectionSerializer.new(singers, each_serializer: ArtistSerializer,is_song: false),
       total_pages: singers.total_pages
-    }, each_serializer: ArtistSerializer, is_song: false
+    }
   end
 
   def show 

@@ -7,9 +7,9 @@ class Api::SongsController < Api::ApplicationController
     end
     songs = songs.page(params[:page]).per(10)
     render json: {
-      songs: songs,
+      songs: ActiveModel::Serializer::CollectionSerializer.new(songs, each_serializer: SongSerializer),
       total_pages: songs.total_pages
-    }, each_serializer: SongSerializer
+    }
   end
 
   def show 

@@ -1,4 +1,4 @@
-class CommentSerializer < ActiveModel::Serializer
+class CommentSerializer < ApplicationSerializer
     attributes :id, :content, :song_id, :parent_comment_id, :status, :replies, :count_reply, :created_at
     belongs_to :user, serializer: ClientSerializer
 

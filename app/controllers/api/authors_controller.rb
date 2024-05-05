@@ -2,9 +2,9 @@ class Api::AuthorsController < Api::ApplicationController
   def index
     authors = Artist.author.page(params[:page]).per(10)
     render json: {
-      authors: authors,
+      authors: ActiveModel::Serializer::CollectionSerializer.new(authors, each_serializer: ArtistSerializer,is_song: false),
       total_pages: authors.total_pages
-    }, each_serializer: ArtistSerializer, is_song: false
+    }
   end
 
   def show 

@@ -3,9 +3,9 @@ class Api::Me::AlbumsController < Api::ApplicationController
     albums = @current_user.albums.page(params[:page]).per(10)
     if albums
       render json: {
-        albums: albums,
+        albums: ActiveModel::Serializer::CollectionSerializer.new(albums, each_serializer: AlbumSerializer,is_song: false),
         total_pages: albums.total_pages
-      }, each_serializer: AlbumSerializer, is_song: false
+      }
     else
       render json: {}, status: :ok
     end
@@ -58,7 +58,7 @@ class Api::Me::AlbumsController < Api::ApplicationController
   end
   
   def show 
-    album = @current_user.albums.find(params[:id])
+    album = @current_user.albums.where(id: params[:id]).first
     if album
       render json: album, serializer: AlbumSerializer, is_song: true
     else

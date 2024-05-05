@@ -3,9 +3,9 @@ class Api::Me::LikesController < Api::ApplicationController
         likes = @current_user.likes.page(params[:page]).per(10)
         if likes
             render json: {
-                likes: likes,
+                likes: ActiveModel::Serializer::CollectionSerializer.new(likes, each_serializer: SongSerializer),
                 total_pages: likes.total_pages
-            }, each_serializer: SongSerializer
+            }
         else
             render json: {}, status: :ok
         end
