@@ -30,7 +30,11 @@ Rails.application.routes.draw do
         get 'albums'
       end
     end
-    resources :genres, only: [:index, :show]
+    resources :genres, only: [:index, :show] do
+      member do
+        get :albums
+      end
+    end
     resources :authors, only: [:index, :create, :show]
     resources :albums, only: [:index, :create, :show]
     resources :songs, only: [:index, :create, :show] do 
