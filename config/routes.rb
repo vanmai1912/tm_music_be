@@ -50,6 +50,7 @@ Rails.application.routes.draw do
         member do
           post 'add_song_ids'
           post 'remove_song_ids'
+          post :songs
         end
       end
       resources :histories, only: [:index, :create]

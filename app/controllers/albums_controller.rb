@@ -8,7 +8,7 @@ class AlbumsController < ApplicationController
 
   # GET /albums/1 or /albums/1.json
   def show
-    @songs = @album.songs
+    @songs = @album.songs.where(private: false)
   end
 
   # GET /albums/new
