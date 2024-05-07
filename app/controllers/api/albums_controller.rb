@@ -1,6 +1,7 @@
 class Api::AlbumsController < Api::ApplicationController
   def index
-    albums = Album.where(artist_id: nil, user_id: nil).page(params[:page]).per(10)
+    page_size = params[:page_size] || 10
+    albums = Album.where(artist_id: nil, user_id: nil).page(params[:page]).per(page_size)
     render json: {
       albums: ActiveModel::Serializer::CollectionSerializer.new(albums, each_serializer: AlbumSerializer,is_song: false),
       total_pages: albums.total_pages

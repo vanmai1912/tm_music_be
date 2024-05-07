@@ -1,6 +1,7 @@
 class Api::Me::LikesController < Api::ApplicationController
     def index
-        likes = @current_user.likes.page(params[:page]).per(10)
+        page_size = params[:page_size] || 10
+        likes = @current_user.likes.page(params[:page]).per(page_size)
         if likes
             render json: {
                 likes: ActiveModel::Serializer::CollectionSerializer.new(likes, each_serializer: SongSerializer),

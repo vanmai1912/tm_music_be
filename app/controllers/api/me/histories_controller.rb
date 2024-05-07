@@ -1,6 +1,7 @@
 class Api::Me::HistoriesController < Api::ApplicationController
   def index
-    histories = @current_user.histories.page(params[:page]).per(10)
+    page_size = params[:page_size] || 10
+    histories = @current_user.histories.page(params[:page]).per(page_size)
     if histories
       render json: {
         histories: ActiveModel::Serializer::CollectionSerializer.new(histories, each_serializer: SongSerializer),

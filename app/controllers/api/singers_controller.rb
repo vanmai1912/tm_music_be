@@ -1,6 +1,7 @@
 class Api::SingersController < Api::ApplicationController
   def index
-    singers = Artist.singer.page(params[:page]).per(10)
+    page_size = params[:page_size] || 10
+    singers = Artist.singer.page(params[:page]).per(page_size)
     render json: {
       singers: ActiveModel::Serializer::CollectionSerializer.new(singers, each_serializer: ArtistSerializer,is_song: false),
       total_pages: singers.total_pages

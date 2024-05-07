@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     namespace :me do
       resources :invitations, only: [:index, :create, :show]
       resources :suggest, only: [:index]
-      resources :albums, only: [:index, :create, :show, :destroy] do
+      resources :albums, only: [:index, :create, :show, :destroy, :update] do
         member do
           post 'add_song_ids'
           post 'remove_song_ids'

@@ -1,6 +1,7 @@
 class Api::Me::AlbumsController < Api::ApplicationController
   def index
-    albums = @current_user.albums.page(params[:page]).per(10)
+    page_size = params[:page_size] || 10
+    albums = @current_user.albums.page(params[:page]).per(page_size)
     if albums
       render json: {
         albums: ActiveModel::Serializer::CollectionSerializer.new(albums, each_serializer: AlbumSerializer,is_song: false),
@@ -24,6 +25,18 @@ class Api::Me::AlbumsController < Api::ApplicationController
       render json: { error: 'Không thể lưu album' }, status: :unprocessable_entity
     end
   end
+
+  def update
+    album = @current_user.albums.find(params[:id])
+    if album && album_params['logo']
+      url = CloudinaryService.upload_image(album_params['logo'])
+      album.update(image: url)
+      render json: album, serializer: AlbumSerializer, is_song: false, status: :created
+    else
+      render json: { error: 'Không thể  upload' }, status: :unprocessable_entity
+    end
+  end
+
 
   def add_song_ids
     album = @current_user.albums.find(params[:id])

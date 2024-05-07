@@ -1,6 +1,7 @@
 class Api::GenresController < Api::ApplicationController
     def index
-      genres = Genre.all.page(params[:page]).per(10)
+      page_size = params[:page_size] || 10
+      genres = Genre.all.page(params[:page]).per(page_size)
       render json: {
         genres: ActiveModel::Serializer::CollectionSerializer.new(genres, each_serializer: GenreSerializer,is_song: false),
         total_pages: genres.total_pages
