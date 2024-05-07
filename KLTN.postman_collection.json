@@ -814,6 +814,104 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "submission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTQ5NDMwNDJ9.bwC09wUmMQm1RZ_--M_z0uZpSUwRHqM9tXx9tqbd2e4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/create-checkout-submission",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"create-checkout-submission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new song in album",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE3MTUwMjI3ODR9.ucxeSn3I8_HjarX0EBHpDwwrEnjKbLmDeR5Hyz_hh7M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "lyric",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/nus/Documents/App/image/2c08a7ab065e5f9aba3623638126c33d.jpg"
+								},
+								{
+									"key": "mp3_file",
+									"type": "file",
+									"src": "/home/nus/Documents/App/image/conmuangangqua.jpg"
+								},
+								{
+									"key": "artist_ids",
+									"value": "[18, 21]",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/me/albums/6/songs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"me",
+								"albums",
+								"6",
+								"songs"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1323,6 +1421,28 @@
 			"request": {
 				"method": "GET",
 				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get albums in genre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/genres/6/albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"genres",
+						"6",
+						"albums"
+					]
+				}
 			},
 			"response": []
 		}
