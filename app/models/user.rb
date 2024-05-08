@@ -13,6 +13,7 @@ class User < ApplicationRecord
   attr_accessor :avatar
 
   has_many :albums
+  has_many :rooms
 
   has_many :history_likes
   has_many :liked_songs, -> { where("tag = 'like' AND song_id IS NOT NULL") }, class_name: 'HistoryLike'
