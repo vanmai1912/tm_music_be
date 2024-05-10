@@ -20,7 +20,8 @@ class RoomChannel < ApplicationCable::Channel
       }
       room_data = {
         id: room.id,
-        name: room.name
+        name: room.name,
+        current_time: room.calculate_time_difference
       }
       stream_from "room_channel_#{room.id}"
       ActionCable.server.broadcast("room_channel_#{room.id}", { user: user_data, room: room_data, total_user: total_user})
