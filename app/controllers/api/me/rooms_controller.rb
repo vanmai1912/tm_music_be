@@ -1,8 +1,12 @@
 class Api::Me::RoomsController < Api::ApplicationController
 
   def index
-    rooms = Room.where(user_id: [@current_user.id, nil])
-    render json: rooms, status: :ok
+    public_rooms = Room.where(user_id: nil)
+    private_rooms = Room.where(user_id: @current_user.id)
+    render json: {
+      public_rooms: public_rooms,
+      private_rooms: private_rooms
+    }, status: :ok
   end
 
 end
