@@ -92,12 +92,16 @@ class Api::Me::AlbumsController < Api::ApplicationController
     album = @current_user.albums.find(params[:id])
     song = album.songs.new(song_params)
     if song.save
-      url = CloudinaryService.upload_image(song_params['logo'])
-      audio = CloudinaryService.upload_mp3(song_params['mp3_file'])
+      if song_params['logo'].present?
+        url = CloudinaryService.upload_image(song_params['logo'])
+      end
+      if song_params['mp3_file'].present?
+        audio = CloudinaryService.upload_mp3(song_params['mp3_file'])
+      end
       song.update(image: url, audio: audio, private: true)
       render json: {success: true, status: "Thêm thành công"}, status: :ok
     else
-      render json: {success: true, error: "Có lỗi xảy ra"}, status: :unprocessable_entity
+      render json: {success: false, error: "Có lỗi xảy ra"}, status: :unprocessable_entity
     end
   end
 
@@ -108,7 +112,7 @@ class Api::Me::AlbumsController < Api::ApplicationController
     end
 
     def song_params
-      params.permit(:title, :lyric, :release_date, :genre_id, :logo, :copyright, :mp3_file, album_ids: [], artist_ids: [])
+      params.permit(:title, :lyric, :release_date, :genre_id, :copyright, :mp3_file, :logo, album_ids: [], artist_ids: [])
     end
     
 end
