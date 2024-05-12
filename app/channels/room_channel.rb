@@ -21,7 +21,9 @@ class RoomChannel < ApplicationCable::Channel
       room_data = {
         id: room.id,
         name: room.name,
-        current_time: room.calculate_time_difference
+        url: room.url,
+        current_time: room.calculate_time_difference,
+        owner_id: room.user ? room.user .id : -100
       }
       stream_from "room_channel_#{room.id}"
       ActionCable.server.broadcast("room_channel_#{room.id}", { user: user_data, room: room_data, total_user: total_user })
@@ -45,7 +47,10 @@ class RoomChannel < ApplicationCable::Channel
       }
       room_data = {
         id: room.id,
-        name: room.name
+        name: room.name,
+        url: room.url,
+        current_time: room.calculate_time_difference,
+        owner_id: room.user ? room.user .id : -100
       }
       stop_all_streams
       ActionCable.server.broadcast("room_channel_#{room.id}", { user: user_data, room: room_data, total_user: total_user })
@@ -91,5 +96,25 @@ class RoomChannel < ApplicationCable::Channel
       reject 
     end
   end  
+
+  def change_url(data)
+    room = Room.where(uuid: params['uuid']).first
+    user_id = params['user_id']
+    
+    if room && user_id
+      user = User.find(user_id)
+      url = data['url']
+      room.update(url: url)
+      room_data = {
+        id: room.id,
+        name: room.name,
+        url: room.url,
+        current_time: 1
+      }
+      ActionCable.server.broadcast("room_channel_#{room.id}", { type: 'change_url', room: room_data })
+    else
+      reject 
+    end
+  end
   
 end
