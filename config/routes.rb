@@ -51,7 +51,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:show]    
 
     namespace :me do
-      resources :rooms, only: [:index]
+      resources :rooms, only: [:index, :create, :destroy]
       resources :invitations, only: [:index, :create, :show]
       resources :suggest, only: [:index]
       resources :albums, only: [:index, :create, :show, :destroy, :update] do

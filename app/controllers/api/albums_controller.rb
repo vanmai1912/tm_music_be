@@ -15,8 +15,12 @@ class Api::AlbumsController < Api::ApplicationController
 
   def related
     album = Album.find(params[:id])
-    albums = album.genre.albums.where.not(id: album.id).limit(3)
-    render json: albums, each_serializer: AlbumSerializer, is_song: false
+    if album && album.genre && album.genre.albums
+      albums = album.genre.albums.where.not(id: album.id).limit(3)
+      render json: albums, each_serializer: AlbumSerializer, is_song: false
+    else
+      render json: []
+    end
   end
   
 end
