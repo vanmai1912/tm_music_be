@@ -2,7 +2,7 @@ class Room < ApplicationRecord
   belongs_to :user, optional: true
   has_many :user_rooms, dependent: :destroy
   has_many :users, through: :user_rooms
-  has_many :chat_rooms
+  has_many :chat_rooms, dependent: :destroy
 
   def calculate_time_difference
     # Kiểm tra xem total_time có tồn tại không

@@ -7,10 +7,10 @@ class Song < ApplicationRecord
 
   belongs_to :genre, optional: true
 
-  has_many :comments
-  has_many :history_likes
-  has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike'
-  has_many :invoices
+  has_many :comments, dependent: :destroy
+  has_many :history_likes, dependent: :destroy
+  has_many :liked_songs, -> { where(tag: :like) }, class_name: 'HistoryLike', dependent: :destroy
+  has_many :invoices, dependent: :destroy
 
   attr_accessor :logo, :mp3_file, :album_ids
 
