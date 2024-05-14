@@ -596,3 +596,93 @@ denvau_songs = [
 #   song = denvau.songs.create(s)
 #   song.album_songs.create(album_id: album_denvau.reload.id)
 # end
+
+toctien_songs = [
+    {
+        "title": "Ngày Mai (Vũ Điệu Cồng Chiêng)",
+        "lyric": """Ngày mai, ánh sáng chiếu rọi khắp muôn nơi
+        Ngày mai, khát khao bùng cháy trong tim
+        Từng nhịp cồng chiêng hòa vang
+        Cùng niềm vui mới trong lòng""",
+        "views": 90000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715710130/music_kl/song/5150063729145721649_jgj7l1.mp3",
+    },
+    {
+        "title": "Big Girls Don't Cry",
+        "lyric": """Big girls don't cry
+        We keep our heads up to the sky
+        We keep on moving forward
+        No matter what they say""",
+        "views": 80000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/d/2/9/fd29d76c211a7750c27c1533f4f90677.jpg",
+        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/d8d7660f4921a26a363fbd8048a91367?authen=exp=1715882971~acl=/d8d7660f4921a26a363fbd8048a91367/*~hmac=7ffb059f1e5801bedb6e2426ebcb6790",
+    },
+    {
+        "title": "Có Ai Thương Em Như Anh",
+        "lyric": """Có ai thương em như anh
+        Để anh luôn ở bên em
+        Cùng em chia sẻ mỗi buồn vui
+        Để anh được thấy nụ cười em mỗi ngày""",
+        "views": 85000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+        "audio": "https://vnso-zn-23-tf-mp3-s1-zmp3.zmdcdn.me/4d32aaa37be792b9cbf6/4083951574028405225?authen=exp=1715883024~acl=/4d32aaa37be792b9cbf6/*~hmac=bcec7fc10efeb05e14153acc9c7608dd&fs=MTmUsICxNTmUsICxMDIyNDM5OXx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+    },
+    {
+        "title": "Em Không Là Duy Nhất",
+        "lyric": """Em không là duy nhất
+        Trong tim anh bao la thế giới
+        Nhưng em biết chắc một điều
+        Em là người yêu anh nhất""",
+        "views": 70000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/1/6/1648b6e7471b456f8aa2f9f19c93e5be_1488428433.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/d9fa4fe5cc88b362d7ba2d71234404e8?authen=exp=1715883058~acl=/d9fa4fe5cc88b362d7ba2d71234404e8/*~hmac=0e282503896fe85695c639bcfb1d524b",
+    },
+    {
+        "title": "Hôm Nay Tôi Cô Đơn Quá",
+        "lyric": """Hôm nay tôi cô đơn quá
+        Bao nỗi nhớ như sóng xô vào lòng
+        Thời gian trôi qua thật nhanh
+        Để lại đây những niềm đau không nguôi""",
+        "views": 65000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/7/d/7df58098752de92365ac1080bc79a495_1503939281.jpg",
+        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/bdce670335e596de27fe12a9ab05380d?authen=exp=1715883104~acl=/bdce670335e596de27fe12a9ab05380d/*~hmac=4a8fa6e0c346e7f45e6907c020a8d01e",
+    },
+    {
+        "title": "Walk Away",
+        "lyric": """Walk away from the pain
+        Walk away from the sorrow
+        Walk away from the things
+        That keep you down""",
+        "views": 60000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/f/d/fdde6122efe6abd2eb6a0db7e3e0ddea_1493952467.jpg",
+        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/911c9158b1b2964f50c2cdff67d2b6b2?authen=exp=1715883142~acl=/911c9158b1b2964f50c2cdff67d2b6b2/*~hmac=1abaeb6a32ab88cd44e7f8fbfacc60c7",
+    },
+    {
+        "title": "I'm In Love",
+        "lyric": """I'm in love with you
+        Every moment feels so right
+        You make my heart beat fast
+        When you're near""",
+        "views": 55000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/7/e/7efa1b239a5907a2ea291b1cb4a3e52d_1465528310.jpg",
+        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/289cc4deaf5dc54850f0305ce86de336?authen=exp=1715883183~acl=/289cc4deaf5dc54850f0305ce86de336/*~hmac=9f237c7ebb37b13e61e4d03e0e953971",
+    },
+    {
+        "title": "Một Cọng Tóc Mai",
+        "lyric": """Một cọng tóc mai, nhẹ nhàng lướt qua
+        Màu thời gian trôi, chẳng thể quay lại
+        Nhưng tình yêu anh trao em mãi mãi
+        Như cọng tóc mai, không phai nhòa""",
+        "views": 45000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/c/0/7/c/c07c3ae64b05904e2e3c1cf274cced69.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/bddd80f90c01ddac93cb7bc92bc55f7d?authen=exp=1715883248~acl=/bddd80f90c01ddac93cb7bc92bc55f7d/*~hmac=59f609fb9164556a5c0592fe68d77be8",
+    }
+]
+toctien = Artist.where(name: 'Tóc Tiên').first
+album_toctien = toctien.albums.create(title: 'Những Bài Hát Hay Nhất Của Tóc Tiên', description: "Ở đây có 906090, #CATENA và nhiều Hit khác của Tóc Tiên", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/b/1/5/f/b15f7223405952cea169faa6fd3b8acc.jpg")
+toctien_songs.each do |s|
+  song = toctien.songs.create(s)
+  song.album_songs.create(album_id: album_toctien.reload.id)
+end
+
