@@ -679,10 +679,89 @@ toctien_songs = [
         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/bddd80f90c01ddac93cb7bc92bc55f7d?authen=exp=1715883248~acl=/bddd80f90c01ddac93cb7bc92bc55f7d/*~hmac=59f609fb9164556a5c0592fe68d77be8",
     }
 ]
-toctien = Artist.where(name: 'Tóc Tiên').first
-album_toctien = toctien.albums.create(title: 'Những Bài Hát Hay Nhất Của Tóc Tiên', description: "Ở đây có 906090, #CATENA và nhiều Hit khác của Tóc Tiên", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/b/1/5/f/b15f7223405952cea169faa6fd3b8acc.jpg")
-toctien_songs.each do |s|
-  song = toctien.songs.create(s)
-  song.album_songs.create(album_id: album_toctien.reload.id)
-end
+# toctien = Artist.where(name: 'Tóc Tiên').first
+# album_toctien = toctien.albums.create(title: 'Những Bài Hát Hay Nhất Của Tóc Tiên', description: "Ở đây có 906090, #CATENA và nhiều Hit khác của Tóc Tiên", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/b/1/5/f/b15f7223405952cea169faa6fd3b8acc.jpg")
+# toctien_songs.each do |s|
+#   song = toctien.songs.create(s)
+#   song.album_songs.create(album_id: album_toctien.reload.id)
+# end
+min_songs = [
+    {
+        "title": "Em Mới Là Người Yêu Anh",
+        "lyric": """Em mới là người yêu anh
+        Anh nhìn em đi, em mới là người yêu anh
+        Anh nhìn em đi, em mới là người yêu anh
+        Anh nhìn em đi, em mới là người yêu anh""",
+        "views": 90000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/c/6/1/0/c6105cd1d620d84451fc43d201e2dbe8.jpg",
+        "audio": "https://vnso-zn-23-tf-mp3-s1-zmp3.zmdcdn.me/dcfe12624c22a57cfc33/4992240161696586666?authen=exp=1715883060~acl=/dcfe12624c22a57cfc33/*~hmac=b7b3e2a56713d3ced725e5091189d79c&fs=MTmUsICxNTmUsICxMDI2MDkwN3x3ZWJWNnwwfDQyLjExOS4xNDkdUngMTM",
+    },
+    {
+        "title": "Ghen",
+        "lyric": """Anh đi một vòng quanh phố phường
+        Cùng với người yêu mới
+        Em không còn muốn biết chuyện đó nữa
+        Anh muốn làm gì thì làm""",
+        "views": 80000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/d/0/d05f9b3c87cf7ccda468174b28757489_1495770525.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/810449635fc68d44ba19225d0ce84217?authen=exp=1715883536~acl=/810449635fc68d44ba19225d0ce84217/*~hmac=d999c1479da822e37b5f2603e874ae69",
+    },
+    {
+        "title": "Vì Yêu Cứ Đâm Đầu",
+        "lyric": """Điều gì làm em muốn tìm lại
+        Điều gì làm em chạy đến bên anh
+        Điều gì làm anh khác với bao người
+        Vì yêu cứ đâm đầu""",
+        "views": 85000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/0/3/a/c/03ac82cbf720ea5d24129dc5a2bb5bbe.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f23d71b23eab22ea6f780badfff7a05c?authen=exp=1715883191~acl=/f23d71b23eab22ea6f780badfff7a05c/*~hmac=58ba4fd1998c7920e7fa7572768eb43d",
+    },
+    {
+        "title": "Nếu Ngày Ấy",
+        "lyric": """Nếu ngày ấy, ta không gặp nhau
+        Ta chẳng biết sẽ đi về đâu
+        Nếu ngày ấy, ta không cùng nhau
+        Ta có lẽ chẳng đau lòng vì nhau""",
+        "views": 70000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/e/6/2/2e623cb7cfeb88441fbcacfa2121290c.jpg",
+        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/3b60c37717c27bdf64801cea00892b92?authen=exp=1715883608~acl=/3b60c37717c27bdf64801cea00892b92/*~hmac=48d7e28b22db04e43374979de2b8af66",
+    },
+    {
+        "title": "Y.Ê.U",
+        "lyric": """Baby, I just wanna love you
+        Baby, I just wanna hold you
+        Baby, I just wanna kiss you
+        Baby, I just wanna Y.Ê.U""",
+        "views": 65000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/8/3/834cdaf8e7552c17ed918a75cbba7ea8_1426588739.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8125434d47c19e86fe04a2527ea75c65?authen=exp=1715883337~acl=/8125434d47c19e86fe04a2527ea75c65/*~hmac=383651ed050fabf5c92aa184c540ca45",
+    },
+    {
+        "title": "Có Em Chờ",
+        "lyric": """Đã bao giờ anh nghĩ đến em
+        Trong những giấc mơ êm đềm
+        Trái tim anh bỗng lạnh lùng
+        Khi không có em bên cạnh""",
+        "views": 60000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/f/3/f3ccdd27d2000e3f9255a7e3e2c48800_1493277779.jpg",
+        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/9b2027e736d862600454e292113dd4e2?authen=exp=1715883188~acl=/9b2027e736d862600454e292113dd4e2/*~hmac=e79563270039e63f70805843686c58b6",
+    },
+    {
+        "title": "Bùa Yêu",
+        "lyric": """Em là bùa yêu
+        Làm tan biến nỗi buồn anh mang theo
+        Em là bùa yêu
+        Làm cho anh quên hết đi những phiền muộn""",
+        "views": 55000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/c/d/5/3cd5abfdd0224a98757fef8707344077.jpg",
+        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/68eff7de415c3e6c8e8336c8b0525b07?authen=exp=1715883718~acl=/68eff7de415c3e6c8e8336c8b0525b07/*~hmac=90796c9ab0bbb292c1a559d1c1d430f6",
+    },
+]
+
+# min = Artist.where(name: 'Min').first
+# album_min = min.albums.create(title: 'Những Bài Hát Hay Nhất Của Min', description: "Say 'Cà Phê' như say âm nhạc của MIN", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/7/9/f/7/79f73acbfc1d0c86599eafd713dab948.jpg")
+# min_songs.each do |s|
+#   song = min.songs.create(s)
+#   song.album_songs.create(album_id: album_min.reload.id)
+# end
 
