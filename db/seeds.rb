@@ -320,7 +320,7 @@ singers = [
 # end
 
 # sontung = Artist.where(name: 'Sơn Tùng M-TP').first
-# album_sontung = sontung.albums.create(title: 'Những Bài Hát Hay Nhất Của Sơn Tùng M-TP', description: 'Sơn Tùng M-TP và bộ sưu tập siêu Hit')
+# album_sontung = sontung.albums.create(title: 'Những Bài Hát Hay Nhất Của Sơn Tùng M-TP', description: 'Sơn Tùng M-TP và bộ sưu tập siêu Hit', image: "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/e/7/7/e/e77e66089e244c0c61188189be25f8ba.jpg")
 # sontung_songs = [
 #     {
 #         "title": "Lạc Trôi",
@@ -529,8 +529,70 @@ singers = [
 #     }
 # ]
 # hoangthuylinh = Artist.where(name: 'Hoàng Thùy Linh').first
-# album_hoangthuylinh = hoangthuylinh.albums.create(title: 'Những Bài Hát Hay Nhất Của Hoàng Thùy Linh', description: "'See Tình' và series Hit tạo nên thương hiệu")
+# album_hoangthuylinh = hoangthuylinh.albums.create(title: 'Những Bài Hát Hay Nhất Của Hoàng Thùy Linh', description: "'See Tình' và series Hit tạo nên thương hiệu", image: "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/e/2/c/e/e2cef78e01149e8c1bbb07113de37963.jpg")
 # hoangthuylinh_songs.each do |s|
 #   song = hoangthuylinh.songs.create(s)
 #   song.album_songs.create(album_id: album_hoangthuylinh.reload.id)
+# end
+
+denvau_songs = [
+    {
+        "title": "Lối Nhỏ",
+        "lyric": """Anh đi tìm em ở khắp mọi nơi
+        Anh tìm niềm vui nơi ánh sáng chói lòa
+        Rồi anh chợt nhận ra rằng
+        Niềm vui của anh là khi thấy em cười
+        Như một cơn gió thoảng qua
+        Nhẹ nhàng nhưng làm anh xao xuyến""",
+        "views": 80000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/d/0/b/2d0bf08b1ddaa07bae28208796316571.jpg",
+        "audio": "https://mp3-s1-zmp3.zmdcdn.me/edc75a7a3f3dd6638f2c/7555328701165411356?authen=exp=1715881435~acl=/edc75a7a3f3dd6638f2c/*~hmac=429500fceff30a3dbd1943b7bb8d125e&fs=MTmUsICxNTmUsICwODYzNTIxN3x3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+    },
+    {
+        "title": "Bài Này Chill Phết",
+        "lyric": """Và em ơi bài này chill phết
+        Em thích nghe thì lên xe anh đưa đón về
+        Thả hồn bay giữa trời mây
+        Ngắm hoàng hôn nhẹ nhàng trôi qua""",
+        "views": 75000000,
+        "image": "https://link.to/image_bai_nay_chill_phet.jpg",
+        "audio": "https://link.to/audio_bai_nay_chill_phet.mp3",
+    },
+    {
+        "title": "Anh Đếch Cần Gì Nhiều Ngoài Em",
+        "lyric": """Anh đếch cần gì nhiều ngoài em
+        Chỉ cần thấy em cười là đủ
+        Mọi phiền muộn tan biến trong phút chốc
+        Chỉ cần em bên cạnh là anh thấy hạnh phúc""",
+        "views": 68000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/e/9/3/9/e939d0144b95dfc5f13cb0ea4427fc69.jpg",
+        "audio": "https://mp3-s1-zmp3.zmdcdn.me/10f7a29164d58d8bd4c4/6881725539374191715?authen=exp=1715881550~acl=/10f7a29164d58d8bd4c4/*~hmac=d95a80ffe11d94a356e4c3de40ff6244&fs=MTmUsICxNTmUsICwODmUsIC1MDQ5Mnx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+    },
+    {
+        "title": "Đi Theo Bóng Mặt Trời",
+        "lyric": """Anh đi theo bóng mặt trời
+        Bỏ lại sau lưng những muộn phiền
+        Anh tìm đến những giấc mơ
+        Để thấy cuộc đời thêm ý nghĩa""",
+        "views": 67000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+        "audio": "https://vnso-zn-23-tf-mp3-s1-zmp3.zmdcdn.me/d15f0d34d870312e6861/1444089018733256086?authen=exp=1715881664~acl=/d15f0d34d870312e6861/*~hmac=188acc4f59cd3c98455da17f5a9901ac&fs=MTmUsICxNTmUsICwODg2NDAzM3x3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+    },
+    {
+        "title": "Ta Cứ Đi Cùng Nhau",
+        "lyric": """Ta cứ đi cùng nhau
+        Qua bao nhiêu chặng đường dài
+        Dẫu biết rằng phía trước còn nhiều gian khó
+        Nhưng chỉ cần có nhau, mọi thứ sẽ ổn thôi""",
+        "views": 69000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715708958/music_kl/song/195612218813491902_em7yah.mp3",
+    }
+]
+
+# denvau = Artist.where(name: 'Đen Vâu').first
+# album_denvau = denvau.albums.create(title: 'Những Bài Hát Hay Nhất Của Đen', description: "Cùng thưởng thức những bài hát hay nhất của Đen", image: "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/e/9/3/9/e939d0144b95dfc5f13cb0ea4427fc69.jpg")
+# denvau_songs.each do |s|
+#   song = denvau.songs.create(s)
+#   song.album_songs.create(album_id: album_denvau.reload.id)
 # end
