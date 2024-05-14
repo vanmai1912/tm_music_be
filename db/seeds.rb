@@ -765,3 +765,72 @@ min_songs = [
 #   song.album_songs.create(album_id: album_min.reload.id)
 # end
 
+
+noophuocthinhh_songs = [
+    {
+        "title": "I'm Still Loving You",
+        "lyric": """Baby, I'm still loving you
+        Even though you're far away
+        My love for you will never fade
+        You're always in my heart""",
+        "views": 90000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/4/b/a/b/4babed2b761a5c8bc4194fff5041ae02.jpg",
+        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8531d8a56b5f2d20bb8d492fe7ca3ba2?authen=exp=1715884130~acl=/8531d8a56b5f2d20bb8d492fe7ca3ba2/*~hmac=7e61c25d05d32defc65cd4331e3cff56",
+    },
+    {
+        "title": "Gạt Đi Nước Mắt",
+        "lyric": """Gạt đi nước mắt
+        Đừng để nỗi buồn ở lại trong tim
+        Hãy cùng nhau vượt qua mọi khó khăn
+        Bên nhau mãi mãi""",
+        "views": 80000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/f/f/ffe87169f25c5bc08d1333bda3d3acb5_1410318537.jpg",
+        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/2ff89b6d6130a5009328a3ac63139004?authen=exp=1715884104~acl=/2ff89b6d6130a5009328a3ac63139004/*~hmac=7fa49810b537bdf6ed5f007c048ff278",
+    },
+    {
+        "title": "Yêu Một Người Sao Buồn Đến Thế",
+        "lyric": """Yêu một người sao buồn đến thế
+        Khi người ấy không hiểu cho lòng mình
+        Nhưng dù thế nào, lòng anh vẫn yêu
+        Dù người ấy có thay đổi""",
+        "views": 85000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/0/c/3/e0c341956a038d66b77275b20168b112.jpg",
+        "audio": "https://a128-z3.zmdcdn.me/da480813244602bf90aefb20335b9a3c?authen=exp=1715883618~acl=/da480813244602bf90aefb20335b9a3c/*~hmac=28ad2a80dd4dc86cac77d7b352b27d95",
+    },
+    {
+        "title": "Chạm Khẽ Tim Anh Một Chút Thôi",
+        "lyric": """Chạm khẽ tim anh một chút thôi
+        Để anh biết em ở bên cạnh
+        Những giây phút này, chỉ cần em ở đây
+        Là đủ để anh cảm thấy hạnh phúc""",
+        "views": 65000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/6/e/6e7b90d96728c9ce1b4c2a104d622784_1507799020.jpg",
+        "audio": "https://a128-z3.zmdcdn.me/8d41537cf3c8aa3e46a55b72af051c81?authen=exp=1715884248~acl=/8d41537cf3c8aa3e46a55b72af051c81/*~hmac=a36572ebd7d82984af90ef29993a10e6",
+    },
+    {
+        "title": "Hơn Cả Yêu",
+        "lyric": """Anh muốn nói với em
+        Rằng anh yêu em hơn cả những gì anh nghĩ
+        Hơn cả những gì anh muốn
+        Và hơn cả những gì anh làm""",
+        "views": 55000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/a/9/e/d/a9ed142c215560ab45f6b2b433907f90.jpg",
+        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/7e5e7add1b34dce07b5f45f6996f28f1?authen=exp=1715883842~acl=/7e5e7add1b34dce07b5f45f6996f28f1/*~hmac=c1c8a751495f3aae8ddd9620e0265a8c",
+    },
+    {
+        "title": "Cậu Làm Gì Đấy",
+        "lyric": """Cậu làm gì đấy, để lòng anh đau như vậy
+        Cậu làm gì đấy, để anh phải khóc như vậy
+        Cậu làm gì đấy, để trái tim anh tan vỡ""",
+        "views": 50000000,
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/avatars/3/6/b/7/36b7280d00f7a7378d91a6556762c6ca.jpg",
+        "audio": "https://a128-z3.zmdcdn.me/93ba4f39231838245a18276eb005624f?authen=exp=1715884349~acl=/93ba4f39231838245a18276eb005624f/*~hmac=c4247ca1bb49a8c3cac4642bf4c7a9ea",
+    },
+  ]
+
+phuocthing = Artist.where(name: 'Noo Phước Thịnh').first
+album_phuocthing = phuocthing.albums.create(title: 'Những Bài Hát Hay Nhất Của Noo Phước Thịnh', description: "Noo Phước Thịnh và bộ sưu tập Hit gây thương nhớ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/a/9/0/e/a90ec09aa0a101049eba0a61487f2abe.jpg")
+noophuocthinhh_songs.each do |s|
+  song = phuocthing.songs.create(s)
+  song.album_songs.create(album_id: album_phuocthing.reload.id)
+end
