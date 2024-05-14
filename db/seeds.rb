@@ -319,157 +319,218 @@ singers = [
 #   Artist.singer.create(s)
 # end
 
-sontung = Artist.where(name: 'Sơn Tùng M-TP').first
-album_sontung = sontung.albums.create(title: 'Những Bài Hát Hay Nhất Của Sơn Tùng M-TP', description: 'Sơn Tùng M-TP và bộ sưu tập siêu Hit')
-sontung_songs = [
-    {
-        "title": "Lạc Trôi",
-        "lyric": """Một mình nơi đây lạc vào chốn nào
-        Bàn chân phiêu du cùng ngàn ánh sao
-        Dường như là định mệnh đổi thay
-        Mà lòng này vẫn vương vấn sâu đây
-        Một mình nơi đây chờ một chốn nào
-        Để em ngồi lại cùng tình khúc đau
-        Để nỗi sầu càng thêm quặn thắt
-        Để mùa xuân cứ mãi lạc trôi
-        Một mình nơi đây... lạc trôi giữa trời...""",
-        "views": 100000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/9/8/98e3677733fe52439823d1b1992d9ae0_1483242323.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/756ba39ea07eb46c326b54c999668a94?authen=exp=1715877345~acl=/756ba39ea07eb46c326b54c999668a94/*~hmac=5f08b5ec01f44ddefd6d1ee9da20b2f3",
-    },
-    {
-        "title": "Chạy Ngay Đi",
-        "lyric": """Chạy ngay đi trước khi
-        Mọi điều dần tồi tệ hơn
-        Trước khi lòng hận thù vây kín
-        Nơi đây không còn gì cho nhau
-        Chạy ngay đi trước khi
-        Lòng hận thù vây kín trong tâm trí em
-        Khi em đã không còn là em...""",
-        "views": 95000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/a/6/8/b/a68b0bd411adc076ba6c3fb00203a1ee.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2a92caeb62976d2492509c102ced2711?authen=exp=1715876893~acl=/2a92caeb62976d2492509c102ced2711/*~hmac=6678fc58b6606026b0316d58248f0ebd",
-    },
-    {
-        "title": "Nơi Này Có Anh",
-        "lyric": """Anh sẽ mãi là người yêu em
-        Cùng em đi qua bao đoạn đường
-        Dẫu thế giới này đổi thay
-        Nhưng tim anh vẫn luôn ở đây
-        Ngày qua ngày dài rộng
-        Dù có bao nhiêu điều khiến em vui
-        Anh vẫn luôn ở bên em
-        Và nói yêu em từng ngày...""",
-        "views": 90000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/3/a/3a9e48bc4df7bbde3acea30cc267f609_1487066528.jpg",
-        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/d17d79105dfcbf67208389c9e8fc9c42?authen=exp=1715876995~acl=/d17d79105dfcbf67208389c9e8fc9c42/*~hmac=56ea1fb166768e7c158ddfe89d970ac2",
-    },
-    {
-        "title": "Hãy Trao Cho Anh",
-        "lyric": """Hãy trao cho anh
-        Hãy trao cho anh
-        Hãy trao cho anh những yêu thương nồng cháy
-        Và hãy trao cho anh
-        Hãy trao cho anh
-        Hãy trao cho anh những phút giây thần tiên...""",
-        "views": 85000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/4/1/8/2/41822760163a4da22ddad1e5285e6149.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/593b54ec5c26d2a70585377cf9374578?authen=exp=1715877605~acl=/593b54ec5c26d2a70585377cf9374578/*~hmac=337b24e6d91696afbdf5fdcc6d9d86b4",
-    },
-    {
-        "title": "Cơn Mưa Ngang Qua",
-        "lyric": """Và cơn mưa ngang qua
-        Làm nhòa đi bao nhiêu kỉ niệm
-        Đã từng có nhau
-        Yêu thương nhau
-        Nhưng giờ đây chỉ còn là giấc mơ
-        Cơn mưa ngang qua...""",
-        "views": 80000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/5/b/5baa8ca8d0dd072524767a4aff6d400c_1349715671.jpg",
-        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/2f6fc8622021b60dcaeb1c011b32be75?authen=exp=1715877442~acl=/2f6fc8622021b60dcaeb1c011b32be75/*~hmac=37b52e082ff3d15b35ccd2e8bb50bc40",
-    },
-    {
-        "title": "Âm Thầm Bên Em",
-        "lyric": """Một ngày nào đó
-        Một ngày nào đó em sẽ hiểu
-        Rằng những yêu thương anh dành cho em
-        Chẳng bao giờ vơi đi
-        Dù có cách xa ngàn đời
-        Anh vẫn âm thầm bên em...""",
-        "views": 75000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/a/3/1/c/a31cdf3a266dfa3fcbc586613c70ed52.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/523fb2bef2f3b3c8497c6efe228c737c?authen=exp=1715877975~acl=/523fb2bef2f3b3c8497c6efe228c737c/*~hmac=921e85a20f9ab8d315770a2865ff71ae",
-    },
-    {
-        "title": "Em Của Ngày Hôm Qua",
-        "lyric": """Đừng vội vàng em ơi
-        Xin hãy là em của ngày hôm qua
-        Đừng để tình yêu ta phai nhòa
-        Chỉ vì những nỗi đau
-        Dù cho biết bao đớn đau
-        Xin em đừng buông tay anh...""",
-        "views": 70000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/b/1/b1c839bd85e6081614cf770278b8f782_1387164001.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2703e88a97437d7bc2ddc8ddb7e4de12?authen=exp=1715877608~acl=/2703e88a97437d7bc2ddc8ddb7e4de12/*~hmac=eacb7a285f8b4ab211631ef5d598918d",
-    },
-    {
-        "title": "Chúng Ta Của Hiện Tại",
-        "lyric": """Người ơi người ở đừng về
-        Bỏ mặc anh bơ vơ giữa dòng đời
-        Tìm hoài không thấy lối thoát
-        Chỉ thấy bóng dáng em
-        Như làn mây trôi xa...""",
-        "views": 65000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/0/c/6/f0c6b74652e9ed643f3183c7617aaa30.jpg",
-        "audio": "https://a128-z3.zmdcdn.me/9d5e0023aeae573dc1000abec75de7d1?authen=exp=1715877888~acl=/9d5e0023aeae573dc1000abec75de7d1/*~hmac=4fd2acc0795e6352f09932f4d461ef76",
-    },
-    {
-        "title": "Buông Đôi Tay Nhau Ra",
-        "lyric": """Buông đôi tay nhau ra
-        Buông đôi tay nhau ra
-        Để lòng này nhẹ nhàng hơn
-        Để tình yêu trôi qua
-        Như cơn mưa ngừng rơi...""",
-        "views": 60000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/d/d/a/edda9844722bd0484b317662754e7417.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8c8a6c647f1a5575de199da7727c7a10?authen=exp=1715878150~acl=/8c8a6c647f1a5575de199da7727c7a10/*~hmac=dcbb821c006563b482bb9159ab1efde4",
-    },
-    {
-        "title": "Chắc Ai Đó Sẽ Về",
-        "lyric": """Chắc ai đó sẽ về
-        Chắc ai đó sẽ về
-        Một ngày không xa
-        Khi anh chẳng còn đợi chờ...""",
-        "views": 55000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/8/f/8ffcb87289215a21d169d7a8ec86162e_1414118901.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f179de5dd723a556efdf18a13247a512?authen=exp=1715878127~acl=/f179de5dd723a556efdf18a13247a512/*~hmac=96f040c3edea9fd2011f12aef8f8dade",
-    },
-    {
-        "title": "Một Năm Mới Bình An",
-        "lyric": """Một năm mới bình an
-        Cùng nhau nắm tay vui đùa
-        Chúc nhau những điều may mắn
-        Đến bên nhau yêu thương...
-        Một năm mới bình an...""",
-        "views": 50000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/7/7/e/277ef3a66a67413690578905dbb85451.jpg",
-        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/419d792482e1678c9f1b7a1e50c292f3?authen=exp=1715878903~acl=/419d792482e1678c9f1b7a1e50c292f3/*~hmac=a676a62f68623f3f36286c6788a20965",
-    },
-    {
-        "title": "Muộn Rồi Mà Sao Còn",
-        "lyric": """Muộn rồi mà sao còn
-        Nhìn lên trần nhà rồi quay ra
-        Lại còn nằm mơ bóng dáng ai kìa
-        Đêm nay lại nhớ nhớ đến phát điên
-        Ngày còn đâu biết tên
-        Muộn rồi mà sao còn...""",
-        "views": 45000000,
-        "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/f/6/c/ef6c9d4b97048c9911ea6069e968dadb.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/ed296514b07543c8f29162802af28948?authen=exp=1715878965~acl=/ed296514b07543c8f29162802af28948/*~hmac=b8ea4fdc1ffe1cf4a1cacfe060ba47ed",
-    }
-]
+# sontung = Artist.where(name: 'Sơn Tùng M-TP').first
+# album_sontung = sontung.albums.create(title: 'Những Bài Hát Hay Nhất Của Sơn Tùng M-TP', description: 'Sơn Tùng M-TP và bộ sưu tập siêu Hit')
+# sontung_songs = [
+#     {
+#         "title": "Lạc Trôi",
+#         "lyric": """Một mình nơi đây lạc vào chốn nào
+#         Bàn chân phiêu du cùng ngàn ánh sao
+#         Dường như là định mệnh đổi thay
+#         Mà lòng này vẫn vương vấn sâu đây
+#         Một mình nơi đây chờ một chốn nào
+#         Để em ngồi lại cùng tình khúc đau
+#         Để nỗi sầu càng thêm quặn thắt
+#         Để mùa xuân cứ mãi lạc trôi
+#         Một mình nơi đây... lạc trôi giữa trời...""",
+#         "views": 100000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/9/8/98e3677733fe52439823d1b1992d9ae0_1483242323.jpg",
+#         "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/756ba39ea07eb46c326b54c999668a94?authen=exp=1715877345~acl=/756ba39ea07eb46c326b54c999668a94/*~hmac=5f08b5ec01f44ddefd6d1ee9da20b2f3",
+#     },
+#     {
+#         "title": "Chạy Ngay Đi",
+#         "lyric": """Chạy ngay đi trước khi
+#         Mọi điều dần tồi tệ hơn
+#         Trước khi lòng hận thù vây kín
+#         Nơi đây không còn gì cho nhau
+#         Chạy ngay đi trước khi
+#         Lòng hận thù vây kín trong tâm trí em
+#         Khi em đã không còn là em...""",
+#         "views": 95000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/a/6/8/b/a68b0bd411adc076ba6c3fb00203a1ee.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2a92caeb62976d2492509c102ced2711?authen=exp=1715876893~acl=/2a92caeb62976d2492509c102ced2711/*~hmac=6678fc58b6606026b0316d58248f0ebd",
+#     },
+#     {
+#         "title": "Nơi Này Có Anh",
+#         "lyric": """Anh sẽ mãi là người yêu em
+#         Cùng em đi qua bao đoạn đường
+#         Dẫu thế giới này đổi thay
+#         Nhưng tim anh vẫn luôn ở đây
+#         Ngày qua ngày dài rộng
+#         Dù có bao nhiêu điều khiến em vui
+#         Anh vẫn luôn ở bên em
+#         Và nói yêu em từng ngày...""",
+#         "views": 90000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/3/a/3a9e48bc4df7bbde3acea30cc267f609_1487066528.jpg",
+#         "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/d17d79105dfcbf67208389c9e8fc9c42?authen=exp=1715876995~acl=/d17d79105dfcbf67208389c9e8fc9c42/*~hmac=56ea1fb166768e7c158ddfe89d970ac2",
+#     },
+#     {
+#         "title": "Hãy Trao Cho Anh",
+#         "lyric": """Hãy trao cho anh
+#         Hãy trao cho anh
+#         Hãy trao cho anh những yêu thương nồng cháy
+#         Và hãy trao cho anh
+#         Hãy trao cho anh
+#         Hãy trao cho anh những phút giây thần tiên...""",
+#         "views": 85000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/4/1/8/2/41822760163a4da22ddad1e5285e6149.jpg",
+#         "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/593b54ec5c26d2a70585377cf9374578?authen=exp=1715877605~acl=/593b54ec5c26d2a70585377cf9374578/*~hmac=337b24e6d91696afbdf5fdcc6d9d86b4",
+#     },
+#     {
+#         "title": "Cơn Mưa Ngang Qua",
+#         "lyric": """Và cơn mưa ngang qua
+#         Làm nhòa đi bao nhiêu kỉ niệm
+#         Đã từng có nhau
+#         Yêu thương nhau
+#         Nhưng giờ đây chỉ còn là giấc mơ
+#         Cơn mưa ngang qua...""",
+#         "views": 80000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/5/b/5baa8ca8d0dd072524767a4aff6d400c_1349715671.jpg",
+#         "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/2f6fc8622021b60dcaeb1c011b32be75?authen=exp=1715877442~acl=/2f6fc8622021b60dcaeb1c011b32be75/*~hmac=37b52e082ff3d15b35ccd2e8bb50bc40",
+#     },
+#     {
+#         "title": "Âm Thầm Bên Em",
+#         "lyric": """Một ngày nào đó
+#         Một ngày nào đó em sẽ hiểu
+#         Rằng những yêu thương anh dành cho em
+#         Chẳng bao giờ vơi đi
+#         Dù có cách xa ngàn đời
+#         Anh vẫn âm thầm bên em...""",
+#         "views": 75000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/a/3/1/c/a31cdf3a266dfa3fcbc586613c70ed52.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/523fb2bef2f3b3c8497c6efe228c737c?authen=exp=1715877975~acl=/523fb2bef2f3b3c8497c6efe228c737c/*~hmac=921e85a20f9ab8d315770a2865ff71ae",
+#     },
+#     {
+#         "title": "Em Của Ngày Hôm Qua",
+#         "lyric": """Đừng vội vàng em ơi
+#         Xin hãy là em của ngày hôm qua
+#         Đừng để tình yêu ta phai nhòa
+#         Chỉ vì những nỗi đau
+#         Dù cho biết bao đớn đau
+#         Xin em đừng buông tay anh...""",
+#         "views": 70000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/b/1/b1c839bd85e6081614cf770278b8f782_1387164001.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2703e88a97437d7bc2ddc8ddb7e4de12?authen=exp=1715877608~acl=/2703e88a97437d7bc2ddc8ddb7e4de12/*~hmac=eacb7a285f8b4ab211631ef5d598918d",
+#     },
+#     {
+#         "title": "Chúng Ta Của Hiện Tại",
+#         "lyric": """Người ơi người ở đừng về
+#         Bỏ mặc anh bơ vơ giữa dòng đời
+#         Tìm hoài không thấy lối thoát
+#         Chỉ thấy bóng dáng em
+#         Như làn mây trôi xa...""",
+#         "views": 65000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/0/c/6/f0c6b74652e9ed643f3183c7617aaa30.jpg",
+#         "audio": "https://a128-z3.zmdcdn.me/9d5e0023aeae573dc1000abec75de7d1?authen=exp=1715877888~acl=/9d5e0023aeae573dc1000abec75de7d1/*~hmac=4fd2acc0795e6352f09932f4d461ef76",
+#     },
+#     {
+#         "title": "Buông Đôi Tay Nhau Ra",
+#         "lyric": """Buông đôi tay nhau ra
+#         Buông đôi tay nhau ra
+#         Để lòng này nhẹ nhàng hơn
+#         Để tình yêu trôi qua
+#         Như cơn mưa ngừng rơi...""",
+#         "views": 60000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/d/d/a/edda9844722bd0484b317662754e7417.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8c8a6c647f1a5575de199da7727c7a10?authen=exp=1715878150~acl=/8c8a6c647f1a5575de199da7727c7a10/*~hmac=dcbb821c006563b482bb9159ab1efde4",
+#     },
+#     {
+#         "title": "Chắc Ai Đó Sẽ Về",
+#         "lyric": """Chắc ai đó sẽ về
+#         Chắc ai đó sẽ về
+#         Một ngày không xa
+#         Khi anh chẳng còn đợi chờ...""",
+#         "views": 55000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/8/f/8ffcb87289215a21d169d7a8ec86162e_1414118901.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f179de5dd723a556efdf18a13247a512?authen=exp=1715878127~acl=/f179de5dd723a556efdf18a13247a512/*~hmac=96f040c3edea9fd2011f12aef8f8dade",
+#     },
+#     {
+#         "title": "Một Năm Mới Bình An",
+#         "lyric": """Một năm mới bình an
+#         Cùng nhau nắm tay vui đùa
+#         Chúc nhau những điều may mắn
+#         Đến bên nhau yêu thương...
+#         Một năm mới bình an...""",
+#         "views": 50000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/7/7/e/277ef3a66a67413690578905dbb85451.jpg",
+#         "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/419d792482e1678c9f1b7a1e50c292f3?authen=exp=1715878903~acl=/419d792482e1678c9f1b7a1e50c292f3/*~hmac=a676a62f68623f3f36286c6788a20965",
+#     },
+#     {
+#         "title": "Muộn Rồi Mà Sao Còn",
+#         "lyric": """Muộn rồi mà sao còn
+#         Nhìn lên trần nhà rồi quay ra
+#         Lại còn nằm mơ bóng dáng ai kìa
+#         Đêm nay lại nhớ nhớ đến phát điên
+#         Ngày còn đâu biết tên
+#         Muộn rồi mà sao còn...""",
+#         "views": 45000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/f/6/c/ef6c9d4b97048c9911ea6069e968dadb.jpg",
+#         "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/ed296514b07543c8f29162802af28948?authen=exp=1715878965~acl=/ed296514b07543c8f29162802af28948/*~hmac=b8ea4fdc1ffe1cf4a1cacfe060ba47ed",
+#     }
+# ]
 # sontung_songs.each do |s|
 #   song = sontung.songs.create(s)
 #   song.album_songs.create(album_id: album_sontung.reload.id)
 # end
 
+# hoangthuylinh_songs = [
+#     {
+#       "title": "Để Mị Nói Cho Mà Nghe",
+#       "lyric": """Để Mị nói cho mà nghe
+#       Tâm hồn này chẳng để lặng lẽ
+#       Thương cha thương mẹ thương thì thương vậy thôi
+#       Thương mình chẳng thời ai khóc mướn mà lo
+#       Còn chuyện người ta cứ để người ta tính
+#       Đời mình đâu có dài mà héo hon vì ai
+#       Ở đời nhiều khi ngây ngô nhưng ừ thì là mơ""",
+#       "views": 75000000,
+#       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/5/3/7/2537435f53acd84f833ac5f82575899d.jpg",
+#       "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/be642984985c390011bf2b02d6c0f5cb?authen=exp=1715880669~acl=/be642984985c390011bf2b02d6c0f5cb/*~hmac=6deb7ec0dfb38b3f3209dc0846d0dc9d  ",
+#     },
+#     {
+#         "title": "Bánh Trôi Nước",
+#         "lyric": """Thân em vừa trắng lại vừa tròn
+#         Bảy nổi ba chìm với nước non
+#         Rắn nát mặc dầu tay kẻ nặn
+#         Mà em vẫn giữ tấm lòng son""",
+#         "views": 80000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/b/d/d/9/bdd946b0c2f68abb4d6c2ff9b7d400ac.jpg",
+#         "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/8092378f8087a00e487c6937d5005bb5?authen=exp=1715880110~acl=/8092378f8087a00e487c6937d5005bb5/*~hmac=1fe9b17516e3df62cf075db6c6f0bb6e",
+#     },
+#     {
+#         "title": "Kẻ Cắp Gặp Bà Già (Remix)",
+#         "lyric": """Hồi còn nhỏ xíu cứ nghĩ yêu là trò chơi
+#         Lúc lớn mới biết yêu là học đòi
+#         Hồi còn nhỏ xíu cứ nghĩ yêu là chuyện vớ vẩn
+#         Lớn rồi mới thấy chỉ vớ vẩn khi yêu người không ra gì""",
+#         "views": 48000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/0/2/2/3/02233cfbdea8c3cf01583b4d88123f41.jpg",
+#         "audio": "https://vnso-pt-14-tf-mp3-s1-zmp3.zmdcdn.me/2849d0d4b5935ccd0582/3157308852649852305?authen=exp=1715880284~acl=/2849d0d4b5935ccd0582/*~hmac=e5fb2db61715b41e828f1aac05533d3e&fs=MTmUsICxNTmUsICwNzQ4NTAwMHx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+#     },
+#     {
+#         "title": "See Tình",
+#         "lyric": """Oh! Mình yêu thì mình cứ yêu thôi
+#         Vì tình yêu là món quà
+#         Đến lúc ta phải nhận ra
+#         Tình yêu là những giấc mơ dài""",
+#         "views": 42000000,
+#         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/b/4/2/a/b42a33a26f823fed3fbf7f5fcfc7e8fd.jpg",
+#         "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/9e7d02969a2c3781b120732d6787830e?authen=exp=1715880366~acl=/9e7d02969a2c3781b120732d6787830e/*~hmac=1ae597395b5bb3e4a528035dbf85a50e",
+#     },
+#     {
+#       "title": "Em Đây Chẳng Phải Thúy Kiều",
+#       "lyric": """Em đây chẳng phải Thúy Kiều
+#       Thúy Vân lại càng không phải
+#       Nhưng vẫn hồn nhiên yêu đời
+#       Như bao cô gái tuyệt vời""",
+#       "views": 60000000,
+#       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/0/2/2/3/02233cfbdea8c3cf01583b4d88123f41.jpg",
+#       "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715707789/music_kl/song/9214380421917830314_2_ospo0x.mp3",
+#     }
+# ]
+# hoangthuylinh = Artist.where(name: 'Hoàng Thùy Linh').first
+# album_hoangthuylinh = hoangthuylinh.albums.create(title: 'Những Bài Hát Hay Nhất Của Hoàng Thùy Linh', description: "'See Tình' và series Hit tạo nên thương hiệu")
+# hoangthuylinh_songs.each do |s|
+#   song = hoangthuylinh.songs.create(s)
+#   song.album_songs.create(album_id: album_hoangthuylinh.reload.id)
+# end
