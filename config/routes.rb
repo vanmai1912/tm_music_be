@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "dashboard#index"
 
-  resources :dashboard, only: [] do 
+  resources :dashboard, only: [:index] do 
     collection do
       get :client_chart
       get :payment_chart

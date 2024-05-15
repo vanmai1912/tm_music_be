@@ -828,9 +828,90 @@ noophuocthinhh_songs = [
     },
   ]
 
-phuocthing = Artist.where(name: 'Noo Phước Thịnh').first
-album_phuocthing = phuocthing.albums.create(title: 'Những Bài Hát Hay Nhất Của Noo Phước Thịnh', description: "Noo Phước Thịnh và bộ sưu tập Hit gây thương nhớ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/a/9/0/e/a90ec09aa0a101049eba0a61487f2abe.jpg")
-noophuocthinhh_songs.each do |s|
-  song = phuocthing.songs.create(s)
-  song.album_songs.create(album_id: album_phuocthing.reload.id)
+# phuocthing = Artist.where(name: 'Noo Phước Thịnh').first
+# album_phuocthing = phuocthing.albums.create(title: 'Những Bài Hát Hay Nhất Của Noo Phước Thịnh', description: "Noo Phước Thịnh và bộ sưu tập Hit gây thương nhớ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/a/9/0/e/a90ec09aa0a101049eba0a61487f2abe.jpg")
+# noophuocthinhh_songs.each do |s|
+#   song = phuocthing.songs.create(s)
+#   song.album_songs.create(album_id: album_phuocthing.reload.id)
+# end
+
+truongvu_songs = [
+  {
+      "title": "Mưa Đêm Tỉnh Nhỏ",
+      "lyric": "Đêm nay mưa rơi không dứt, nhớ em lòng đau nát tan. Đường phố vắng ánh đèn, chỉ mình anh lặng thầm bước đi trong cơn mưa, ký ức xưa ùa về, từng kỷ niệm vui buồn còn mãi trong tim. Anh mong em hiểu rằng tình anh vẫn luôn đong đầy...",
+      "views": 2300000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/f/3/f3ccdd27d2000e3f9255a7e3e2c48800_1314504102.jpg",
+      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f5a2c7b03af282bc25abec947955928a?authen=exp=1715968487~acl=/f5a2c7b03af282bc25abec947955928a/*~hmac=52d2502dcd4c6434f1ea19c895283a9e"
+  },
+  {
+      "title": "Đoạn Tái Bút",
+      "lyric": "Từng dòng thư tay em gửi, anh vẫn còn giữ mãi. Nhưng giờ đây ta xa nhau, chỉ còn lại ký ức trong tim. Những lời yêu thương chưa kịp nói, nay đã trở thành quá khứ. Anh nhớ những ngày bên nhau, hạnh phúc dường như mới hôm qua...",
+      "views": 3100000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/6/6/d/7/66d75a098e8b5c8e5ace19eff1acff76.jpg",
+      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/6601ac0a9ea5fd61f4cebdf382ed76a4?authen=exp=1715968573~acl=/6601ac0a9ea5fd61f4cebdf382ed76a4/*~hmac=9ddca85c6a34e170c1e4c7346feeaad1"
+  },
+  {
+      "title": "Người Ngoài Phố",
+      "lyric": "Chiều nay em ra phố, một mình bước lang thang. Kỷ niệm xưa vọng về, trong lòng đầy nhớ thương. Đôi tay lạnh buốt, chỉ mình em cô đơn giữa phố đông người. Nhớ những ngày ta bên nhau, giờ đây chỉ là hoài niệm...",
+      "views": 4500000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/3/f/3ff457385ca5e2e6b2e99400534c9807_1370768899.jpg",
+      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/b18977f95c8112aa5078932c58fd73c9?authen=exp=1715968639~acl=/b18977f95c8112aa5078932c58fd73c9/*~hmac=fa5f0469118f614def675b33778f4aa2"
+  },
+  {
+      "title": "Hai Vì Sao Lạc",
+      "lyric": "Tình yêu chúng ta như hai vì sao lạc, mãi mãi không thể nào đến với nhau. Trái tim anh đau đớn khi phải xa em, nhưng định mệnh đã an bài. Em hãy sống hạnh phúc, và anh sẽ mãi nhớ về em như vì sao sáng trong tim...",
+      "views": 3800000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/4/b/1/9/4b19e07f34caa7f30de37430c6d4c19d.jpg",
+      "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/a029af85d92e400fb9b7f7737bbc521a?authen=exp=1715968706~acl=/a029af85d92e400fb9b7f7737bbc521a/*~hmac=0ff175601d42d9e28fe6ab84a3a0aafd"
+  },
+  {
+      "title": "Lại Nhớ Người Yêu",
+      "lyric": "Bao đêm anh vẫn mơ về em, người yêu dấu ơi. Tình yêu như sóng biển, mãi không ngừng vỗ về trong lòng anh. Những kỷ niệm ngọt ngào, những nụ hôn đắm say. Dù xa cách nhưng lòng anh vẫn mãi nhớ về em...",
+      "views": 5200000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/avatars/7/d/7d108db512f6a6a929cd0d0ad3b593e8_1511431730.jpg",
+      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/0b15424fff6327acc1b26120d7dfc090?authen=exp=1715968762~acl=/0b15424fff6327acc1b26120d7dfc090/*~hmac=616989728b6065cdcc88f03d25f97b86"
+  },
+  {
+      "title": "Thiệp Hồng Anh Viết Tên Em",
+      "lyric": "Ngày xưa ấy khi anh viết tên em trên thiệp hồng. Nguyện ước trọn đời sẽ mãi bên nhau. Nhưng giờ đây em đã xa rồi, thiệp hồng còn đây nhưng lòng anh đã tan nát. Nhớ em từng ngày, từng phút giây...",
+      "views": 4000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/0/2/8/8/0288dae6b2fb72ec073cfd26ac23be4f.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/3135a21b7760e28b765dae5824c1ab22?authen=exp=1715968801~acl=/3135a21b7760e28b765dae5824c1ab22/*~hmac=fcc9541c845194c32cd2f7278083f8d3"
+  },
+  {
+      "title": "Mưa Nửa Đêm",
+      "lyric": "Đêm nay mưa buồn rơi hắt hiu, lòng anh nhớ em nhiều. Từng giọt mưa như nước mắt, thấm đẫm những ký ức buồn. Đêm dài lắm cô đơn, anh mong một ngày em sẽ quay về bên anh, để tình ta lại xanh ngát...",
+      "views": 2700000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/0/c/0c1485a24cf001c56223be2879ae5f26_1290654489.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/099b79295ba1902e552b8498f0e8776f?authen=exp=1715968846~acl=/099b79295ba1902e552b8498f0e8776f/*~hmac=ba4853aa5880f7cbbd2d9a2924ef790c"
+  },
+  {
+      "title": "Yêu Một Mình",
+      "lyric": "Tình yêu đơn phương anh dành cho em, mãi mãi không thể nói ra. Một mình anh ôm ấp những nỗi niềm, những giấc mơ về em. Dù biết em không hiểu, nhưng anh vẫn luôn mong chờ một ngày em sẽ nhận ra tình yêu này...",
+      "views": 3400000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_png/covers/9/e/9e549ed896a1a21c42a7f0ff09a05961_1407310471.png",
+      "audio": "https://a128-z3.zmdcdn.me/8fac8d2e92f05d659dafee007e90eeee?authen=exp=1715968904~acl=/8fac8d2e92f05d659dafee007e90eeee/*~hmac=6dd0696b681e81cb1c774695777b4428"
+  },
+  {
+      "title": "Lá Thư Đô Thị",
+      "lyric": "Lá thư em gửi từ đô thị xa hoa, làm anh nhớ quê nhà. Những ngày xưa yên bình, những kỷ niệm êm đềm bên nhau. Giờ đây chỉ còn lại nỗi nhớ, và anh vẫn chờ em trở về với tình yêu chân thành...",
+      "views": 3900000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/e/a/ea7b7c82bd972090b482c9578a024747_1394681663.jpg",
+      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/af9396a58683f1abe6b5719ceb3437bf?authen=exp=1715968935~acl=/af9396a58683f1abe6b5719ceb3437bf/*~hmac=0df3467434e5ab9a4e9aec25fc0caed9"
+  },
+  {
+      "title": "Giàu Nghèo",
+      "lyric": "Đời người có khi giàu sang, có khi lại nghèo khó. Tình yêu chân thật không bao giờ đổi thay. Anh và em sẽ cùng nhau vượt qua mọi khó khăn, dù cho cuộc sống có thế nào. Hãy tin rằng tình yêu sẽ giúp chúng ta mãi bên nhau...",
+      "views": 4100000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/5/9/7/7/597718765fa8da46c33973f4d5ac6604.jpg",
+      "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/5d9e57230a728c57071cc0531892e422?authen=exp=1715968974~acl=/5d9e57230a728c57071cc0531892e422/*~hmac=9ebe613d73dcac2310681c56dc417ebd"
+  }
+]
+
+
+truongvu = Artist.where(name: 'Trường Vũ').first
+album_truongvu = truongvu.albums.create(title: 'Những Bài Hát Hay Nhất Của Trường Vũ', description: "Tuyển tập các ca khúc hay nhất của Trường Vũ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/6/1/2/d/612d672822e69d3a4ecdc608b74acb1c.jpg")
+truongvu_songs.each do |s|
+  song = truongvu.songs.create(s)
+  song.album_songs.create(album_id: album_truongvu.reload.id)
 end
