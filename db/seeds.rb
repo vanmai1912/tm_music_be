@@ -1040,9 +1040,9 @@ erik_songs = [
   }
 ]
 
-erik = Artist.where(name: 'Erik').first
-album_erik = erik.albums.create(title: 'Những Bài Hát Hay Nhất Của Erik', description: " 'Chạy về khóc với anh', 'Em không sai chúng ta sai' và Hit của ERIK", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
-erik_songs.each do |s|
-  song = erik.songs.create(s)
-  song.album_songs.create(album_id: album_erik.reload.id)
-end
+# erik = Artist.where(name: 'Erik').first
+# album_erik = erik.albums.create(title: 'Những Bài Hát Hay Nhất Của Erik', description: " 'Chạy về khóc với anh', 'Em không sai chúng ta sai' và Hit của ERIK", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
+# erik_songs.each do |s|
+#   song = erik.songs.create(s)
+#   song.album_songs.create(album_id: album_erik.reload.id)
+# end
