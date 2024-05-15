@@ -981,9 +981,68 @@ phinhung_songs = [
 ]
 
 
-phinhung = Artist.where(name: 'Phi Nhung').first
-album_phinhung = phinhung.albums.create(title: 'Những Bài Hát Hay Nhất Của Phi Nhung', description: "Bậu ơi đừng buồn, vào nghe Phi Nhung hát", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
-phinhung_songs.each do |s|
-  song = phinhung.songs.create(s)
-  song.album_songs.create(album_id: album_phinhung.reload.id)
+# phinhung = Artist.where(name: 'Phi Nhung').first
+# album_phinhung = phinhung.albums.create(title: 'Những Bài Hát Hay Nhất Của Phi Nhung', description: "Bậu ơi đừng buồn, vào nghe Phi Nhung hát", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
+# phinhung_songs.each do |s|
+#   song = phinhung.songs.create(s)
+#   song.album_songs.create(album_id: album_phinhung.reload.id)
+# end
+
+erik_songs = [
+  {
+    "title": "Sau Tất Cả",
+    "lyric": "Sau tất cả mình lại trở về với nhau. Tựa như chưa bắt đầu, tựa như ta vừa mới quen... Sau tất cả, tình yêu ấy không thể phai mờ. Những kỷ niệm ta đã có, luôn in sâu trong trái tim này. Dù có những lúc ta xa nhau, nhưng ta vẫn luôn nhớ về nhau. Sau tất cả, mình lại trở về bên nhau, như chưa từng có chia xa.",
+    "views": 2000000,
+    "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/5/5/55a2e33a5d4d6a70f5144181c28eacb0_1452855672.jpg",
+    "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/a37f931dc8bbcdc9e06bdfd8213c8465?authen=exp=1715968948~acl=/a37f931dc8bbcdc9e06bdfd8213c8465/*~hmac=6cfc9be007df2187e4e66fe806c284ea"
+  },
+  {
+      "title": "Chạm Đáy Nỗi Đau",
+      "lyric": "Hạnh phúc cứ thế trôi qua tay, tựa như giấc mơ không quay trở lại... Những ngày tháng bên nhau giờ chỉ còn là ký ức. Nỗi đau này, liệu có ai thấu hiểu? Chạm đáy nỗi đau, lòng càng thêm đau. Nhưng anh vẫn phải bước đi, dù lòng vẫn còn yêu em rất nhiều.",
+      "views": 1500000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/9/b/4/0/9b40a25f9a606520333fa79f1fdf5ea6.jpg",
+      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/3278f11e8bd6e624a5e05d01d5cbb0b4?authen=exp=1715969064~acl=/3278f11e8bd6e624a5e05d01d5cbb0b4/*~hmac=b25ebf0c33cbc370ec2950703e464034"
+  },
+  {
+      "title": "Lạc Nhau Có Phải Muôn Đời",
+      "lyric": "Vì sao ta lạc mất nhau, giữa đời thường là thế đó... Chỉ còn lại những lời nói dối. Lạc nhau rồi, liệu có tìm lại được nhau? Giữa biển người, ta vẫn luôn tìm kiếm. Lạc nhau có phải muôn đời, hay chỉ là thử thách của tình yêu? Dù thế nào đi nữa, anh vẫn sẽ chờ em.",
+      "views": 1300000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/covers/1/c/1c427f21e588bc59ec2be35b65f5c6a5_1484313604.jpg",
+      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/b3c944f006bf492a6daf043ff5656dd6?authen=exp=1715969177~acl=/b3c944f006bf492a6daf043ff5656dd6/*~hmac=a52958efa7ebef4cf92a09c7b8fe77ef"
+  },
+  {
+      "title": "Đừng Xin Lỗi Nữa (Cover)",
+      "lyric": "Đừng xin lỗi nữa, mọi thứ cũng đã vỡ tan rồi... Lời xin lỗi giờ đây cũng chỉ là vô nghĩa. Đừng nói thêm gì nữa, để lòng này bớt đau. Tình yêu đã kết thúc, hãy để mọi thứ trở lại như ban đầu. Đừng xin lỗi nữa, chỉ khiến lòng thêm buồn. Chúng ta nên kết thúc ở đây thôi.",
+      "views": 1200000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/4/a/8/7/4a8740d9b5ae80b5a9cd091857f45cc3.jpg",
+      "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/3e97762444caaf8bd82cb8842f1e4193?authen=exp=1715969548~acl=/3e97762444caaf8bd82cb8842f1e4193/*~hmac=c9fc5cf8a7bd847c33c9295bfcc7eef0"
+  },
+  {
+      "title": "Em Không Sai Chúng Ta Sai",
+      "lyric": "Em không sai, chúng ta sai, lời yêu ấy nay đã quá xa... Những ngày tháng bên nhau giờ chỉ là dĩ vãng. Anh không trách em, chỉ trách tình ta không đủ mạnh mẽ. Em không sai, chỉ là ta không thể đi cùng nhau đến cuối con đường. Những lời nói yêu thương giờ đã trở thành quá khứ.",
+      "views": 1800000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/7/4/0/d/740d5e0fd272d2421d441e9fd5c08fdd.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/b2707a710cb37c6b1fcfb4899761deda?authen=exp=1715969610~acl=/b2707a710cb37c6b1fcfb4899761deda/*~hmac=02f8268b714afc390a0ab0eaa53ecc93"
+  },
+  {
+      "title": "Ghen (ft. Min)",
+      "lyric": "Em thấy ghét khi mà anh cứ mãi gần bên cô ấy... Những lời nói ngọt ngào chỉ khiến lòng thêm đau. Ghen tuông là vậy, tình yêu thật phức tạp. Em muốn anh chỉ là của riêng em. Ghen tuông làm lòng này thêm rối bời, nhưng em vẫn yêu anh nhiều lắm. Đừng để tình yêu này phải phai nhòa.",
+      "views": 1700000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/covers/d/0/d05f9b3c87cf7ccda468174b28757489_1495770525.jpg",
+      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/810449635fc68d44ba19225d0ce84217?authen=exp=1715969678~acl=/810449635fc68d44ba19225d0ce84217/*~hmac=b2d36ae380a7cfc2fd39ec68dc936482"
+  },
+  {
+      "title": "Yêu Và Yêu",
+      "lyric": "Cứ yêu và yêu, dù có sai lầm ta vẫn không hề hối tiếc... Tình yêu là thế, không thể đoán trước được. Yêu hết mình, sống hết mình vì nhau. Những kỷ niệm đẹp sẽ mãi in sâu trong tim. Dù có sai lầm, ta vẫn không hề hối tiếc. Yêu và yêu, dù biết rằng tình yêu có thể làm ta đau.",
+      "views": 1400000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/covers/2/7/27280fc4cf0b8569604bb9a96e52e423_1460390369.jpg",
+      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/80b1607abbeab927daf70a838f17dc49?authen=exp=1715969746~acl=/80b1607abbeab927daf70a838f17dc49/*~hmac=d5968d521847459ca44afc2b870c5e38"
+  }
+]
+
+erik = Artist.where(name: 'Erik').first
+album_erik = erik.albums.create(title: 'Những Bài Hát Hay Nhất Của Erik', description: " 'Chạy về khóc với anh', 'Em không sai chúng ta sai' và Hit của ERIK", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
+erik_songs.each do |s|
+  song = erik.songs.create(s)
+  song.album_songs.create(album_id: album_erik.reload.id)
 end
