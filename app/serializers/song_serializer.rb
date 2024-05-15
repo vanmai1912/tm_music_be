@@ -25,7 +25,7 @@ class SongSerializer < ApplicationSerializer
   end
   
   def singers
-    object.artists.singer.map { |singer| ArtistSerializer.new(singer) }
+    object.artists.singer
   end
 
   def mp3_file

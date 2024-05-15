@@ -32,7 +32,7 @@ class Api::ApplicationController < ActionController::Base
   end
 
   def encode_token(user_id)
-    payload = { user_id: user_id, exp: Time.now.to_i + 3.hours.to_i } 
+    payload = { user_id: user_id } 
     JWT.encode(payload, Rails.application.secrets.secret_key_base, 'HS256')
   end
 
