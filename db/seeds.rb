@@ -907,11 +907,83 @@ truongvu_songs = [
       "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/5d9e57230a728c57071cc0531892e422?authen=exp=1715968974~acl=/5d9e57230a728c57071cc0531892e422/*~hmac=9ebe613d73dcac2310681c56dc417ebd"
   }
 ]
+# truongvu = Artist.where(name: 'Trường Vũ').first
+# album_truongvu = truongvu.albums.create(title: 'Những Bài Hát Hay Nhất Của Trường Vũ', description: "Tuyển tập các ca khúc hay nhất của Trường Vũ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/6/1/2/d/612d672822e69d3a4ecdc608b74acb1c.jpg")
+# truongvu_songs.each do |s|
+#   song = truongvu.songs.create(s)
+#   song.album_songs.create(album_id: album_truongvu.reload.id)
+# end
+
+phinhung_songs = [
+  {
+      "title": "Bông Bí Vàng",
+      "lyric": "Bông bí vàng trong vườn nhà mình, như tình ta đong đầy yêu thương. Em vẫn chờ bên bờ ao nhà, nhớ anh từng đêm, từng chiều mưa. Tình yêu đôi ta mãi đậm đà, như bông bí vàng rực rỡ dưới nắng.",
+      "views": 85000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715796663/music_kl/song/8791011493626143346_vmsy06.mp3"
+  },
+  {
+      "title": "Lý Con Sáo Miền Nam",
+      "lyric": "Lý con sáo miền Nam, bay đi tìm bạn. Đôi chim sáo vui đùa cùng nhau, trong nắng mai hồng. Nhớ về miền quê yên bình, nơi có tình yêu đôi ta.",
+      "views": 75000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/7/f/e/d/7fed3c0b63e198bf84b7b28544ac7b13.jpg",
+      "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/8014953b6c9725cadaf0a98eed44c728?authen=exp=1715969469~acl=/8014953b6c9725cadaf0a98eed44c728/*~hmac=fbc3d2ef3f591ffba7f7aec0e002f14d"
+  },
+  {
+      "title": "Như Lục Bình Trôi",
+      "lyric": "Như lục bình trôi, em lạc mất anh rồi. Dòng sông mênh mông cuốn trôi đi bao kỷ niệm. Tình yêu đôi ta giờ đây chỉ còn là giấc mơ.",
+      "views": 65000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/a/4/8/9/a489fc7420010b10eda6fa4d616fcfe3.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/de3d3db2a9121da1f419db7aa06b2f07?authen=exp=1715969541~acl=/de3d3db2a9121da1f419db7aa06b2f07/*~hmac=0f27f365ddecc7f8822a47ead4dfd35f"
+  },
+  {
+      "title": "Ninh Kiều Em Gái Cần Thơ",
+      "lyric": "Ninh Kiều em gái Cần Thơ, nụ cười tỏa nắng. Em đứng bên bến Ninh Kiều, đợi anh về thăm. Nhớ những chiều mưa, ta cùng chung bước dưới mưa.",
+      "views": 60000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/0/d/0d5b1c4c7f720f698946c7f6ab08f687_1425889433.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/f0d137a5fc327c6a8862a7a2f524781f?authen=exp=1715969588~acl=/f0d137a5fc327c6a8862a7a2f524781f/*~hmac=7fde0c2155116439040aa03ebd63e0ea"
+  },
+  {
+      "title": "Lý Miệt Vườn",
+      "lyric": "Lý miệt vườn, tình quê thắm đượm. Bên nhau ta xây đắp bao mộng ước. Những chiều hoàng hôn, em chờ anh về. Tình yêu đôi ta như miệt vườn nở hoa.",
+      "views": 70000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/7/c/4/d/7c4dd3413c0bb9c3c8d99d39077a5e8f.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/8a7b689e17829727289cdd13395ed239?authen=exp=1715969625~acl=/8a7b689e17829727289cdd13395ed239/*~hmac=fd3775367ac551b9450e21b4b9d4528a"
+  },
+  {
+      "title": "Đừng Nói Yêu Tôi",
+      "lyric": "Đừng nói yêu tôi nếu anh không thật lòng. Đừng để tôi thêm những đêm dài cô đơn. Tình yêu như mây trôi, mộng ước tan biến. Em chỉ cần một tình yêu chân thành.",
+      "views": 80000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/8/9/4/38949c7b36e398d2b760331bf007f7fa.jpg",
+      "audio": "https://a128-z3.zmdcdn.me/9605e828651dba53ceeae03594cfffe8?authen=exp=1715969260~acl=/9605e828651dba53ceeae03594cfffe8/*~hmac=a0cc6f226a57e623b258b042457fafc2"
+  },
+  {
+      "title": "Cây Khế Sau Hè",
+      "lyric": "Cây khế sau hè, nơi ta từng bên nhau. Những kỷ niệm buồn vui, vẫn còn trong tim. Anh ra đi, để lại em một mình. Cây khế giờ đây đã già, như tình ta năm nào.",
+      "views": 90000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/b/d/a/c/bdaca16296b1470a319901883606db2e.jpg",
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715796963/music_kl/song/21550485555657315_lpol8v.mp3"
+  },
+  {
+      "title": "Bạc Liêu Hoài Cổ",
+      "lyric": "Bạc Liêu hoài cổ, em nhớ anh vô bờ. Những ngày xưa yêu dấu, giờ đã xa vời. Đêm đêm nghe tiếng đàn, nhớ về anh khôn nguôi.",
+      "views": 72000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+      "audio": "https://mp3-s1-zmp3.zmdcdn.me/3f76708129c5c09b99d4/5584761192197239189?authen=exp=1715969749~acl=/3f76708129c5c09b99d4/*~hmac=7cbf5c8ca44564f6b1f019013c9af1f0&fs=MTmUsICxNTmUsIC5Njk0OTg2MXx3ZWJWNnwxMDQ5NzQxODkxfDQyLjExOC4xOTAdUngMTE0"
+  },
+  {
+      "title": "Chiều Thương Đô Thị",
+      "lyric": "Chiều thương đô thị, lòng nhớ quê hương. Nhớ những chiều mưa, ta cùng nhau dạo phố. Đô thị phồn hoa, lòng em vẫn nhớ về anh.",
+      "views": 68000000,
+      "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
+      "audio": "https://mp3-s1-zmp3.zmdcdn.me/24fb912afc6e15304c7f/4550484303562899027?authen=exp=1715969812~acl=/24fb912afc6e15304c7f/*~hmac=58893df7d66a99759b5e639fdd6c10b2&fs=MTmUsICxNTmUsIC5NzAxMjEwNXx3ZWJWNnwxMDQ5NzQxODkxfDQyLjExOC4xOTAdUngMTE0"
+  }
+]
 
 
-truongvu = Artist.where(name: 'Trường Vũ').first
-album_truongvu = truongvu.albums.create(title: 'Những Bài Hát Hay Nhất Của Trường Vũ', description: "Tuyển tập các ca khúc hay nhất của Trường Vũ", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/6/1/2/d/612d672822e69d3a4ecdc608b74acb1c.jpg")
-truongvu_songs.each do |s|
-  song = truongvu.songs.create(s)
-  song.album_songs.create(album_id: album_truongvu.reload.id)
+phinhung = Artist.where(name: 'Phi Nhung').first
+album_phinhung = phinhung.albums.create(title: 'Những Bài Hát Hay Nhất Của Phi Nhung', description: "Bậu ơi đừng buồn, vào nghe Phi Nhung hát", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")
+phinhung_songs.each do |s|
+  song = phinhung.songs.create(s)
+  song.album_songs.create(album_id: album_phinhung.reload.id)
 end
