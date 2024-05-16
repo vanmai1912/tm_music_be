@@ -1,6 +1,6 @@
 class SongSerializer < ApplicationSerializer
   attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers, :owner
-  belongs_to :genre, serializer: GenreSerializer, is_song: false
+  belongs_to :genre
 
 
   def release_date

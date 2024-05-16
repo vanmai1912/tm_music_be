@@ -1,7 +1,7 @@
 class GenreSerializer < ApplicationSerializer
-    attributes :id, :title, :description, :songs, :image, :singers
+    attributes :id, :title, :description, :image
   
-    has_many :albums, each_serializer: AlbumSerializer, is_song: false
+    has_many :albums
 
     def initialize(object, options = {})
       super
@@ -17,7 +17,8 @@ class GenreSerializer < ApplicationSerializer
     def singers
       singer_ids = object.songs.map { |song| song.artists.pluck(:id) }.flatten.uniq
       singers = Artist.where(id: singer_ids)
-      ActiveModel::Serializer::CollectionSerializer.new(singers, serializer: ArtistSerializer, is_song: false)
+      singers
+      # ActiveModel::Serializer::CollectionSerializer.new(singers, serializer: ArtistSerializer, is_song: false)
     end
   
 end
