@@ -1,5 +1,5 @@
 class GenreSerializer < ApplicationSerializer
-    attributes :id, :title, :description, :image
+    attributes :id, :title, :description, :image, :songs, :singers
   
     has_many :albums
 
@@ -17,8 +17,14 @@ class GenreSerializer < ApplicationSerializer
     def singers
       singer_ids = object.songs.map { |song| song.artists.pluck(:id) }.flatten.uniq
       singers = Artist.where(id: singer_ids)
-      singers
-      # ActiveModel::Serializer::CollectionSerializer.new(singers, serializer: ArtistSerializer, is_song: false)
-    end
+      
+      singers_with_new_field = singers.map do |singer|
+        user_ids = singer.users.pluck(:id)
+        exists = user_ids.include?($current_user.id)
+        singer.attributes.merge(followed: exists)
+      end
+      
+      singers_with_new_field
+    end  
   
 end
