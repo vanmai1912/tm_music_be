@@ -1,5 +1,5 @@
 class AlbumSerializer < ApplicationSerializer
-  attributes :id, :title, :description, :image, :created_at, :liked, :songs, :singers
+  attributes :id, :title, :description, :image, :created_at, :liked, :songs, :singers, :genre_id
 
   def initialize(object, options = {})  
     super
