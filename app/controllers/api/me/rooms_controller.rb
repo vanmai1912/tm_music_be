@@ -1,11 +1,36 @@
 class Api::Me::RoomsController < Api::ApplicationController
 
   def index
-    public_rooms = Room.where(user_id: nil)
+    public_rooms = Room.where.not(user_id: @current_user.id)
     private_rooms = Room.where(user_id: @current_user.id)
+    public_rooms_with_users = public_rooms.includes(:user).map do |room|
+      {
+        id: room.id,
+        name: room.name,
+        description: room.description,
+        total_time: room.total_time,
+        url: room.url,
+        user_id: room.user_id,
+        uuid: room.uuid,
+        user_name: room.user.first_name + ' ' +  room.user.last_name
+      }
+    end
+  
+    private_rooms_with_users = private_rooms.includes(:user).map do |room|
+      {
+        id: room.id,
+        name: room.name,
+        description: room.description,
+        total_time: room.total_time,
+        url: room.url,
+        user_id: room.user_id,
+        uuid: room.uuid,
+        user_name: room.user.first_name + ' ' +  room.user.last_name
+      }
+    end
     render json: {
-      public_rooms: public_rooms,
-      private_rooms: private_rooms
+      public_rooms: public_rooms_with_users,
+      private_rooms: private_rooms_with_users
     }, status: :ok
   end
 
@@ -29,7 +54,7 @@ class Api::Me::RoomsController < Api::ApplicationController
   end
 
   def songs 
-    room = @current_user.rooms.where(uuid: params[:id]).first
+    room = Room.where(uuid: params[:id]).first
     songs = room.user.albums.favorite&.first&.songs
     render json: songs
   end

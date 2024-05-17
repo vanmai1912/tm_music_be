@@ -104,7 +104,8 @@ class RoomChannel < ApplicationCable::Channel
     if room && user_id
       user = User.find(user_id)
       url = data['url']
-      room.update(url: url)
+      total_time = data['total_time']
+      room.update(url: url, total_time: total_time)
       room_data = {
         id: room.id,
         name: room.name,
