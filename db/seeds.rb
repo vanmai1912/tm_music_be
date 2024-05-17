@@ -1287,14 +1287,14 @@ end
 
 ids1 = []
 singers1 = Artist.where(name: ['Sơn Tùng M-TP', 'Hoàng Thùy Linh', 'Đen Vâu', 'Tóc Tiên', 'Min', 'Noo Phước Thịnh'])
-a1 = Genre.first.albums.first 2
+a1 = Genre.first.albums.first 4
 singers1.each do |s|
   ids1 << s.songs.pluck(:id)
 end
 ids1 = ids1.flatten
 
 a1.each do |album|
-  random_ids = ids1.sample(12)
+  random_ids = ids1.sample(10)
   random_ids.each do |song_id|
     album.album_songs.create(song_id: song_id)
 
