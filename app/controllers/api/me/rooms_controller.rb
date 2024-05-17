@@ -36,6 +36,8 @@ class Api::Me::RoomsController < Api::ApplicationController
 
   def create
     room = @current_user.rooms.new(room_params)
+    room.url = Song.first.audio
+    room.total_time = 253
     if room.save
       render json: room.reload, serializer: RoomSerializer,  status: :created
     else
