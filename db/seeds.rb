@@ -335,7 +335,7 @@ sontung_songs = [
         Một mình nơi đây... lạc trôi giữa trời...""",
         "views": 100000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/9/8/98e3677733fe52439823d1b1992d9ae0_1483242323.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/756ba39ea07eb46c326b54c999668a94?authen=exp=1715877345~acl=/756ba39ea07eb46c326b54c999668a94/*~hmac=5f08b5ec01f44ddefd6d1ee9da20b2f3",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715911790/music_kl/son%20tung/756ba39ea07eb46c326b54c999668a94_yxqmam.mp3",
     },
     {
         "title": "Chạy Ngay Đi",
@@ -348,7 +348,7 @@ sontung_songs = [
         Khi em đã không còn là em...""",
         "views": 95000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/a/6/8/b/a68b0bd411adc076ba6c3fb00203a1ee.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2a92caeb62976d2492509c102ced2711?authen=exp=1715876893~acl=/2a92caeb62976d2492509c102ced2711/*~hmac=6678fc58b6606026b0316d58248f0ebd",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715911857/music_kl/son%20tung/2a92caeb62976d2492509c102ced2711_uvwodf.mp3",
     },
     {
         "title": "Nơi Này Có Anh",
@@ -362,7 +362,7 @@ sontung_songs = [
         Và nói yêu em từng ngày...""",
         "views": 90000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/3/a/3a9e48bc4df7bbde3acea30cc267f609_1487066528.jpg",
-        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/d17d79105dfcbf67208389c9e8fc9c42?authen=exp=1715876995~acl=/d17d79105dfcbf67208389c9e8fc9c42/*~hmac=56ea1fb166768e7c158ddfe89d970ac2",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715911905/music_kl/son%20tung/d17d79105dfcbf67208389c9e8fc9c42_xg6gfj.mp3",
     },
     {
         "title": "Hãy Trao Cho Anh",
@@ -374,7 +374,7 @@ sontung_songs = [
         Hãy trao cho anh những phút giây thần tiên...""",
         "views": 85000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/4/1/8/2/41822760163a4da22ddad1e5285e6149.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/593b54ec5c26d2a70585377cf9374578?authen=exp=1715877605~acl=/593b54ec5c26d2a70585377cf9374578/*~hmac=337b24e6d91696afbdf5fdcc6d9d86b4",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715911951/music_kl/son%20tung/593b54ec5c26d2a70585377cf9374578_kumls2.mp3",
     },
     {
         "title": "Cơn Mưa Ngang Qua",
@@ -386,7 +386,7 @@ sontung_songs = [
         Cơn mưa ngang qua...""",
         "views": 80000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/5/b/5baa8ca8d0dd072524767a4aff6d400c_1349715671.jpg",
-        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/2f6fc8622021b60dcaeb1c011b32be75?authen=exp=1715877442~acl=/2f6fc8622021b60dcaeb1c011b32be75/*~hmac=37b52e082ff3d15b35ccd2e8bb50bc40",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917024/music_kl/son%20tung/2f6fc8622021b60dcaeb1c011b32be75_qlp5rg.mp3",
     },
     {
         "title": "Âm Thầm Bên Em",
@@ -398,7 +398,7 @@ sontung_songs = [
         Anh vẫn âm thầm bên em...""",
         "views": 75000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/a/3/1/c/a31cdf3a266dfa3fcbc586613c70ed52.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/523fb2bef2f3b3c8497c6efe228c737c?authen=exp=1715877975~acl=/523fb2bef2f3b3c8497c6efe228c737c/*~hmac=921e85a20f9ab8d315770a2865ff71ae",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917080/music_kl/son%20tung/523fb2bef2f3b3c8497c6efe228c737c_wn3z0a.mp3",
     },
     {
         "title": "Em Của Ngày Hôm Qua",
@@ -410,7 +410,7 @@ sontung_songs = [
         Xin em đừng buông tay anh...""",
         "views": 70000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/b/1/b1c839bd85e6081614cf770278b8f782_1387164001.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/2703e88a97437d7bc2ddc8ddb7e4de12?authen=exp=1715877608~acl=/2703e88a97437d7bc2ddc8ddb7e4de12/*~hmac=eacb7a285f8b4ab211631ef5d598918d",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917145/music_kl/son%20tung/2703e88a97437d7bc2ddc8ddb7e4de12_swnu4b.mp3",
     },
     {
         "title": "Chúng Ta Của Hiện Tại",
@@ -421,7 +421,7 @@ sontung_songs = [
         Như làn mây trôi xa...""",
         "views": 65000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/0/c/6/f0c6b74652e9ed643f3183c7617aaa30.jpg",
-        "audio": "https://a128-z3.zmdcdn.me/9d5e0023aeae573dc1000abec75de7d1?authen=exp=1715877888~acl=/9d5e0023aeae573dc1000abec75de7d1/*~hmac=4fd2acc0795e6352f09932f4d461ef76",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917191/music_kl/son%20tung/9d5e0023aeae573dc1000abec75de7d1_wd70cz.mp3",
     },
     {
         "title": "Buông Đôi Tay Nhau Ra",
@@ -432,7 +432,7 @@ sontung_songs = [
         Như cơn mưa ngừng rơi...""",
         "views": 60000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/d/d/a/edda9844722bd0484b317662754e7417.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8c8a6c647f1a5575de199da7727c7a10?authen=exp=1715878150~acl=/8c8a6c647f1a5575de199da7727c7a10/*~hmac=dcbb821c006563b482bb9159ab1efde4",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917239/music_kl/son%20tung/8c8a6c647f1a5575de199da7727c7a10_ak4zfn.mp3",
     },
     {
         "title": "Chắc Ai Đó Sẽ Về",
@@ -442,7 +442,7 @@ sontung_songs = [
         Khi anh chẳng còn đợi chờ...""",
         "views": 55000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/8/f/8ffcb87289215a21d169d7a8ec86162e_1414118901.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f179de5dd723a556efdf18a13247a512?authen=exp=1715878127~acl=/f179de5dd723a556efdf18a13247a512/*~hmac=96f040c3edea9fd2011f12aef8f8dade",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917297/music_kl/son%20tung/f179de5dd723a556efdf18a13247a512_t2tjfa.mp3",
     },
     {
         "title": "Một Năm Mới Bình An",
@@ -453,7 +453,7 @@ sontung_songs = [
         Một năm mới bình an...""",
         "views": 50000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/7/7/e/277ef3a66a67413690578905dbb85451.jpg",
-        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/419d792482e1678c9f1b7a1e50c292f3?authen=exp=1715878903~acl=/419d792482e1678c9f1b7a1e50c292f3/*~hmac=a676a62f68623f3f36286c6788a20965",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917337/music_kl/son%20tung/419d792482e1678c9f1b7a1e50c292f3_mxg0bl.mp3",
     },
     {
         "title": "Muộn Rồi Mà Sao Còn",
@@ -465,7 +465,7 @@ sontung_songs = [
         Muộn rồi mà sao còn...""",
         "views": 45000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/f/6/c/ef6c9d4b97048c9911ea6069e968dadb.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/ed296514b07543c8f29162802af28948?authen=exp=1715878965~acl=/ed296514b07543c8f29162802af28948/*~hmac=b8ea4fdc1ffe1cf4a1cacfe060ba47ed",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715917386/music_kl/son%20tung/ed296514b07543c8f29162802af28948_utaiec.mp3",
     }
 ]
 sontung_songs.each do |s|
@@ -487,7 +487,7 @@ hoangthuylinh_songs = [
       Ở đời nhiều khi ngây ngô nhưng ừ thì là mơ""",
       "views": 75000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/5/3/7/2537435f53acd84f833ac5f82575899d.jpg",
-      "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/be642984985c390011bf2b02d6c0f5cb?authen=exp=1715880669~acl=/be642984985c390011bf2b02d6c0f5cb/*~hmac=6deb7ec0dfb38b3f3209dc0846d0dc9d  ",
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715921803/music_kl/son%20tung/be642984985c390011bf2b02d6c0f5cb_u2yj7a.mp3",
     },
     {
         "title": "Bánh Trôi Nước",
@@ -497,7 +497,7 @@ hoangthuylinh_songs = [
         Mà em vẫn giữ tấm lòng son""",
         "views": 80000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/b/d/d/9/bdd946b0c2f68abb4d6c2ff9b7d400ac.jpg",
-        "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/8092378f8087a00e487c6937d5005bb5?authen=exp=1715880110~acl=/8092378f8087a00e487c6937d5005bb5/*~hmac=1fe9b17516e3df62cf075db6c6f0bb6e",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715921855/music_kl/son%20tung/8092378f8087a00e487c6937d5005bb5_seiiae.mp3",
     },
     {
         "title": "Kẻ Cắp Gặp Bà Già (Remix)",
@@ -507,7 +507,7 @@ hoangthuylinh_songs = [
         Lớn rồi mới thấy chỉ vớ vẩn khi yêu người không ra gì""",
         "views": 48000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/0/2/2/3/02233cfbdea8c3cf01583b4d88123f41.jpg",
-        "audio": "https://vnso-pt-14-tf-mp3-s1-zmp3.zmdcdn.me/2849d0d4b5935ccd0582/3157308852649852305?authen=exp=1715880284~acl=/2849d0d4b5935ccd0582/*~hmac=e5fb2db61715b41e828f1aac05533d3e&fs=MTmUsICxNTmUsICwNzQ4NTAwMHx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715921918/music_kl/son%20tung/3157308852649852305_jpsxnr.mp3",
     },
     {
         "title": "See Tình",
@@ -517,7 +517,7 @@ hoangthuylinh_songs = [
         Tình yêu là những giấc mơ dài""",
         "views": 42000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/b/4/2/a/b42a33a26f823fed3fbf7f5fcfc7e8fd.jpg",
-        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/9e7d02969a2c3781b120732d6787830e?authen=exp=1715880366~acl=/9e7d02969a2c3781b120732d6787830e/*~hmac=1ae597395b5bb3e4a528035dbf85a50e",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715921959/music_kl/son%20tung/9e7d02969a2c3781b120732d6787830e_vpb3eq.mp3",
     },
     {
       "title": "Em Đây Chẳng Phải Thúy Kiều",
@@ -527,7 +527,7 @@ hoangthuylinh_songs = [
       Như bao cô gái tuyệt vời""",
       "views": 60000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/0/2/2/3/02233cfbdea8c3cf01583b4d88123f41.jpg",
-      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715707789/music_kl/song/9214380421917830314_2_ospo0x.mp3",
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715922017/music_kl/son%20tung/9214380421917830314_3_c2caxk.mp3",
     }
 ]
 hoangthuylinh = Artist.where(name: 'Hoàng Thùy Linh').first
@@ -550,7 +550,7 @@ denvau_songs = [
         Nhẹ nhàng nhưng làm anh xao xuyến""",
         "views": 80000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/2/d/0/b/2d0bf08b1ddaa07bae28208796316571.jpg",
-        "audio": "https://mp3-s1-zmp3.zmdcdn.me/edc75a7a3f3dd6638f2c/7555328701165411356?authen=exp=1715881435~acl=/edc75a7a3f3dd6638f2c/*~hmac=429500fceff30a3dbd1943b7bb8d125e&fs=MTmUsICxNTmUsICwODYzNTIxN3x3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923471/music_kl/son%20tung/7555328701165411356_zmobcw.mp3",
     },
     {
         "title": "Bài Này Chill Phết",
@@ -559,8 +559,8 @@ denvau_songs = [
         Thả hồn bay giữa trời mây
         Ngắm hoàng hôn nhẹ nhàng trôi qua""",
         "views": 75000000,
-        "image": "https://link.to/image_bai_nay_chill_phet.jpg",
-        "audio": "https://link.to/audio_bai_nay_chill_phet.mp3",
+        "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/avatars/e/2/f/8/e2f85cc2be0c8b7f28526dea89e6987b.jpg",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923758/music_kl/son%20tung/8419f6281271973a40e78a78e673eec0_yrtzde.mp3",
     },
     {
         "title": "Anh Đếch Cần Gì Nhiều Ngoài Em",
@@ -570,7 +570,7 @@ denvau_songs = [
         Chỉ cần em bên cạnh là anh thấy hạnh phúc""",
         "views": 68000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w320_r1x1_jpeg/cover/e/9/3/9/e939d0144b95dfc5f13cb0ea4427fc69.jpg",
-        "audio": "https://mp3-s1-zmp3.zmdcdn.me/10f7a29164d58d8bd4c4/6881725539374191715?authen=exp=1715881550~acl=/10f7a29164d58d8bd4c4/*~hmac=d95a80ffe11d94a356e4c3de40ff6244&fs=MTmUsICxNTmUsICwODmUsIC1MDQ5Mnx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923593/music_kl/son%20tung/6881725539374191715_pxbkpt.mp3",
     },
     {
         "title": "Đi Theo Bóng Mặt Trời",
@@ -580,7 +580,7 @@ denvau_songs = [
         Để thấy cuộc đời thêm ý nghĩa""",
         "views": 67000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
-        "audio": "https://vnso-zn-23-tf-mp3-s1-zmp3.zmdcdn.me/d15f0d34d870312e6861/1444089018733256086?authen=exp=1715881664~acl=/d15f0d34d870312e6861/*~hmac=188acc4f59cd3c98455da17f5a9901ac&fs=MTmUsICxNTmUsICwODg2NDAzM3x3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923667/music_kl/son%20tung/1444089018733256086_icrj39.mp3",
     },
     {
         "title": "Ta Cứ Đi Cùng Nhau",
@@ -590,7 +590,7 @@ denvau_songs = [
         Nhưng chỉ cần có nhau, mọi thứ sẽ ổn thôi""",
         "views": 69000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
-        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715708958/music_kl/song/195612218813491902_em7yah.mp3",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923704/music_kl/son%20tung/195612218813491902_1_z3tl3x.mp3",
     }
 ]
 
@@ -622,7 +622,7 @@ toctien_songs = [
         No matter what they say""",
         "views": 80000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/d/2/9/fd29d76c211a7750c27c1533f4f90677.jpg",
-        "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/d8d7660f4921a26a363fbd8048a91367?authen=exp=1715882971~acl=/d8d7660f4921a26a363fbd8048a91367/*~hmac=7ffb059f1e5801bedb6e2426ebcb6790",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923848/music_kl/son%20tung/d8d7660f4921a26a363fbd8048a91367_pf9hjc.mp3",
     },
     {
         "title": "Có Ai Thương Em Như Anh",
@@ -632,7 +632,7 @@ toctien_songs = [
         Để anh được thấy nụ cười em mỗi ngày""",
         "views": 85000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
-        "audio": "https://vnso-zn-23-tf-mp3-s1-zmp3.zmdcdn.me/4d32aaa37be792b9cbf6/4083951574028405225?authen=exp=1715883024~acl=/4d32aaa37be792b9cbf6/*~hmac=bcec7fc10efeb05e14153acc9c7608dd&fs=MTmUsICxNTmUsICxMDIyNDM5OXx3ZWJWNnwxMDQ5NzQxODkxfDEdUngNTUdUngMjAwLjIw",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923901/music_kl/son%20tung/f5aa1922da8e90f5339e59d4b54fa2bc_lhpy9i.mp3",
     },
     {
         "title": "Em Không Là Duy Nhất",
@@ -642,7 +642,7 @@ toctien_songs = [
         Em là người yêu anh nhất""",
         "views": 70000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/1/6/1648b6e7471b456f8aa2f9f19c93e5be_1488428433.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/d9fa4fe5cc88b362d7ba2d71234404e8?authen=exp=1715883058~acl=/d9fa4fe5cc88b362d7ba2d71234404e8/*~hmac=0e282503896fe85695c639bcfb1d524b",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715923950/music_kl/son%20tung/d9fa4fe5cc88b362d7ba2d71234404e8_s6o12v.mp3",
     },
     {
         "title": "Hôm Nay Tôi Cô Đơn Quá",
@@ -652,7 +652,7 @@ toctien_songs = [
         Để lại đây những niềm đau không nguôi""",
         "views": 65000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/7/d/7df58098752de92365ac1080bc79a495_1503939281.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/bdce670335e596de27fe12a9ab05380d?authen=exp=1715883104~acl=/bdce670335e596de27fe12a9ab05380d/*~hmac=4a8fa6e0c346e7f45e6907c020a8d01e",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924084/music_kl/son%20tung/bdce670335e596de27fe12a9ab05380d_a0b71k.mp3",
     },
     {
         "title": "Walk Away",
@@ -662,7 +662,7 @@ toctien_songs = [
         That keep you down""",
         "views": 60000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/f/d/fdde6122efe6abd2eb6a0db7e3e0ddea_1493952467.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/911c9158b1b2964f50c2cdff67d2b6b2?authen=exp=1715883142~acl=/911c9158b1b2964f50c2cdff67d2b6b2/*~hmac=1abaeb6a32ab88cd44e7f8fbfacc60c7",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924120/music_kl/son%20tung/911c9158b1b2964f50c2cdff67d2b6b2_edwlqv.mp3",
     },
     {
         "title": "I'm In Love",
@@ -672,7 +672,7 @@ toctien_songs = [
         When you're near""",
         "views": 55000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/7/e/7efa1b239a5907a2ea291b1cb4a3e52d_1465528310.jpg",
-        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/289cc4deaf5dc54850f0305ce86de336?authen=exp=1715883183~acl=/289cc4deaf5dc54850f0305ce86de336/*~hmac=9f237c7ebb37b13e61e4d03e0e953971",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924160/music_kl/son%20tung/289cc4deaf5dc54850f0305ce86de336_hfkcd4.mp3",
     },
     {
         "title": "Một Cọng Tóc Mai",
@@ -682,7 +682,7 @@ toctien_songs = [
         Như cọng tóc mai, không phai nhòa""",
         "views": 45000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/c/0/7/c/c07c3ae64b05904e2e3c1cf274cced69.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/bddd80f90c01ddac93cb7bc92bc55f7d?authen=exp=1715883248~acl=/bddd80f90c01ddac93cb7bc92bc55f7d/*~hmac=59f609fb9164556a5c0592fe68d77be8",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924267/music_kl/son%20tung/bddd80f90c01ddac93cb7bc92bc55f7d_rxdwrt.mp3",
     }
 ]
 toctien = Artist.where(name: 'Tóc Tiên').first
@@ -785,7 +785,7 @@ noophuocthinhh_songs = [
         You're always in my heart""",
         "views": 90000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/4/b/a/b/4babed2b761a5c8bc4194fff5041ae02.jpg",
-        "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/8531d8a56b5f2d20bb8d492fe7ca3ba2?authen=exp=1715884130~acl=/8531d8a56b5f2d20bb8d492fe7ca3ba2/*~hmac=7e61c25d05d32defc65cd4331e3cff56",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924309/music_kl/son%20tung/6329299839677484541_evkmdk.mp3",
     },
     {
         "title": "Gạt Đi Nước Mắt",
@@ -795,7 +795,7 @@ noophuocthinhh_songs = [
         Bên nhau mãi mãi""",
         "views": 80000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/f/f/ffe87169f25c5bc08d1333bda3d3acb5_1410318537.jpg",
-        "audio": "https://vnso-pt-15-tf-a128-z3.zmdcdn.me/2ff89b6d6130a5009328a3ac63139004?authen=exp=1715884104~acl=/2ff89b6d6130a5009328a3ac63139004/*~hmac=7fa49810b537bdf6ed5f007c048ff278",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924355/music_kl/son%20tung/2ff89b6d6130a5009328a3ac63139004_t7ok6f.mp3",
     },
     {
         "title": "Yêu Một Người Sao Buồn Đến Thế",
@@ -805,7 +805,7 @@ noophuocthinhh_songs = [
         Dù người ấy có thay đổi""",
         "views": 85000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/e/0/c/3/e0c341956a038d66b77275b20168b112.jpg",
-        "audio": "https://a128-z3.zmdcdn.me/da480813244602bf90aefb20335b9a3c?authen=exp=1715883618~acl=/da480813244602bf90aefb20335b9a3c/*~hmac=28ad2a80dd4dc86cac77d7b352b27d95",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924418/music_kl/son%20tung/da480813244602bf90aefb20335b9a3c_zvgfs4.mp3",
     },
     {
         "title": "Chạm Khẽ Tim Anh Một Chút Thôi",
@@ -815,7 +815,7 @@ noophuocthinhh_songs = [
         Là đủ để anh cảm thấy hạnh phúc""",
         "views": 65000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/6/e/6e7b90d96728c9ce1b4c2a104d622784_1507799020.jpg",
-        "audio": "https://a128-z3.zmdcdn.me/8d41537cf3c8aa3e46a55b72af051c81?authen=exp=1715884248~acl=/8d41537cf3c8aa3e46a55b72af051c81/*~hmac=a36572ebd7d82984af90ef29993a10e6",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924456/music_kl/son%20tung/8d41537cf3c8aa3e46a55b72af051c81_zcyokg.mp3",
     },
     {
         "title": "Hơn Cả Yêu",
@@ -825,7 +825,7 @@ noophuocthinhh_songs = [
         Và hơn cả những gì anh làm""",
         "views": 55000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/a/9/e/d/a9ed142c215560ab45f6b2b433907f90.jpg",
-        "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/7e5e7add1b34dce07b5f45f6996f28f1?authen=exp=1715883842~acl=/7e5e7add1b34dce07b5f45f6996f28f1/*~hmac=c1c8a751495f3aae8ddd9620e0265a8c",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924502/music_kl/son%20tung/7e5e7add1b34dce07b5f45f6996f28f1_vzakot.mp3",
     },
     {
         "title": "Cậu Làm Gì Đấy",
@@ -834,7 +834,7 @@ noophuocthinhh_songs = [
         Cậu làm gì đấy, để trái tim anh tan vỡ""",
         "views": 50000000,
         "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/avatars/3/6/b/7/36b7280d00f7a7378d91a6556762c6ca.jpg",
-        "audio": "https://a128-z3.zmdcdn.me/93ba4f39231838245a18276eb005624f?authen=exp=1715884349~acl=/93ba4f39231838245a18276eb005624f/*~hmac=c4247ca1bb49a8c3cac4642bf4c7a9ea",
+        "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924541/music_kl/son%20tung/93ba4f39231838245a18276eb005624f_paayhg.mp3",
     },
   ]
 
@@ -853,70 +853,70 @@ truongvu_songs = [
       "lyric": "Đêm nay mưa rơi không dứt, nhớ em lòng đau nát tan. Đường phố vắng ánh đèn, chỉ mình anh lặng thầm bước đi trong cơn mưa, ký ức xưa ùa về, từng kỷ niệm vui buồn còn mãi trong tim. Anh mong em hiểu rằng tình anh vẫn luôn đong đầy...",
       "views": 2300000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/f/3/f3ccdd27d2000e3f9255a7e3e2c48800_1314504102.jpg",
-      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/f5a2c7b03af282bc25abec947955928a?authen=exp=1715968487~acl=/f5a2c7b03af282bc25abec947955928a/*~hmac=52d2502dcd4c6434f1ea19c895283a9e"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924580/music_kl/son%20tung/31a9ce7ad8d7e76c20f9c90b0bda9139_aihopz.mp3"
   },
   {
       "title": "Đoạn Tái Bút",
       "lyric": "Từng dòng thư tay em gửi, anh vẫn còn giữ mãi. Nhưng giờ đây ta xa nhau, chỉ còn lại ký ức trong tim. Những lời yêu thương chưa kịp nói, nay đã trở thành quá khứ. Anh nhớ những ngày bên nhau, hạnh phúc dường như mới hôm qua...",
       "views": 3100000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/6/6/d/7/66d75a098e8b5c8e5ace19eff1acff76.jpg",
-      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/6601ac0a9ea5fd61f4cebdf382ed76a4?authen=exp=1715968573~acl=/6601ac0a9ea5fd61f4cebdf382ed76a4/*~hmac=9ddca85c6a34e170c1e4c7346feeaad1"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924620/music_kl/son%20tung/6601ac0a9ea5fd61f4cebdf382ed76a4_c3odmg.mp3"
   },
   {
       "title": "Người Ngoài Phố",
       "lyric": "Chiều nay em ra phố, một mình bước lang thang. Kỷ niệm xưa vọng về, trong lòng đầy nhớ thương. Đôi tay lạnh buốt, chỉ mình em cô đơn giữa phố đông người. Nhớ những ngày ta bên nhau, giờ đây chỉ là hoài niệm...",
       "views": 4500000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/3/f/3ff457385ca5e2e6b2e99400534c9807_1370768899.jpg",
-      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/b18977f95c8112aa5078932c58fd73c9?authen=exp=1715968639~acl=/b18977f95c8112aa5078932c58fd73c9/*~hmac=fa5f0469118f614def675b33778f4aa2"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924672/music_kl/son%20tung/3bf79760b5f043cfd22aa1ad94d617f9_fke5aq.mp3"
   },
   {
       "title": "Hai Vì Sao Lạc",
       "lyric": "Tình yêu chúng ta như hai vì sao lạc, mãi mãi không thể nào đến với nhau. Trái tim anh đau đớn khi phải xa em, nhưng định mệnh đã an bài. Em hãy sống hạnh phúc, và anh sẽ mãi nhớ về em như vì sao sáng trong tim...",
       "views": 3800000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/4/b/1/9/4b19e07f34caa7f30de37430c6d4c19d.jpg",
-      "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/a029af85d92e400fb9b7f7737bbc521a?authen=exp=1715968706~acl=/a029af85d92e400fb9b7f7737bbc521a/*~hmac=0ff175601d42d9e28fe6ab84a3a0aafd"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924710/music_kl/son%20tung/189e9946c341e364627030249b0157ca_uw74u8.mp3"
   },
   {
       "title": "Lại Nhớ Người Yêu",
       "lyric": "Bao đêm anh vẫn mơ về em, người yêu dấu ơi. Tình yêu như sóng biển, mãi không ngừng vỗ về trong lòng anh. Những kỷ niệm ngọt ngào, những nụ hôn đắm say. Dù xa cách nhưng lòng anh vẫn mãi nhớ về em...",
       "views": 5200000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/avatars/7/d/7d108db512f6a6a929cd0d0ad3b593e8_1511431730.jpg",
-      "audio": "https://vnso-zn-24-tf-a128-z3.zmdcdn.me/0b15424fff6327acc1b26120d7dfc090?authen=exp=1715968762~acl=/0b15424fff6327acc1b26120d7dfc090/*~hmac=616989728b6065cdcc88f03d25f97b86"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924765/music_kl/son%20tung/6880942701780100652_owfoyh.mp3"
   },
   {
       "title": "Thiệp Hồng Anh Viết Tên Em",
       "lyric": "Ngày xưa ấy khi anh viết tên em trên thiệp hồng. Nguyện ước trọn đời sẽ mãi bên nhau. Nhưng giờ đây em đã xa rồi, thiệp hồng còn đây nhưng lòng anh đã tan nát. Nhớ em từng ngày, từng phút giây...",
       "views": 4000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/0/2/8/8/0288dae6b2fb72ec073cfd26ac23be4f.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/3135a21b7760e28b765dae5824c1ab22?authen=exp=1715968801~acl=/3135a21b7760e28b765dae5824c1ab22/*~hmac=fcc9541c845194c32cd2f7278083f8d3"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924806/music_kl/son%20tung/3135a21b7760e28b765dae5824c1ab22_fmsf7q.mp3"
   },
   {
       "title": "Mưa Nửa Đêm",
       "lyric": "Đêm nay mưa buồn rơi hắt hiu, lòng anh nhớ em nhiều. Từng giọt mưa như nước mắt, thấm đẫm những ký ức buồn. Đêm dài lắm cô đơn, anh mong một ngày em sẽ quay về bên anh, để tình ta lại xanh ngát...",
       "views": 2700000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/covers/0/c/0c1485a24cf001c56223be2879ae5f26_1290654489.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/099b79295ba1902e552b8498f0e8776f?authen=exp=1715968846~acl=/099b79295ba1902e552b8498f0e8776f/*~hmac=ba4853aa5880f7cbbd2d9a2924ef790c"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924836/music_kl/son%20tung/099b79295ba1902e552b8498f0e8776f_uycoez.mp3"
   },
   {
       "title": "Yêu Một Mình",
       "lyric": "Tình yêu đơn phương anh dành cho em, mãi mãi không thể nói ra. Một mình anh ôm ấp những nỗi niềm, những giấc mơ về em. Dù biết em không hiểu, nhưng anh vẫn luôn mong chờ một ngày em sẽ nhận ra tình yêu này...",
       "views": 3400000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_png/covers/9/e/9e549ed896a1a21c42a7f0ff09a05961_1407310471.png",
-      "audio": "https://a128-z3.zmdcdn.me/8fac8d2e92f05d659dafee007e90eeee?authen=exp=1715968904~acl=/8fac8d2e92f05d659dafee007e90eeee/*~hmac=6dd0696b681e81cb1c774695777b4428"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924869/music_kl/son%20tung/8fac8d2e92f05d659dafee007e90eeee_ewsdi0.mp3"
   },
   {
       "title": "Lá Thư Đô Thị",
       "lyric": "Lá thư em gửi từ đô thị xa hoa, làm anh nhớ quê nhà. Những ngày xưa yên bình, những kỷ niệm êm đềm bên nhau. Giờ đây chỉ còn lại nỗi nhớ, và anh vẫn chờ em trở về với tình yêu chân thành...",
       "views": 3900000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/e/a/ea7b7c82bd972090b482c9578a024747_1394681663.jpg",
-      "audio": "https://vnso-zn-15-tf-a128-z3.zmdcdn.me/af9396a58683f1abe6b5719ceb3437bf?authen=exp=1715968935~acl=/af9396a58683f1abe6b5719ceb3437bf/*~hmac=0df3467434e5ab9a4e9aec25fc0caed9"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924898/music_kl/son%20tung/af9396a58683f1abe6b5719ceb3437bf_r2hed9.mp3"
   },
   {
       "title": "Giàu Nghèo",
       "lyric": "Đời người có khi giàu sang, có khi lại nghèo khó. Tình yêu chân thật không bao giờ đổi thay. Anh và em sẽ cùng nhau vượt qua mọi khó khăn, dù cho cuộc sống có thế nào. Hãy tin rằng tình yêu sẽ giúp chúng ta mãi bên nhau...",
       "views": 4100000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/5/9/7/7/597718765fa8da46c33973f4d5ac6604.jpg",
-      "audio": "https://vnso-zn-23-tf-a128-z3.zmdcdn.me/5d9e57230a728c57071cc0531892e422?authen=exp=1715968974~acl=/5d9e57230a728c57071cc0531892e422/*~hmac=9ebe613d73dcac2310681c56dc417ebd"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715924924/music_kl/son%20tung/5d9e57230a728c57071cc0531892e422_vb83wm.mp3"
   }
 ]
 truongvu = Artist.where(name: 'Trường Vũ').first
@@ -939,35 +939,35 @@ phinhung_songs = [
       "lyric": "Lý con sáo miền Nam, bay đi tìm bạn. Đôi chim sáo vui đùa cùng nhau, trong nắng mai hồng. Nhớ về miền quê yên bình, nơi có tình yêu đôi ta.",
       "views": 75000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/7/f/e/d/7fed3c0b63e198bf84b7b28544ac7b13.jpg",
-      "audio": "https://vnso-pt-14-tf-a128-z3.zmdcdn.me/8014953b6c9725cadaf0a98eed44c728?authen=exp=1715969469~acl=/8014953b6c9725cadaf0a98eed44c728/*~hmac=fbc3d2ef3f591ffba7f7aec0e002f14d"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925030/music_kl/son%20tung/8014953b6c9725cadaf0a98eed44c728_sjebod.mp3"
   },
   {
       "title": "Như Lục Bình Trôi",
       "lyric": "Như lục bình trôi, em lạc mất anh rồi. Dòng sông mênh mông cuốn trôi đi bao kỷ niệm. Tình yêu đôi ta giờ đây chỉ còn là giấc mơ.",
       "views": 65000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/a/4/8/9/a489fc7420010b10eda6fa4d616fcfe3.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/de3d3db2a9121da1f419db7aa06b2f07?authen=exp=1715969541~acl=/de3d3db2a9121da1f419db7aa06b2f07/*~hmac=0f27f365ddecc7f8822a47ead4dfd35f"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925059/music_kl/son%20tung/de3d3db2a9121da1f419db7aa06b2f07_gkspcu.mp3"
   },
   {
       "title": "Ninh Kiều Em Gái Cần Thơ",
       "lyric": "Ninh Kiều em gái Cần Thơ, nụ cười tỏa nắng. Em đứng bên bến Ninh Kiều, đợi anh về thăm. Nhớ những chiều mưa, ta cùng chung bước dưới mưa.",
       "views": 60000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/covers/0/d/0d5b1c4c7f720f698946c7f6ab08f687_1425889433.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/f0d137a5fc327c6a8862a7a2f524781f?authen=exp=1715969588~acl=/f0d137a5fc327c6a8862a7a2f524781f/*~hmac=7fde0c2155116439040aa03ebd63e0ea"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925095/music_kl/son%20tung/f0d137a5fc327c6a8862a7a2f524781f_rbcpys.mp3"
   },
   {
       "title": "Lý Miệt Vườn",
       "lyric": "Lý miệt vườn, tình quê thắm đượm. Bên nhau ta xây đắp bao mộng ước. Những chiều hoàng hôn, em chờ anh về. Tình yêu đôi ta như miệt vườn nở hoa.",
       "views": 70000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/7/c/4/d/7c4dd3413c0bb9c3c8d99d39077a5e8f.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/8a7b689e17829727289cdd13395ed239?authen=exp=1715969625~acl=/8a7b689e17829727289cdd13395ed239/*~hmac=fd3775367ac551b9450e21b4b9d4528a"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925125/music_kl/son%20tung/8a7b689e17829727289cdd13395ed239_yeg6mj.mp3"
   },
   {
       "title": "Đừng Nói Yêu Tôi",
       "lyric": "Đừng nói yêu tôi nếu anh không thật lòng. Đừng để tôi thêm những đêm dài cô đơn. Tình yêu như mây trôi, mộng ước tan biến. Em chỉ cần một tình yêu chân thành.",
       "views": 80000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/8/9/4/38949c7b36e398d2b760331bf007f7fa.jpg",
-      "audio": "https://a128-z3.zmdcdn.me/9605e828651dba53ceeae03594cfffe8?authen=exp=1715969260~acl=/9605e828651dba53ceeae03594cfffe8/*~hmac=a0cc6f226a57e623b258b042457fafc2"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925167/music_kl/son%20tung/9605e828651dba53ceeae03594cfffe8_qcg2gr.mp3"
   },
   {
       "title": "Cây Khế Sau Hè",
@@ -981,17 +981,16 @@ phinhung_songs = [
       "lyric": "Bạc Liêu hoài cổ, em nhớ anh vô bờ. Những ngày xưa yêu dấu, giờ đã xa vời. Đêm đêm nghe tiếng đàn, nhớ về anh khôn nguôi.",
       "views": 72000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
-      "audio": "https://mp3-s1-zmp3.zmdcdn.me/3f76708129c5c09b99d4/5584761192197239189?authen=exp=1715969749~acl=/3f76708129c5c09b99d4/*~hmac=7cbf5c8ca44564f6b1f019013c9af1f0&fs=MTmUsICxNTmUsIC5Njk0OTg2MXx3ZWJWNnwxMDQ5NzQxODkxfDQyLjExOC4xOTAdUngMTE0"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925204/music_kl/son%20tung/5584761192197239189_xuqkcr.mp3"
   },
   {
       "title": "Chiều Thương Đô Thị",
       "lyric": "Chiều thương đô thị, lòng nhớ quê hương. Nhớ những chiều mưa, ta cùng nhau dạo phố. Đô thị phồn hoa, lòng em vẫn nhớ về anh.",
       "views": 68000000,
       "image": "https://photo-resize-zmp3.zmdcdn.me/w165_r1x1_jpeg/cover/3/2/a/3/32a35f4d26ee56366397c09953f6c269.jpg",
-      "audio": "https://mp3-s1-zmp3.zmdcdn.me/24fb912afc6e15304c7f/4550484303562899027?authen=exp=1715969812~acl=/24fb912afc6e15304c7f/*~hmac=58893df7d66a99759b5e639fdd6c10b2&fs=MTmUsICxNTmUsIC5NzAxMjEwNXx3ZWJWNnwxMDQ5NzQxODkxfDQyLjExOC4xOTAdUngMTE0"
+      "audio": "https://res.cloudinary.com/dx9vr7on4/video/upload/v1715925241/music_kl/son%20tung/4550484303562899027_ykfz82.mp3"
   }
 ]
-
 
 phinhung = Artist.where(name: 'Phi Nhung').first
 album_phinhung = phinhung.albums.create(title: 'Những Bài Hát Hay Nhất Của Phi Nhung', description: "Bậu ơi đừng buồn, vào nghe Phi Nhung hát", image: "https://photo-resize-zmp3.zmdcdn.me/w600_r1x1_jpeg/cover/e/e/b/1/eeb17bfbdaa9e6e6b15aa81e8a862679.jpg")

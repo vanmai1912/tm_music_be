@@ -28,6 +28,12 @@ class Api::Me::RoomsController < Api::ApplicationController
     end
   end
 
+  def songs 
+    room = @current_user.rooms.where(uuid: params[:id]).first
+    songs = room.user.albums.favorite&.first&.songs
+    render json: songs
+  end
+
   private
   
     def room_params
