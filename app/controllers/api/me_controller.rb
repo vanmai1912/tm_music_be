@@ -16,7 +16,7 @@ class Api::MeController < Api::ApplicationController
     end
 
     # Tìm kiếm theo tên bài hát
-    songs = Song.where('title LIKE ? OR lyric LIKE ?', "%#{query}%", "%#{query}%")
+    songs = Song.where('title LIKE ?', "%#{query}%")
     songs.each do |song|
       @results << { type: 'song', data: SongSerializer.new(song) }
     end
