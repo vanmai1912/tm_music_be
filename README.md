@@ -3,7 +3,7 @@
 Setup Project
 
 Step 1: clone repository
-run: https://github.com/vanmai1912/KLTN_music_be.git
+run: https://github.com/vanmai1912/tm_music_be.git
 
 Step 2: switch branch
 run: git checkout master-2
