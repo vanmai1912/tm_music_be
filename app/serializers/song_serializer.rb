@@ -1,5 +1,5 @@
 class SongSerializer < ApplicationSerializer
-  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers, :owner
+  attributes :id, :title, :lyric, :release_date, :duration, :views, :track_number, :image, :audio, :liked, :singers, :owner, :bought, :copyright
   belongs_to :genre
 
 
@@ -14,14 +14,19 @@ class SongSerializer < ApplicationSerializer
   end
 
   def owner
-    if object.copyright
+    # if object.copyright
       invoice = Invoice.where(song_id: object.id, user_id: $current_user.id).first
       if invoice
         true
       else
         false
       end
-    end
+    # end
+  end
+
+  def bought
+    songs = $current_user.albums.favorite.first.songs.pluck(:id)
+    songs.include?(object.id)
   end
   
   def singers
