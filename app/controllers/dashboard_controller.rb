@@ -5,6 +5,13 @@ class DashboardController < ApplicationController
     @total_song = Song.all.size
     @total_interactions = HistoryLike.like.size + Comment.all.size
     @songs = Song.order(views: :desc).first(10)
+    top_song_cmt_ids = Comment.top_songs_by_true_status_ratio
+    top_songs = Song.where(id: top_song_cmt_ids)
+    @top_songs = top_song_cmt_ids.map { |id| top_songs.find { |song| song.id == id } }
+    bottom_song_cmt_ids = Comment.bottom_songs_by_false_status_ratio
+    bottom_songs = Song.where(id: bottom_song_cmt_ids)
+    @bottom_songs = bottom_song_cmt_ids.map { |id| bottom_songs.find { |song| song.id == id } }
+  
   end
 
   def client_chart

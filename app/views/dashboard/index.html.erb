@@ -201,6 +201,136 @@
   </div> 
 
   <div class="row">
+  <div class="col-6">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <h4 class="card-header-title">
+              Top 5 positive 
+            </h4>
+
+          </div>
+        </div> 
+      </div>
+      <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+        <table class="table table-sm table-nowrap card-table">
+          <thead>
+            <tr>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-status">
+                  Title
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-progress">
+                  Comment positive
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Total comment
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Ratio
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <% @top_songs.each do |song| %>
+              <tr>
+                <td class="goal-status">
+                  <%= song.title %>
+                </td>
+                <td class="goal-progress">
+                  <%= song.comments.where(status: true).size %>
+                </td>
+                <td class="goal-date">
+                  <%= song.comments.size %>
+                </td>
+                <td class="goal-date">
+                  <%= ((song.comments.where(status: true).size.to_f / song.comments.size) * 100).round %>%
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-6">
+
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <div class="col">
+
+            <h4 class="card-header-title">
+              Top 5 negative 
+            </h4>
+
+          </div>
+        </div> 
+      </div>
+      <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+        <table class="table table-sm table-nowrap card-table">
+          <thead>
+            <tr>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-status">
+                  Title
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-progress">
+                  Comment negative
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Total comment
+                </a>
+              </th>
+              <th>
+                <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                  Ratio
+                </a>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <% @bottom_songs.each do |song| %>
+              <tr>
+                <td class="goal-status">
+                  <%= song.title %>
+                </td>
+                <td class="goal-progress">
+                  <%= song.comments.where(status: false).size %>
+                </td>
+                <td class="goal-date">
+                  <%= song.comments.size %>
+                </td>
+                <td class="goal-date">
+                  <%= ((song.comments.where(status: false).size.to_f / song.comments.size) * 100).round %>%
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  
+  </div>
+
+  <div class="row">
   <div class="col-12">
 
     <div class="card">
