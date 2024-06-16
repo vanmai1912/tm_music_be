@@ -42,6 +42,8 @@ user_client.each do |user|
   User.create(user)
 end
 
+
+
 musicGenres = [
   {
     title: "Nhạc Trẻ",
@@ -1513,4 +1515,8 @@ a1.each do |album|
     album.album_songs.create(song_id: song_id)
 
   end
+end
+
+User.user.each do |user|
+  user.albums.favorite.create(title: "My Favorite", description: "My favorite album")
 end

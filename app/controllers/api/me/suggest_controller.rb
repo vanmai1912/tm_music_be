@@ -27,4 +27,16 @@ class Api::Me::SuggestController < Api::ApplicationController
       render json: []
     end
   end
+
+  def create
+    song_titles = JSON.parse(params[:songs]).map(&:downcase)
+    songs = Song.where('LOWER(title) IN (?)', song_titles)
+  
+    if songs.any?
+      render json: songs, each_serializer: SongSerializer
+    else
+      render json: []
+    end
+  end
+  
 end

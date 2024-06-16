@@ -14,7 +14,7 @@ class Song < ApplicationRecord
 
   attr_accessor :logo, :mp3_file, :album_ids
 
-  after_create :send_email_to_user
+  # after_create :send_email_to_user
 
   private
 
