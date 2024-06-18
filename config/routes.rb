@@ -58,7 +58,7 @@ Rails.application.routes.draw do
       end
 
       resources :invitations, only: [:index, :create, :show]
-      resources :suggest, only: [:index]
+      resources :suggest, only: [:index, :create]
       resources :albums, only: [:index, :create, :show, :destroy, :update] do
         member do
           post 'add_song_ids'
