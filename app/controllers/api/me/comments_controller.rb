@@ -1,9 +1,13 @@
 class Api::Me::CommentsController < Api::ApplicationController  
     def create
-      comment = @current_user.comments.new(comment_params) 
-  
-      if comment.save
-        render json: comment, serializer: CommentSerializer, is_comment: false , status: :created
+      encoded_comment = CGI.escape(params[:content])
+      url = "http://127.0.0.1:8000/answers/vietnamese_classification?text=#{encoded_comment}"
+      response = HTTParty.get(url)
+      if response.success?
+        comment = @current_user.comments.new(comment_params) 
+        comment.status = response.parsed_response[0] == "POSITIVE" ? true : false
+        comment.save
+        render json: comment.reload, serializer: CommentSerializer, is_comment: false , status: :created
       else
         render json: { error: 'Không thể lưu comment' }, status: :unprocessable_entity
       end
