@@ -38,6 +38,7 @@ gem 'ransack'
 gem 'bootstrap-kaminari-views'
 gem 'groupdate'
 gem 'uuid', '>= 2.3.8'
+gem 'httparty'
 
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'

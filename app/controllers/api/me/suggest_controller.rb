@@ -1,4 +1,6 @@
 class Api::Me::SuggestController < Api::ApplicationController
+  include HTTParty
+
   def index
     genre_counts = HistoryLike.where(user_id: current_user.id).joins(song: :genre)
       .group("genres.id")
@@ -29,11 +31,19 @@ class Api::Me::SuggestController < Api::ApplicationController
   end
 
   def create
-    song_titles = JSON.parse(params[:songs]).map(&:downcase)
-    songs = Song.where('LOWER(title) IN (?)', song_titles)
-  
-    if songs.any?
-      render json: songs, each_serializer: SongSerializer
+    song_titles = JSON.parse(params[:songs]).map(&:downcase).to_json
+    encoded_song_titles = CGI.escape(song_titles)
+    url = "http://127.0.0.1:8000/answers/music_suggest?text=#{encoded_song_titles}"
+    response = HTTParty.get(url)
+    
+    if response.success?
+      value = JSON.parse(response.parsed_response.gsub("'", '"')).map(&:downcase)
+      songs = Song.where('LOWER(title) IN (?)', value)
+      if songs.any?
+        render json: songs, each_serializer: SongSerializer
+      else
+        render json: []
+      end
     else
       render json: []
     end

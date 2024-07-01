@@ -96,6 +96,7 @@ GEM
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
+    csv (3.3.0)
     date (3.3.4)
     declarative (0.0.20)
     devise (4.9.4)
@@ -152,6 +153,10 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     httpclient (2.8.3)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
@@ -205,6 +210,7 @@ GEM
     minitest (5.22.3)
     msgpack (1.7.2)
     multi_json (1.15.0)
+    multi_xml (0.6.0)
     net-http (0.4.1)
       uri
     net-imap (0.4.10)
@@ -380,6 +386,7 @@ DEPENDENCIES
   dotenv-rails
   google-api-client (~> 0.52)
   groupdate
+  httparty
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   jwt
