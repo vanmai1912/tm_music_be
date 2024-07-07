@@ -11,6 +11,8 @@ class RoomChannel < ApplicationCable::Channel
         room.user_rooms.online.create(user_id: user_id)
       end
       user = User.find(params['user_id'])
+      song = Song.find_by_audio(room.url)
+      artist = song.artists.singer.first
       total_user = room.user_rooms.online.size
       user_data = {
         id: user.id,
@@ -22,8 +24,10 @@ class RoomChannel < ApplicationCable::Channel
         id: room.id,
         name: room.name,
         url: room.url,
-        current_time: room.calculate_time_difference,
-        owner_id: room.user ? room.user .id : -100
+        song_title: song ? song.title : '',
+        song_singer: artist ? artist.name : '',
+        current_time: calculate_time_difference(room),
+        owner_id: room.user ? room.user.id : -100
       }
       stream_from "room_channel_#{room.id}"
       ActionCable.server.broadcast("room_channel_#{room.id}", { user: user_data, room: room_data, total_user: total_user })
@@ -39,6 +43,8 @@ class RoomChannel < ApplicationCable::Channel
       user_room = UserRoom.where(user_id: user_id, room_id: room.id).first.offline!
       user = User.find(params['user_id'])
       total_user = room.user_rooms.online.size
+      song = Song.find_by_audio(room.url)
+      artist = song.artists.singer.first
       user_data = {
         id: user.id,
         first_name: user.first_name,
@@ -49,8 +55,10 @@ class RoomChannel < ApplicationCable::Channel
         id: room.id,
         name: room.name,
         url: room.url,
-        current_time: room.calculate_time_difference,
-        owner_id: room.user ? room.user .id : -100
+        song_title: song ? song.title : '',
+        song_singer: artist ? artist.name : '',
+        current_time: calculate_time_difference(room),
+        owner_id: room.user ? room.user.id : -100
       }
       stop_all_streams
       ActionCable.server.broadcast("room_channel_#{room.id}", { user: user_data, room: room_data, total_user: total_user })
@@ -106,16 +114,34 @@ class RoomChannel < ApplicationCable::Channel
       url = data['url']
       total_time = data['total_time']
       room.update(url: url, total_time: total_time)
+      song = Song.find_by_audio(room.url)
+      artist = song.artists.singer.first
       room_data = {
         id: room.id,
         name: room.name,
         url: room.url,
+        song_title: song ? song.title : '',
+        song_singer: artist ? artist.name : '',
         current_time: 1
       }
       ActionCable.server.broadcast("room_channel_#{room.id}", { type: 'change_url', room: room_data })
     else
       reject 
     end
+  end
+
+  private
+
+  def calculate_time_difference(room)
+    # Kiểm tra xem total_time có tồn tại không
+    return 0 if !room.total_time.present? || room.total_time == 0
+  
+    current_time = Time.now.in_time_zone(room.updated_at.time_zone)
+    time_difference = current_time - room.updated_at
+    remainder = time_difference % room.total_time
+    remainder = remainder.ceil
+  
+    return remainder
   end
   
 end
